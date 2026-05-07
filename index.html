@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUSB 90.1 FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
+
+    <!-- COMPONENT: header.html -->
+    <div id="header-placeholder"></div>
+    
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-end border-b-2 border-zinc-800 pb-4 mb-8">
+            <h2 class="font-swiss font-bold text-4xl md:text-5xl uppercase tracking-tighter">Latest Transmissions</h2>
+            <button class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
+                <i data-lucide="search" class="w-5 h-5"></i>
+                <span class="font-swiss text-sm font-bold uppercase tracking-widest hidden sm:inline">Search Archives</span>
+            </button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
+            
+            <!-- Post 1 -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300">
+                <div class="h-3 w-full bg-[#df0781]"></div>
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: #df0781;">Music</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 26, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df0781;">
+                        Local Band Spotlight: The Stony Brook Sound
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        Diving into the underground scene of Long Island's latest post-punk revival. We sat down with the lead singer to discuss their new EP and upcoming campus basement show.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: #df0781;">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 2 -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300">
+                <div class="h-3 w-full bg-[#8bfa00]"></div>
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: #8bfa00;">Station News</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 24, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8bfa00;">
+                        DJ Application Deadline Approaching!
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        Want your own slot on WUSB? The Spring 2026 application cycle is closing soon. Read our guide on how to pitch the perfect radio show to our program directors.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: #8bfa00;">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300">
+                <div class="h-3 w-full bg-[#52a1fc]"></div>
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: #52a1fc;">Reviews</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 22, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #52a1fc;">
+                        Review: 'Currents & Feedback' by The Void
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        A sonic landscape that redefines modern shoegaze. Here is why 'Currents & Feedback' is our Album of the Week and why you need to listen to it immediately.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: #52a1fc;">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 4 -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300">
+                <div class="h-3 w-full bg-[#f8e700]"></div>
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: #f8e700;">Events</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 20, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #f8e700;">
+                        Spring Fest 2026 Lineup Announcement
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        The wait is over. Check out the official WUSB stage lineup for this year's Spring Fest. Get ready for 12 hours of uninterrupted live music.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: #f8e700;">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 5 -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300">
+                <div class="h-3 w-full bg-[#9800e0]"></div>
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: #9800e0;">Editorial</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 18, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #9800e0;">
+                        Interview: The Evolution of College Radio
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        An in-depth look at how independent radio stations are surviving and thriving in the era of algorithmic streaming playlists.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: #9800e0;">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post 6 -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300">
+                <div class="h-3 w-full bg-[#df2331]"></div>
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: #df2331;">Charts</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 15, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df2331;">
+                        Top 50 Spins This Month
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        From indie rock to experimental electronic, here are the tracks our DJs have been spinning the most over the last 30 days.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: #df2331;">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- COMPONENT: player.html -->
+    <div id="player-placeholder"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+--NOTES worked on snorlax2988 account, Make gradient be horizontal move sub menu to the bottom, put the main menu where the sub menu is and the robot animation back into the website, OR move about to sub menu,
+--SIDEQUESTS Add DJ Page, Add Shows page

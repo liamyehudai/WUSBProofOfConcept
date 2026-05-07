@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUSB 90.1 FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
+
+    <!-- COMPONENT: header.html -->
+    <div id="header-placeholder"></div>
+    
+
+    <!-- MAIN CONTENT AREA -->
+    <!-- DRUPAL MAPPING: Main Content Region / Node Display -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full pb-32">
+        
+        <div class="border-b-2 border-zinc-800 pb-4 mb-8">
+            <h1 class="font-swiss font-bold text-5xl wusb-gradient inline-block uppercase tracking-tighter">About WUSB</h1>
+        </div>
+        
+        <!-- DRUPAL MAPPING: Node Body Field (Text formatted) -->
+        <div class="prose prose-invert max-w-none font-swiss text-zinc-700 dark:text-zinc-400 leading-relaxed space-y-6 text-lg">
+            <p>Briefly, we're Long Island's largest non-commercial, free-form radio station. Tune in any time and you'll hear sounds ranging from interviews, commentary, jazz, pop, punk, metal, electronic, noise, funk, folk, blues, reggae, polka, world music, live music, spontaneous mixes and groovy combustion.</p>
+
+            <p>Our signal can be heard at 90.1 FM on most of Long Island, and in Southern Connecticut, parts of NYC (Brooklyn and Queens), and Westchester County. We are also simulcasting on 107.3 to reach Stony Brook University campus. It can be heard over the Internet, by using the links at the top of any pages on the WUSB website.</p>
+
+            <p>We are licensed by the FCC to Stony Brook University as a 3,600 watt non-commercial station located on the campus of Stony Brook University.</p>
+
+            <p>Since 1977, we have served the campus and Long Island listening communities with a diverse broadcast mix of music, news, public affairs, drama and sports programming. Our 24/7 schedule is made possible by a volunteer staff efforts of over 160 Stony Brook students, faculty, staff, alumni and community residents. Behind-the-scenes as well as on-air work, combined with a variety of nationally syndicated radio programs integrated into the schedule, creates the 168 hours per week of innovative and high-quality programming.</p>
+
+            <p>We are funded by listener donations as well as by the State University of New York at Stony Brook and the University's Undergraduate Student Government and Graduate Student Organization, and by local business underwriting and grants.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 pt-8 border-t border-zinc-800">
+                <div class="bg-zinc-900/40 p-6 border border-zinc-800">
+                    <h2 class="text-2xl text-white font-bold mb-4 uppercase tracking-tighter font-swiss">Memberships</h2>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8bfa00] mt-0.5 flex-shrink-0"></i> the Intercollegiate Broadcasting System (IBS)</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8bfa00] mt-0.5 flex-shrink-0"></i> College Broadcasters Inc. (CBI)</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8bfa00] mt-0.5 flex-shrink-0"></i> the National Federation of Community Broadcasters</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8bfa00] mt-0.5 flex-shrink-0"></i> the College Media Association</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#8bfa00] mt-0.5 flex-shrink-0"></i> The Society of Professional Journalists</li>
+                    </ul>
+                </div>
+
+                <div class="bg-zinc-900/40 p-6 border border-zinc-800">
+                    <h2 class="text-2xl text-white font-bold mb-4 uppercase tracking-tighter font-swiss">Affiliations</h2>
+                    <ul class="list-none space-y-3">
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#df0781] mt-0.5 flex-shrink-0"></i> Pacifica</li>
+                        <li class="flex items-start gap-2"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#df0781] mt-0.5 flex-shrink-0"></i> Democracy Now</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex gap-6 mt-8">
+                <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2">
+                    WUSB Public File <span class="text-xl leading-none">&rarr;</span>
+                </a>
+                <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2">
+                    EEO Report <span class="text-xl leading-none">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- COMPONENT: player.html -->
+    <div id="player-placeholder"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+--NOTES worked on snorlax2988 account, Make gradient be horizontal move sub menu to the bottom, put the main menu where the sub menu is and the robot animation back into the website, OR move about to sub menu,
+--SIDEQUESTS Add DJ Page, Add Shows page

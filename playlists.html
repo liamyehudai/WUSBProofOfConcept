@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUSB 90.1 FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
+
+    <!-- COMPONENT: header.html -->
+    <div id="header-placeholder"></div>
+    
+
+    <!-- MAIN CONTENT AREA -->
+    <!-- DRUPAL MAPPING: Main Content Region / Node Display -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full pb-32">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-end border-b-2 border-zinc-800 pb-4 mb-8">
+            <h2 class="font-swiss font-bold text-4xl md:text-5xl uppercase tracking-tighter">Recent Playlists</h2>
+            <button class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
+                <i data-lucide="search" class="w-5 h-5"></i>
+                <span class="font-swiss text-sm font-bold uppercase tracking-widest hidden sm:inline">Search Playlists</span>
+            </button>
+        </div>
+
+        <!-- DRUPAL MAPPING: Views - Station Schedule Playlists -->
+        <div class="flex flex-col gap-8">
+            
+            <!-- Playlist Node 1 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df0781;">With The Beatles playlist for 05/07/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">scottorourke</a> on Thu, 05/07/2026 - 12:06am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>Tonight on With The Beatles</p>
+                    <p>Tonight we head to the legendary The Beatles at the Hollywood Bowl and revisit the excitement of Beatlemania captured live in concert</p>
+                    <p>We’ll also explore some of George Harrison’s compilation releases and solo-era material.</p>
+                    <p>Plus, as John Lennon and Yoko Ono purchase Tittenhurst Park, we’ll head into the Imagine sessions and that creative era.</p>
+                    <p>We also continue our deep dive into the new album from Ringo Starr along with new music from Paul McCartney</p>
+                    <p>Plus new releases from:</p>
+                    <p>• The Claypool Lennon Delirium</p>
+                    <p>• James McCartney</p>
+                    <p>And of course — more Beatles history, deep cuts, and gems throughout the night.</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df0781] hover:text-white transition-colors flex items-center gap-2" style="color: #df0781;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 2 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8bfa00;">Steve K's Radio Kaos playlist for 05/07/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Steve-K</a> on Thu, 05/07/2026 - 7:53am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>New Rolling Stones & their solo endeavors...Happy 80th Birthday Bill Kreitzman..The Soul Set & of course your morning Bruce Juice! apparently not</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8bfa00] hover:text-white transition-colors flex items-center gap-2" style="color: #8bfa00;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 3 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #52a1fc;">Stereo Sanctity playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 12:12am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>Fill-in</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#52a1fc] hover:text-white transition-colors flex items-center gap-2" style="color: #52a1fc;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 4 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #f8e700;">Close The Door playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 1:37am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>More Springtime stuff bc I'm suffering from allergies</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#f8e700] hover:text-white transition-colors flex items-center gap-2" style="color: #f8e700;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 5 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #9800e0;">Wayback Wednesday playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 2:12am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>Fill-in</p>
+                    <p>MJ and Hannah were reissues</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#9800e0] hover:text-white transition-colors flex items-center gap-2" style="color: #9800e0;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 6 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df2331;">Flesh Uncovered playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">maacastro</a> on Wed, 05/06/2026 - 3:15am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df2331] hover:text-white transition-colors flex items-center gap-2" style="color: #df2331;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 7 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #eebc00;">Blues At Dawn playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Gavin</a> on Wed, 05/06/2026 - 8:10am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>"The Blues Will Do Your Heart Good !!"</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#eebc00] hover:text-white transition-colors flex items-center gap-2" style="color: #eebc00;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 8 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8febfe;">Hot Wax playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Ryanberger</a> on Wed, 05/06/2026 - 8:47am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2" style="color: #8febfe;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 9 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #af04ab;">A Visual Sound playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">DJ Ray Knives</a> on Wed, 05/06/2026 - 10:41am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>All vinyl! All Over the place!</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#af04ab] hover:text-white transition-colors flex items-center gap-2" style="color: #af04ab;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 10 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #3b00fc;">The Golden Ratio playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">igneous_rock</a> on Wed, 05/06/2026 - 12:01pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#3b00fc] hover:text-white transition-colors flex items-center gap-2" style="color: #3b00fc;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 11 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #a91b00;">Creature Central playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Sillyometer</a> on Wed, 05/06/2026 - 1:10pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>"Summer"</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#a91b00] hover:text-white transition-colors flex items-center gap-2" style="color: #a91b00;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 12 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df0781;">Suburban Hymns playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">paul n</a> on Wed, 05/06/2026 - 2:32pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df0781] hover:text-white transition-colors flex items-center gap-2" style="color: #df0781;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 13 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8bfa00;">Blue Grass Time playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Buddy Merriam</a> on Wed, 05/06/2026 - 4:17pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>45 minutes of Blue Grass then game Radiothon continues</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8bfa00] hover:text-white transition-colors flex items-center gap-2" style="color: #8bfa00;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 14 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #52a1fc;">Spiney Norman playlist for 05/06/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Spiney Norman</a> on Wed, 05/06/2026 - 10:13pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#52a1fc] hover:text-white transition-colors flex items-center gap-2" style="color: #52a1fc;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 15 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #f8e700;">Cafe`Ali playlist for 05/05/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Ahmad Ali</a> on Tue, 05/05/2026 - 10:38am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#f8e700] hover:text-white transition-colors flex items-center gap-2" style="color: #f8e700;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 16 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #9800e0;">Recess playlist for 05/05/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">chespi</a> on Tue, 05/05/2026 - 12:48pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#9800e0] hover:text-white transition-colors flex items-center gap-2" style="color: #9800e0;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 17 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df2331;">Searching for Somewhere playlist for 05/05/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">musictraveler</a> on Tue, 05/05/2026 - 7:40pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df2331] hover:text-white transition-colors flex items-center gap-2" style="color: #df2331;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 18 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #eebc00;">Bustin' Out Blue playlist for 05/05/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Joe V</a> on Tue, 05/05/2026 - 8:09pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#eebc00] hover:text-white transition-colors flex items-center gap-2" style="color: #eebc00;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 19 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8febfe;">Girl from Mars playlist for 05/05/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">stasiathesocialbutterfly</a> on Tue, 05/05/2026 - 11:16pm
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>episode 12</p>
+                    <p>a picnic at midnight on mars !</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2" style="color: #8febfe;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Playlist Node 20 -->
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #af04ab;">More Cowbell playlist for 05/04/2026</a>
+                    </h3>
+                    <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
+                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Mario Staiano</a> on Mon, 05/04/2026 - 9:37am
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm md:text-base">
+                    <p>Blues/ Rock/ R&B</p>
+                </div>
+
+                <div class="pt-4 mt-2 flex justify-end">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#af04ab] hover:text-white transition-colors flex items-center gap-2" style="color: #af04ab;">
+                        View program <span class="text-xl leading-none">&rarr;</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- COMPONENT: player.html -->
+    <div id="player-placeholder"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+--NOTES worked on snorlax2988 account, Make gradient be horizontal move sub menu to the bottom, put the main menu where the sub menu is and the robot animation back into the website, OR move about to sub menu,
+--SIDEQUESTS Add DJ Page, Add Shows page

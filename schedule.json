@@ -1,0 +1,681 @@
+{
+  "Sunday": [
+    {
+      "time": "12-2am",
+      "title": "Melting World",
+      "is_alt": true
+    },
+    {
+      "time": "12-2am",
+      "title": "Ménage à trois",
+      "is_alt": false
+    },
+    {
+      "time": "2-5am",
+      "title": "Melting World",
+      "is_alt": false
+    },
+    {
+      "time": "5-6am",
+      "title": "WUSB Alternatives",
+      "is_alt": false
+    },
+    {
+      "time": "6-8am",
+      "title": "Music Library Gems",
+      "is_alt": false
+    },
+    {
+      "time": "8-9am",
+      "title": "volume @ full",
+      "is_alt": false
+    },
+    {
+      "time": "9am-12pm",
+      "title": "Sunday Street",
+      "is_alt": false
+    },
+    {
+      "time": "12-1pm",
+      "title": "Down Home Country",
+      "is_alt": false
+    },
+    {
+      "time": "1-3pm",
+      "title": "Sunday Classical",
+      "is_alt": true
+    },
+    {
+      "time": "1-3pm",
+      "title": "Bob Longman Show",
+      "is_alt": false
+    },
+    {
+      "time": "3-6pm",
+      "title": "Jazz On The Air",
+      "is_alt": false
+    },
+    {
+      "time": "6-7pm",
+      "title": "China Blue",
+      "is_alt": false
+    },
+    {
+      "time": "7-8pm",
+      "title": "Counter Lock",
+      "is_alt": false
+    },
+    {
+      "time": "8-10pm",
+      "title": "Shades of Blues",
+      "is_alt": false
+    },
+    {
+      "time": "10pm-12am",
+      "title": "The Sports Section",
+      "is_alt": false
+    }
+  ],
+  "Monday": [
+    {
+      "time": "12-3am",
+      "title": "Purple Starlight",
+      "is_alt": true
+    },
+    {
+      "time": "12-3am",
+      "title": "Ridding The Mind Of Waste",
+      "is_alt": false
+    },
+    {
+      "time": "3-4am",
+      "title": "Moods 4 Moderns",
+      "is_alt": true
+    },
+    {
+      "time": "3-4am",
+      "title": "Omega",
+      "is_alt": false
+    },
+    {
+      "time": "4-5am",
+      "title": "WUSB Alternatives",
+      "is_alt": false
+    },
+    {
+      "time": "5-6am",
+      "title": "Global Alert News",
+      "is_alt": false
+    },
+    {
+      "time": "6-7am",
+      "title": "Ralph Nader Radio Hour",
+      "is_alt": false
+    },
+    {
+      "time": "7-9am",
+      "title": "An Eclectic Mess",
+      "is_alt": true
+    },
+    {
+      "time": "7-9am",
+      "title": "Fishing With Bill",
+      "is_alt": false
+    },
+    {
+      "time": "9-10am",
+      "title": "More Cowbell",
+      "is_alt": true
+    },
+    {
+      "time": "9-10am",
+      "title": "Clam Radio",
+      "is_alt": false
+    },
+    {
+      "time": "11am-12pm",
+      "title": "Health Matters",
+      "is_alt": false
+    },
+    {
+      "time": "12-2pm",
+      "title": "DJ Joi: 60s, 70s, And",
+      "is_alt": false
+    },
+    {
+      "time": "2-4pm",
+      "title": "Equilibrium",
+      "is_alt": true
+    },
+    {
+      "time": "2-4pm",
+      "title": "Music Library Gems",
+      "is_alt": false
+    },
+    {
+      "time": "4-5pm",
+      "title": "Notes from Underground",
+      "is_alt": false
+    },
+    {
+      "time": "5-6pm",
+      "title": "Democracy Now!",
+      "is_alt": false
+    },
+    {
+      "time": "6-8pm",
+      "title": "Unbound: The Arts and Culture of Palestine",
+      "is_alt": true
+    },
+    {
+      "time": "6-8pm",
+      "title": "Movie News and Music",
+      "is_alt": false
+    },
+    {
+      "time": "8-10pm",
+      "title": "Salvage &amp; Recovery Radio",
+      "is_alt": false
+    },
+    {
+      "time": "10-11pm",
+      "title": "In Transit",
+      "is_alt": false
+    },
+    {
+      "time": "11pm-12am",
+      "title": "Late Dawns &amp; Early Sunsets",
+      "is_alt": false
+    }
+  ],
+  "Tuesday": [
+    {
+      "time": "12-3am",
+      "title": "Street FM",
+      "is_alt": false
+    },
+    {
+      "time": "3-6am",
+      "title": "The Destinies Archives Mini-Marathon",
+      "is_alt": false
+    },
+    {
+      "time": "6-7am",
+      "title": "Country Pocket Rewinds and B-Sides",
+      "is_alt": false
+    },
+    {
+      "time": "7-8am",
+      "title": "Uncritical Thinking",
+      "is_alt": false
+    },
+    {
+      "time": "8-10am",
+      "title": "The Spin Zone",
+      "is_alt": true
+    },
+    {
+      "time": "8-10am",
+      "title": "Megapolitan",
+      "is_alt": false
+    },
+    {
+      "time": "10am-12pm",
+      "title": "Cafe`Ali",
+      "is_alt": false
+    },
+    {
+      "time": "12-1pm",
+      "title": "Lost Transmissions",
+      "is_alt": true
+    },
+    {
+      "time": "12-1pm",
+      "title": "The Cole Show",
+      "is_alt": false
+    },
+    {
+      "time": "1-3pm",
+      "title": "Recess",
+      "is_alt": false
+    },
+    {
+      "time": "3-4pm",
+      "title": "C4E Presents",
+      "is_alt": false
+    },
+    {
+      "time": "4-5pm",
+      "title": "HEALTH Yeah!",
+      "is_alt": false
+    },
+    {
+      "time": "5-6pm",
+      "title": "Democracy Now!",
+      "is_alt": false
+    },
+    {
+      "time": "6-7pm",
+      "title": "Off The Wall",
+      "is_alt": false
+    },
+    {
+      "time": "7-8pm",
+      "title": "Searching for Somewhere",
+      "is_alt": false
+    },
+    {
+      "time": "8-10pm",
+      "title": "In the Mix with DJ Robbo",
+      "is_alt": true
+    },
+    {
+      "time": "8-10pm",
+      "title": "Bustin' Out  Blue",
+      "is_alt": false
+    },
+    {
+      "time": "10-11pm",
+      "title": "The Nervous System",
+      "is_alt": true
+    },
+    {
+      "time": "10-11pm",
+      "title": "Nothin' On (But The Radio)",
+      "is_alt": false
+    },
+    {
+      "time": "11pm-12am",
+      "title": "Girl from Mars",
+      "is_alt": false
+    }
+  ],
+  "Wednesday": [
+    {
+      "time": "12-1am",
+      "title": "Stereo Sanctity",
+      "is_alt": true
+    },
+    {
+      "time": "12-1am",
+      "title": "Stereo Types",
+      "is_alt": false
+    },
+    {
+      "time": "1-2am",
+      "title": "Close The Door",
+      "is_alt": false
+    },
+    {
+      "time": "2-3am",
+      "title": "Wayback Wednesday",
+      "is_alt": false
+    },
+    {
+      "time": "3-6am",
+      "title": "Flesh Uncovered",
+      "is_alt": false
+    },
+    {
+      "time": "6-8am",
+      "title": "Hot Wax",
+      "is_alt": false
+    },
+    {
+      "time": "8-10am",
+      "title": "Country Pocket",
+      "is_alt": true
+    },
+    {
+      "time": "8-10am",
+      "title": "Blues At Dawn",
+      "is_alt": false
+    },
+    {
+      "time": "10am-12pm",
+      "title": "Wizzy's Brew",
+      "is_alt": false
+    },
+    {
+      "time": "12-1pm",
+      "title": "The Golden Ratio",
+      "is_alt": false
+    },
+    {
+      "time": "1-2pm",
+      "title": "Creature Central",
+      "is_alt": false
+    },
+    {
+      "time": "2-5pm",
+      "title": "Suburban Hymns",
+      "is_alt": true
+    },
+    {
+      "time": "2-5pm",
+      "title": "The Juke Joint",
+      "is_alt": false
+    },
+    {
+      "time": "5-6pm",
+      "title": "Democracy Now!",
+      "is_alt": false
+    },
+    {
+      "time": "6-8pm",
+      "title": "Blue Grass Time",
+      "is_alt": false
+    },
+    {
+      "time": "8-9pm",
+      "title": "Waxx Traxx to the Maxx",
+      "is_alt": true
+    },
+    {
+      "time": "8-9pm",
+      "title": "Davie Jones Locker",
+      "is_alt": false
+    },
+    {
+      "time": "9-10pm",
+      "title": "Turmoil",
+      "is_alt": true
+    },
+    {
+      "time": "9-10pm",
+      "title": "Waxx Traxx to the Maxx",
+      "is_alt": false
+    },
+    {
+      "time": "10pm-12am",
+      "title": "Spiney Norman",
+      "is_alt": true
+    },
+    {
+      "time": "10pm-12am",
+      "title": "The End of Radio",
+      "is_alt": false
+    }
+  ],
+  "Thursday": [
+    {
+      "time": "12-3am",
+      "title": "With The Beatles",
+      "is_alt": false
+    },
+    {
+      "time": "3-5am",
+      "title": "How's That?",
+      "is_alt": false
+    },
+    {
+      "time": "5-6am",
+      "title": "A Face In The Crowd",
+      "is_alt": false
+    },
+    {
+      "time": "6-8am",
+      "title": "Workhorse Radio",
+      "is_alt": false
+    },
+    {
+      "time": "8-10am",
+      "title": "Steve K's Radio Kaos",
+      "is_alt": true
+    },
+    {
+      "time": "8-10am",
+      "title": "The Flip Side",
+      "is_alt": false
+    },
+    {
+      "time": "10am-12pm",
+      "title": "Musicality",
+      "is_alt": false
+    },
+    {
+      "time": "12-2pm",
+      "title": "Lunch On Thursdays",
+      "is_alt": false
+    },
+    {
+      "time": "2-4pm",
+      "title": "If This Be Treason",
+      "is_alt": false
+    },
+    {
+      "time": "4-5pm",
+      "title": "Captain Phil's Planet",
+      "is_alt": false
+    },
+    {
+      "time": "5-6pm",
+      "title": "Democracy Now!",
+      "is_alt": false
+    },
+    {
+      "time": "6-8pm",
+      "title": "The Sounds of Film with Tom Needham",
+      "is_alt": false
+    },
+    {
+      "time": "8-10pm",
+      "title": "The Bayou",
+      "is_alt": true
+    },
+    {
+      "time": "8-10pm",
+      "title": "Global Rhythms",
+      "is_alt": false
+    },
+    {
+      "time": "10pm-12am",
+      "title": "No Sound Test",
+      "is_alt": false
+    }
+  ],
+  "Friday": [
+    {
+      "time": "12-6am",
+      "title": "Trim Mix Party",
+      "is_alt": false
+    },
+    {
+      "time": "6-8am",
+      "title": "The Last DJ",
+      "is_alt": false
+    },
+    {
+      "time": "8-10am",
+      "title": "Blues Warehouse",
+      "is_alt": false
+    },
+    {
+      "time": "10am-12pm",
+      "title": "Fermented Radio",
+      "is_alt": false
+    },
+    {
+      "time": "12-1pm",
+      "title": "Whenever, Wherever",
+      "is_alt": false
+    },
+    {
+      "time": "1-2pm",
+      "title": "Tech &amp; Friends: GSO Radio Hour",
+      "is_alt": true
+    },
+    {
+      "time": "1-2pm",
+      "title": "Campus Connect",
+      "is_alt": false
+    },
+    {
+      "time": "2-3pm",
+      "title": "The Robin's Nest",
+      "is_alt": false
+    },
+    {
+      "time": "3-5pm",
+      "title": "A Visual Sound",
+      "is_alt": true
+    },
+    {
+      "time": "3-5pm",
+      "title": "Unclassic Rock",
+      "is_alt": false
+    },
+    {
+      "time": "5-6pm",
+      "title": "Democracy Now!",
+      "is_alt": false
+    },
+    {
+      "time": "6-7pm",
+      "title": "The Healthy Planet / Natural Alternatives",
+      "is_alt": false
+    },
+    {
+      "time": "7-9pm",
+      "title": "Rockin' Iration",
+      "is_alt": false
+    },
+    {
+      "time": "9-10pm",
+      "title": "Cowboy's Blues",
+      "is_alt": false
+    },
+    {
+      "time": "10-11:30pm",
+      "title": "Friday Nite Free-Form",
+      "is_alt": false
+    },
+    {
+      "time": "11:30pm-12am",
+      "title": "Destinies-The Voice of Science Fiction",
+      "is_alt": false
+    }
+  ],
+  "Saturday": [
+    {
+      "time": "12-2am",
+      "title": "Threat Level Midnight",
+      "is_alt": true
+    },
+    {
+      "time": "12-2am",
+      "title": "Mental Out",
+      "is_alt": false
+    },
+    {
+      "time": "2-3am",
+      "title": "Threat Level Midnight",
+      "is_alt": true
+    },
+    {
+      "time": "2-3am",
+      "title": "No Apologies",
+      "is_alt": false
+    },
+    {
+      "time": "3-5am",
+      "title": "The Groove",
+      "is_alt": true
+    },
+    {
+      "time": "3-5am",
+      "title": "No Apologies",
+      "is_alt": false
+    },
+    {
+      "time": "5-6am",
+      "title": "No Apologies",
+      "is_alt": true
+    },
+    {
+      "time": "5-6am",
+      "title": "Pacifica Network",
+      "is_alt": false
+    },
+    {
+      "time": "6-9am",
+      "title": "a million open tabs",
+      "is_alt": true
+    },
+    {
+      "time": "6-9am",
+      "title": "Sunrise Angels",
+      "is_alt": false
+    },
+    {
+      "time": "9-11am",
+      "title": "Flywheel",
+      "is_alt": true
+    },
+    {
+      "time": "9-11am",
+      "title": "Bob Duffy",
+      "is_alt": false
+    },
+    {
+      "time": "11am-12pm",
+      "title": "Bob Duffy",
+      "is_alt": true
+    },
+    {
+      "time": "11am-12pm",
+      "title": "Health Matters",
+      "is_alt": false
+    },
+    {
+      "time": "12-1pm",
+      "title": "Rock Round Up",
+      "is_alt": false
+    },
+    {
+      "time": "1-3pm",
+      "title": "Saturday's a Party",
+      "is_alt": true
+    },
+    {
+      "time": "1-3pm",
+      "title": "S. T. E. M. Radio",
+      "is_alt": false
+    },
+    {
+      "time": "3-5pm",
+      "title": "Gabe's Flight",
+      "is_alt": false
+    },
+    {
+      "time": "5-6pm",
+      "title": "MTSG",
+      "is_alt": false
+    },
+    {
+      "time": "6-8pm",
+      "title": "Anything Goes",
+      "is_alt": true
+    },
+    {
+      "time": "6-8pm",
+      "title": "Meanwhile, In Europe",
+      "is_alt": false
+    },
+    {
+      "time": "8-10pm",
+      "title": "Over the Horizon Radio",
+      "is_alt": true
+    },
+    {
+      "time": "8-10pm",
+      "title": "Everything Must Go",
+      "is_alt": false
+    },
+    {
+      "time": "10pm-12am",
+      "title": "Reggaematic Vibes",
+      "is_alt": false
+    }
+  ]
+}

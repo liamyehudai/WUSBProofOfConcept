@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WUSB 90.1 FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
+
+    <!-- COMPONENT: header.html -->
+    <div id="header-placeholder"></div>
+    
+
+    <!-- MAIN CONTENT AREA -->
+    <!-- DRUPAL MAPPING: Main Content Region / Node Display -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full pb-32">
+        
+        <div class="border-b-2 border-zinc-800 pb-4 mb-8">
+            <h1 class="font-swiss font-bold text-5xl wusb-gradient inline-block uppercase tracking-tighter">Contact Us</h1>
+        </div>
+        
+        <!-- DRUPAL MAPPING: Node Body Field (Text formatted) -->
+        <div class="prose prose-invert max-w-none font-swiss text-zinc-700 dark:text-zinc-400 leading-relaxed space-y-8 text-lg">
+            
+            <p>For questions & comments on programming or any other inquiries, please reach out.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Studio Contact -->
+                <div class="bg-zinc-900/40 p-6 border border-zinc-800 flex flex-col gap-4">
+                    <h2 class="text-2xl text-white font-bold uppercase tracking-tighter wusb-gradient inline-block">The Studio</h2>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-6 h-6 text-[#8bfa00]"></i>
+                        <span class="font-bold text-xl tracking-tight text-white">631-632-6901</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="mail" class="w-6 h-6 text-[#8bfa00]"></i>
+                        <a href="mailto:pd.wusbradio@gmail.com" class="font-bold tracking-tight text-[#8febfe] hover:text-white transition-colors">pd.wusbradio@gmail.com</a>
+                    </div>
+                    <p class="text-sm text-zinc-500 mt-2">Program Director</p>
+                </div>
+
+                <!-- Music Submissions -->
+                <div class="bg-zinc-900/40 p-6 border border-zinc-800 flex flex-col gap-4">
+                    <h2 class="text-2xl text-white font-bold uppercase tracking-tighter wusb-gradient inline-block">Music Submissions</h2>
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="music" class="w-6 h-6 text-[#df0781]"></i>
+                        <a href="mailto:md.wusbradio@gmail.com" class="font-bold tracking-tight text-[#8febfe] hover:text-white transition-colors">md.wusbradio@gmail.com</a>
+                    </div>
+                    <div class="flex items-start gap-3 mt-4">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-[#df0781] mt-1"></i>
+                        <address class="not-italic text-sm text-zinc-400">
+                            <strong>WUSB Radio</strong><br>
+                            Attn: Music Director<br>
+                            2nd Floor West Side Dining<br>
+                            Stony Brook University<br>
+                            Stony Brook, NY 11794-3200
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-8 border-t border-zinc-800">
+                <h2 class="text-2xl text-white font-bold mb-6 uppercase tracking-tighter font-swiss">Connect With Us</h2>
+                <div class="flex gap-6">
+                    <a href="#" class="flex items-center justify-center w-14 h-14 bg-zinc-900 rounded-full text-white hover:text-[#8febfe] hover:bg-zinc-800 transition-colors transform hover:scale-105 border border-zinc-800">
+                        <i data-lucide="twitter" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-center w-14 h-14 bg-zinc-900 rounded-full text-white hover:text-[#52a1fc] hover:bg-zinc-800 transition-colors transform hover:scale-105 border border-zinc-800">
+                        <i data-lucide="facebook" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- COMPONENT: player.html -->
+    <div id="player-placeholder"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+--NOTES worked on snorlax2988 account, Make gradient be horizontal move sub menu to the bottom, put the main menu where the sub menu is and the robot animation back into the website, OR move about to sub menu,
+--SIDEQUESTS Add DJ Page, Add Shows page

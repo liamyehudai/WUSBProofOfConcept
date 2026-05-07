@@ -1,0 +1,56 @@
+/**
+ * DRUPAL MAPPING: global-styling library
+ * This file should be included in the wusb.libraries.yml file under `global-styling`.
+ * It provides base typography and utility classes not covered by Tailwind config.
+ */
+
+@import url('https://db.onlinewebfonts.com/c/4c1483a82adc14316a0c9a71ae7b94a7?family=Chuck+W01+Regular');
+
+/* DRUPAL MAPPING: Typography defaults (Base theme layer) */
+.font-chuck {
+  font-family: 'Chuck W01 Regular', Impact, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-swiss {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* DRUPAL MAPPING: Component-specific utility classes (Theme layer) */
+.wusb-gradient {
+  background: linear-gradient(90deg, #f6e200 0%, #e19301 50%, #d14401 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.pledge-gradient {
+  background: linear-gradient(90deg, #8bfa00 0%, #badd00 100%);
+}
+
+.pledge-gradient:hover {
+  background: linear-gradient(90deg, #badd00 0%, #8bfa00 100%);
+}
+
+/* DRUPAL MAPPING: Theme specific variable overrides */
+.light-theme {
+  --color-black: #f4f4f5;
+  --color-white: #09090b;
+  --color-zinc-400: #52525b;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #a1a1aa;
+  --color-zinc-700: #d4d4d8;
+  --color-zinc-800: #e4e4e7;
+  --color-zinc-900: #ffffff;
+  --color-zinc-950: #fafafa;
+}
+
+/* Hide scrollbar for the sub-menu */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
