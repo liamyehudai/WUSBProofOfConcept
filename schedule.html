@@ -84,8 +84,85 @@
 </head>
 <body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
 
-    <!-- COMPONENT: header.html -->
-    <div id="header-placeholder"></div>
+    <!-- COMPONENT: HEADER -->
+<!-- HEADER SECTION -->
+    <header class="border-b-4 border-zinc-900 sticky top-0 z-50 bg-black/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-end gap-3 cursor-pointer group">
+                    <h1 class="font-chuck text-6xl md:text-8xl leading-none wusb-gradient transform hover:scale-105 transition-transform duration-200">
+                        WUSB
+                    </h1>
+                    <span class="font-swiss font-bold text-3xl md:text-5xl tracking-tighter mb-1 md:mb-2 text-white">
+                        90.1 FM
+                    </span>
+                </a>
+
+                <!-- Desktop Main Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
+                    <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
+                    
+                    <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+
+                    <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-3xl px-8 py-3 rounded text-[#000] pledge-gradient transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] transition-all duration-200 inline-block text-center">
+                        PLEDGE
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="mobile-theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="mobile-icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="mobile-icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i id="icon-menu" data-lucide="menu" class="w-9 h-9"></i>
+                        <i id="icon-x" data-lucide="x" class="w-9 h-9 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Sub Menu -->
+        <div class="hidden lg:block bg-zinc-900/50 border-t border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto py-3 gap-6 no-scrollbar">
+                <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
+                <a href="underwriting.html#wusb-public-file" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
+                </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-zinc-900 border-b-4 border-zinc-800 flex flex-col">
+            <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
+                <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
+                <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
+                <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
+                    PLEDGE
+                </a>
+            </div>
+            <div class="flex flex-col p-4 gap-3 bg-zinc-950">
+                <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
+                <a href="underwriting.html#wusb-public-file" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
+                </div>
+        </div>
+    </header>
+<!-- END COMPONENT: HEADER -->
     
 
     <!-- MAIN CONTENT AREA -->
@@ -131,12 +208,12 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">12 AM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">12-2am</span>
                                     <span class="show-title">Melting World</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">12-2am</span>
                                     <span class="show-title">Ménage à trois</span>
                                     
@@ -145,12 +222,12 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">12-3am</span>
                                     <span class="show-title">Purple Starlight</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">12-3am</span>
                                     <span class="show-title">Ridding The Mind Of Waste</span>
                                     
@@ -159,7 +236,7 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">12-3am</span>
                                     <span class="show-title">Street FM</span>
                                     
@@ -168,12 +245,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1am</span>
                                     <span class="show-title">Stereo Sanctity</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1am</span>
                                     <span class="show-title">Stereo Types</span>
                                     
@@ -182,7 +259,7 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">12-3am</span>
                                     <span class="show-title">With The Beatles</span>
                                     
@@ -191,7 +268,7 @@
                         </td>
                         <td rowspan="12" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">12-6am</span>
                                     <span class="show-title">Trim Mix Party</span>
                                     
@@ -200,12 +277,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">12-2am</span>
                                     <span class="show-title">Threat Level Midnight</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">12-2am</span>
                                     <span class="show-title">Mental Out</span>
                                     
@@ -220,7 +297,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">1 AM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">1-2am</span>
                                     <span class="show-title">Close The Door</span>
                                     
@@ -235,7 +312,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">2 AM</td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">2-5am</span>
                                     <span class="show-title">Melting World</span>
                                     
@@ -244,7 +321,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">2-3am</span>
                                     <span class="show-title">Wayback Wednesday</span>
                                     
@@ -253,12 +330,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">2-3am</span>
                                     <span class="show-title">Threat Level Midnight</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">2-3am</span>
                                     <span class="show-title">No Apologies</span>
                                     
@@ -273,12 +350,12 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">3 AM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">3-4am</span>
                                     <span class="show-title">Moods 4 Moderns</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">3-4am</span>
                                     <span class="show-title">Omega</span>
                                     
@@ -287,7 +364,7 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">3-6am</span>
                                     <span class="show-title">The Destinies Archives Mini-Marathon</span>
                                     
@@ -296,7 +373,7 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">3-6am</span>
                                     <span class="show-title">Flesh Uncovered</span>
                                     
@@ -305,7 +382,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">3-5am</span>
                                     <span class="show-title">How's That?</span>
                                     
@@ -314,12 +391,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">3-5am</span>
                                     <span class="show-title">The Groove</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">3-5am</span>
                                     <span class="show-title">No Apologies</span>
                                     
@@ -334,7 +411,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">4 AM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">4-5am</span>
                                     <span class="show-title">WUSB Alternatives</span>
                                     
@@ -349,7 +426,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">5 AM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6am</span>
                                     <span class="show-title">WUSB Alternatives</span>
                                     
@@ -358,7 +435,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6am</span>
                                     <span class="show-title">Global Alert News</span>
                                     
@@ -367,7 +444,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6am</span>
                                     <span class="show-title">A Face In The Crowd</span>
                                     
@@ -376,12 +453,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6am</span>
                                     <span class="show-title">No Apologies</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6am</span>
                                     <span class="show-title">Pacifica Network</span>
                                     
@@ -396,7 +473,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">6 AM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8am</span>
                                     <span class="show-title">Music Library Gems</span>
                                     
@@ -405,7 +482,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">6-7am</span>
                                     <span class="show-title">Ralph Nader Radio Hour</span>
                                     
@@ -414,7 +491,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">6-7am</span>
                                     <span class="show-title">Country Pocket Rewinds and B-Sides</span>
                                     
@@ -423,7 +500,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8am</span>
                                     <span class="show-title">Hot Wax</span>
                                     
@@ -432,7 +509,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8am</span>
                                     <span class="show-title">Workhorse Radio</span>
                                     
@@ -441,7 +518,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8am</span>
                                     <span class="show-title">The Last DJ</span>
                                     
@@ -450,12 +527,12 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">6-9am</span>
                                     <span class="show-title">a million open tabs</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">6-9am</span>
                                     <span class="show-title">Sunrise Angels</span>
                                     
@@ -470,12 +547,12 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">7 AM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">7-9am</span>
                                     <span class="show-title">An Eclectic Mess</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">7-9am</span>
                                     <span class="show-title">Fishing With Bill</span>
                                     
@@ -484,7 +561,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">7-8am</span>
                                     <span class="show-title">Uncritical Thinking</span>
                                     
@@ -499,7 +576,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">8 AM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">8-9am</span>
                                     <span class="show-title">volume @ full</span>
                                     
@@ -508,12 +585,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">The Spin Zone</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">Megapolitan</span>
                                     
@@ -522,12 +599,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">Country Pocket</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">Blues At Dawn</span>
                                     
@@ -536,12 +613,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">Steve K's Radio Kaos</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">The Flip Side</span>
                                     
@@ -550,7 +627,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10am</span>
                                     <span class="show-title">Blues Warehouse</span>
                                     
@@ -565,7 +642,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">9 AM</td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">9am-12pm</span>
                                     <span class="show-title">Sunday Street</span>
                                     
@@ -574,12 +651,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">9-10am</span>
                                     <span class="show-title">More Cowbell</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">9-10am</span>
                                     <span class="show-title">Clam Radio</span>
                                     
@@ -588,12 +665,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">9-11am</span>
                                     <span class="show-title">Flywheel</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">9-11am</span>
                                     <span class="show-title">Bob Duffy</span>
                                     
@@ -609,7 +686,7 @@
                         <td rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800 "></td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">10am-12pm</span>
                                     <span class="show-title">Cafe`Ali</span>
                                     
@@ -618,7 +695,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">10am-12pm</span>
                                     <span class="show-title">Wizzy's Brew</span>
                                     
@@ -627,7 +704,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">10am-12pm</span>
                                     <span class="show-title">Musicality</span>
                                     
@@ -636,7 +713,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">10am-12pm</span>
                                     <span class="show-title">Fermented Radio</span>
                                     
@@ -652,7 +729,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">11 AM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">11am-12pm</span>
                                     <span class="show-title">Health Matters</span>
                                     
@@ -661,12 +738,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">11am-12pm</span>
                                     <span class="show-title">Bob Duffy</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">11am-12pm</span>
                                     <span class="show-title">Health Matters</span>
                                     
@@ -681,7 +758,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">12 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1pm</span>
                                     <span class="show-title">Down Home Country</span>
                                     
@@ -690,7 +767,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">12-2pm</span>
                                     <span class="show-title">DJ Joi: 60s, 70s, And</span>
                                     
@@ -699,12 +776,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1pm</span>
                                     <span class="show-title">Lost Transmissions</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1pm</span>
                                     <span class="show-title">The Cole Show</span>
                                     
@@ -713,7 +790,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1pm</span>
                                     <span class="show-title">The Golden Ratio</span>
                                     
@@ -722,7 +799,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">12-2pm</span>
                                     <span class="show-title">Lunch On Thursdays</span>
                                     
@@ -731,7 +808,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1pm</span>
                                     <span class="show-title">Whenever, Wherever</span>
                                     
@@ -740,7 +817,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">12-1pm</span>
                                     <span class="show-title">Rock Round Up</span>
                                     
@@ -755,12 +832,12 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">1 PM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">1-3pm</span>
                                     <span class="show-title">Sunday Classical</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">1-3pm</span>
                                     <span class="show-title">Bob Longman Show</span>
                                     
@@ -769,7 +846,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">1-3pm</span>
                                     <span class="show-title">Recess</span>
                                     
@@ -778,7 +855,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">1-2pm</span>
                                     <span class="show-title">Creature Central</span>
                                     
@@ -787,12 +864,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">1-2pm</span>
                                     <span class="show-title">Tech &amp; Friends: GSO Radio Hour</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">1-2pm</span>
                                     <span class="show-title">Campus Connect</span>
                                     
@@ -801,12 +878,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">1-3pm</span>
                                     <span class="show-title">Saturday's a Party</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">1-3pm</span>
                                     <span class="show-title">S. T. E. M. Radio</span>
                                     
@@ -821,12 +898,12 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">2 PM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">2-4pm</span>
                                     <span class="show-title">Equilibrium</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">2-4pm</span>
                                     <span class="show-title">Music Library Gems</span>
                                     
@@ -835,12 +912,12 @@
                         </td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">2-5pm</span>
                                     <span class="show-title">Suburban Hymns</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">2-5pm</span>
                                     <span class="show-title">The Juke Joint</span>
                                     
@@ -849,7 +926,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">2-4pm</span>
                                     <span class="show-title">If This Be Treason</span>
                                     
@@ -858,7 +935,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">2-3pm</span>
                                     <span class="show-title">The Robin's Nest</span>
                                     
@@ -873,7 +950,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">3 PM</td>
                         <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">3-6pm</span>
                                     <span class="show-title">Jazz On The Air</span>
                                     
@@ -882,7 +959,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">3-4pm</span>
                                     <span class="show-title">C4E Presents</span>
                                     
@@ -891,12 +968,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">3-5pm</span>
                                     <span class="show-title">A Visual Sound</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">3-5pm</span>
                                     <span class="show-title">Unclassic Rock</span>
                                     
@@ -905,7 +982,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">3-5pm</span>
                                     <span class="show-title">Gabe's Flight</span>
                                     
@@ -920,7 +997,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">4 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">4-5pm</span>
                                     <span class="show-title">Notes from Underground</span>
                                     
@@ -929,7 +1006,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">4-5pm</span>
                                     <span class="show-title">HEALTH Yeah!</span>
                                     
@@ -938,7 +1015,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">4-5pm</span>
                                     <span class="show-title">Captain Phil's Planet</span>
                                     
@@ -953,7 +1030,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">5 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6pm</span>
                                     <span class="show-title">Democracy Now!</span>
                                     
@@ -962,7 +1039,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6pm</span>
                                     <span class="show-title">Democracy Now!</span>
                                     
@@ -971,7 +1048,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6pm</span>
                                     <span class="show-title">Democracy Now!</span>
                                     
@@ -980,7 +1057,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6pm</span>
                                     <span class="show-title">Democracy Now!</span>
                                     
@@ -989,7 +1066,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6pm</span>
                                     <span class="show-title">Democracy Now!</span>
                                     
@@ -998,7 +1075,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">5-6pm</span>
                                     <span class="show-title">MTSG</span>
                                     
@@ -1013,7 +1090,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">6 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">6-7pm</span>
                                     <span class="show-title">China Blue</span>
                                     
@@ -1022,12 +1099,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8pm</span>
                                     <span class="show-title">Unbound: The Arts and Culture of Palestine</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8pm</span>
                                     <span class="show-title">Movie News and Music</span>
                                     
@@ -1036,7 +1113,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">6-7pm</span>
                                     <span class="show-title">Off The Wall</span>
                                     
@@ -1045,7 +1122,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8pm</span>
                                     <span class="show-title">Blue Grass Time</span>
                                     
@@ -1054,7 +1131,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8pm</span>
                                     <span class="show-title">The Sounds of Film with Tom Needham</span>
                                     
@@ -1063,7 +1140,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df2331;">
+                                <div class="show-item" style="--card-color: #df2331; border-left-color: var(--card-color);">
                                     <span class="show-time">6-7pm</span>
                                     <span class="show-title">The Healthy Planet / Natural Alternatives</span>
                                     
@@ -1072,12 +1149,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8pm</span>
                                     <span class="show-title">Anything Goes</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">6-8pm</span>
                                     <span class="show-title">Meanwhile, In Europe</span>
                                     
@@ -1092,7 +1169,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">7 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">7-8pm</span>
                                     <span class="show-title">Counter Lock</span>
                                     
@@ -1101,7 +1178,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">7-8pm</span>
                                     <span class="show-title">Searching for Somewhere</span>
                                     
@@ -1110,7 +1187,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">7-9pm</span>
                                     <span class="show-title">Rockin' Iration</span>
                                     
@@ -1125,7 +1202,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">8 PM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">Shades of Blues</span>
                                     
@@ -1134,7 +1211,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">Salvage &amp; Recovery Radio</span>
                                     
@@ -1143,12 +1220,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">In the Mix with DJ Robbo</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">Bustin' Out  Blue</span>
                                     
@@ -1157,12 +1234,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #eebc00;">
+                                <div class="show-item" style="--card-color: #eebc00; border-left-color: var(--card-color);">
                                     <span class="show-time">8-9pm</span>
                                     <span class="show-title">Waxx Traxx to the Maxx</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">8-9pm</span>
                                     <span class="show-title">Davie Jones Locker</span>
                                     
@@ -1171,12 +1248,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">The Bayou</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">Global Rhythms</span>
                                     
@@ -1185,12 +1262,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">Over the Horizon Radio</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">8-10pm</span>
                                     <span class="show-title">Everything Must Go</span>
                                     
@@ -1205,12 +1282,12 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">9 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">9-10pm</span>
                                     <span class="show-title">Turmoil</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">9-10pm</span>
                                     <span class="show-title">Waxx Traxx to the Maxx</span>
                                     
@@ -1219,7 +1296,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8febfe;">
+                                <div class="show-item" style="--card-color: #8febfe; border-left-color: var(--card-color);">
                                     <span class="show-time">9-10pm</span>
                                     <span class="show-title">Cowboy's Blues</span>
                                     
@@ -1234,7 +1311,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">10 PM</td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">10pm-12am</span>
                                     <span class="show-title">The Sports Section</span>
                                     
@@ -1243,7 +1320,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #52a1fc;">
+                                <div class="show-item" style="--card-color: #52a1fc; border-left-color: var(--card-color);">
                                     <span class="show-time">10-11pm</span>
                                     <span class="show-title">In Transit</span>
                                     
@@ -1252,12 +1329,12 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">10-11pm</span>
                                     <span class="show-title">The Nervous System</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">10-11pm</span>
                                     <span class="show-title">Nothin' On (But The Radio)</span>
                                     
@@ -1266,12 +1343,12 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #a91b00;">
+                                <div class="show-item" style="--card-color: #a91b00; border-left-color: var(--card-color);">
                                     <span class="show-time">10pm-12am</span>
                                     <span class="show-title">Spiney Norman</span>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">10pm-12am</span>
                                     <span class="show-title">The End of Radio</span>
                                     
@@ -1280,7 +1357,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #9800e0;">
+                                <div class="show-item" style="--card-color: #9800e0; border-left-color: var(--card-color);">
                                     <span class="show-time">10pm-12am</span>
                                     <span class="show-title">No Sound Test</span>
                                     
@@ -1289,7 +1366,7 @@
                         </td>
                         <td rowspan="3" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #af04ab;">
+                                <div class="show-item" style="--card-color: #af04ab; border-left-color: var(--card-color);">
                                     <span class="show-time">10-11:30pm</span>
                                     <span class="show-title">Friday Nite Free-Form</span>
                                     
@@ -1298,7 +1375,7 @@
                         </td>
                         <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #df0781;">
+                                <div class="show-item" style="--card-color: #df0781; border-left-color: var(--card-color);">
                                     <span class="show-time">10pm-12am</span>
                                     <span class="show-title">Reggaematic Vibes</span>
                                     
@@ -1313,7 +1390,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">11 PM</td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #f8e700;">
+                                <div class="show-item" style="--card-color: #f8e700; border-left-color: var(--card-color);">
                                     <span class="show-time">11pm-12am</span>
                                     <span class="show-title">Late Dawns &amp; Early Sunsets</span>
                                     
@@ -1322,7 +1399,7 @@
                         </td>
                         <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #8bfa00;">
+                                <div class="show-item" style="--card-color: #8bfa00; border-left-color: var(--card-color);">
                                     <span class="show-time">11pm-12am</span>
                                     <span class="show-title">Girl from Mars</span>
                                     
@@ -1334,7 +1411,7 @@
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: 1px solid var(--color-zinc-800);"></td>
                         <td rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
-                                <div class="show-item" style="border-left-color: #3b00fc;">
+                                <div class="show-item" style="--card-color: #3b00fc; border-left-color: var(--card-color);">
                                     <span class="show-time">11:30pm-12am</span>
                                     <span class="show-title">Destinies-The Voice of Science Fiction</span>
                                     
@@ -1348,8 +1425,59 @@
         </div>
     </main>
 
-    <!-- COMPONENT: player.html -->
-    <div id="player-placeholder"></div>
+    <!-- COMPONENT: PLAYER -->
+<!-- STICKY BOTTOM RADIO PLAYER -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+        <div class="bg-zinc-950 border-t border-zinc-800 py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="play-pause-btn" class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:scale-105 transition-transform focus:outline-none">
+                    <i id="icon-play" data-lucide="play" class="w-6 h-6 ml-1 block fill-current"></i>
+                    <i id="icon-pause" data-lucide="pause" class="w-6 h-6 hidden fill-current"></i>
+                </button>
+                <div class="hidden sm:block">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span id="live-ping" class="hidden animate-ping absolute inline-flex h-full w-full rounded-full bg-[#df2331] opacity-75"></span>
+                            <span id="live-dot" class="relative inline-flex rounded-full h-3 w-3 bg-zinc-600"></span>
+                        </span>
+                        <span class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">On Air Now</span>
+                    </div>
+                    <div class="font-swiss font-bold text-lg tracking-tight">The Underground Sound w/ DJ Void</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 mr-4">
+                    <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400"></i>
+                    <div class="w-24 h-2 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-white"></div>
+                    </div>
+                </div>
+                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                    Listen Live
+                </button>
+            </div>
+        </div>
+
+        <!-- NEON COLOR STRIP -->
+        <div class="flex h-4 w-full">
+            <div class="flex-1 bg-[#df0781]"></div>
+            <div class="flex-1 bg-[#af04ab]"></div>
+            <div class="flex-1 bg-[#9800e0]"></div>
+            <div class="flex-1 bg-[#8febfe]"></div>
+            <div class="flex-1 bg-[#8bfa00]"></div>
+            <div class="flex-1 bg-[#f8e700]"></div>
+            <div class="flex-1 bg-[#eebc00]"></div>
+            <div class="flex-1 bg-[#df2331]"></div>
+            <div class="flex-1 bg-[#a91b00]"></div>
+            <div class="flex-1 bg-[#52a1fc]"></div>
+            <div class="flex-1 bg-[#3b00fc]"></div>
+            <div class="flex-1 bg-[#badd00]"></div>
+        </div>
+    </div>
+
+    
+<!-- END COMPONENT: PLAYER -->
 
     <!-- JAVASCRIPT LOGIC -->
     <script src="script.js"></script>

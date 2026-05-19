@@ -11,8 +11,85 @@
 </head>
 <body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
 
-    <!-- COMPONENT: header.html -->
-    <div id="header-placeholder"></div>
+    <!-- COMPONENT: HEADER -->
+<!-- HEADER SECTION -->
+    <header class="border-b-4 border-zinc-900 sticky top-0 z-50 bg-black/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-end gap-3 cursor-pointer group">
+                    <h1 class="font-chuck text-6xl md:text-8xl leading-none wusb-gradient transform hover:scale-105 transition-transform duration-200">
+                        WUSB
+                    </h1>
+                    <span class="font-swiss font-bold text-3xl md:text-5xl tracking-tighter mb-1 md:mb-2 text-white">
+                        90.1 FM
+                    </span>
+                </a>
+
+                <!-- Desktop Main Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
+                    <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
+                    
+                    <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+
+                    <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-3xl px-8 py-3 rounded text-[#000] pledge-gradient transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] transition-all duration-200 inline-block text-center">
+                        PLEDGE
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="mobile-theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="mobile-icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="mobile-icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i id="icon-menu" data-lucide="menu" class="w-9 h-9"></i>
+                        <i id="icon-x" data-lucide="x" class="w-9 h-9 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Sub Menu -->
+        <div class="hidden lg:block bg-zinc-900/50 border-t border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto py-3 gap-6 no-scrollbar">
+                <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
+                <a href="underwriting.html#wusb-public-file" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
+                </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-zinc-900 border-b-4 border-zinc-800 flex flex-col">
+            <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
+                <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
+                <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
+                <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
+                    PLEDGE
+                </a>
+            </div>
+            <div class="flex flex-col p-4 gap-3 bg-zinc-950">
+                <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
+                <a href="underwriting.html#wusb-public-file" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
+                </div>
+        </div>
+    </header>
+<!-- END COMPONENT: HEADER -->
     
 
     <!-- MAIN CONTENT AREA -->
@@ -32,13 +109,13 @@
         <div class="flex flex-col gap-8">
             
             <!-- Playlist Node 1 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #df0781;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df0781;">With The Beatles playlist for 05/07/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">With The Beatles playlist for 05/07/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">scottorourke</a> on Thu, 05/07/2026 - 12:06am
+                        By <a href="#" class=" hover:text-white transition-colors">scottorourke</a> on Thu, 05/07/2026 - 12:06am
                     </div>
                 </div>
 
@@ -55,20 +132,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df0781] hover:text-white transition-colors flex items-center gap-2" style="color: #df0781;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 2 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #8bfa00;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8bfa00;">Steve K's Radio Kaos playlist for 05/07/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Steve K's Radio Kaos playlist for 05/07/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Steve-K</a> on Thu, 05/07/2026 - 7:53am
+                        By <a href="#" class=" hover:text-white transition-colors">Steve-K</a> on Thu, 05/07/2026 - 7:53am
                     </div>
                 </div>
 
@@ -77,20 +154,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8bfa00] hover:text-white transition-colors flex items-center gap-2" style="color: #8bfa00;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 3 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #52a1fc;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #52a1fc;">Stereo Sanctity playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Stereo Sanctity playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 12:12am
+                        By <a href="#" class=" hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 12:12am
                     </div>
                 </div>
 
@@ -99,20 +176,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#52a1fc] hover:text-white transition-colors flex items-center gap-2" style="color: #52a1fc;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 4 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #f8e700;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #f8e700;">Close The Door playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Close The Door playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 1:37am
+                        By <a href="#" class=" hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 1:37am
                     </div>
                 </div>
 
@@ -121,20 +198,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#f8e700] hover:text-white transition-colors flex items-center gap-2" style="color: #f8e700;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 5 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #9800e0;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #9800e0;">Wayback Wednesday playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Wayback Wednesday playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 2:12am
+                        By <a href="#" class=" hover:text-white transition-colors">mr.ethanson</a> on Wed, 05/06/2026 - 2:12am
                     </div>
                 </div>
 
@@ -144,20 +221,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#9800e0] hover:text-white transition-colors flex items-center gap-2" style="color: #9800e0;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 6 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #df2331;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df2331;">Flesh Uncovered playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Flesh Uncovered playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">maacastro</a> on Wed, 05/06/2026 - 3:15am
+                        By <a href="#" class=" hover:text-white transition-colors">maacastro</a> on Wed, 05/06/2026 - 3:15am
                     </div>
                 </div>
 
@@ -165,20 +242,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df2331] hover:text-white transition-colors flex items-center gap-2" style="color: #df2331;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 7 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #eebc00;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #eebc00;">Blues At Dawn playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Blues At Dawn playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Gavin</a> on Wed, 05/06/2026 - 8:10am
+                        By <a href="#" class=" hover:text-white transition-colors">Gavin</a> on Wed, 05/06/2026 - 8:10am
                     </div>
                 </div>
 
@@ -187,20 +264,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#eebc00] hover:text-white transition-colors flex items-center gap-2" style="color: #eebc00;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 8 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #8febfe;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8febfe;">Hot Wax playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Hot Wax playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Ryanberger</a> on Wed, 05/06/2026 - 8:47am
+                        By <a href="#" class=" hover:text-white transition-colors">Ryanberger</a> on Wed, 05/06/2026 - 8:47am
                     </div>
                 </div>
 
@@ -208,20 +285,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2" style="color: #8febfe;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 9 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #af04ab;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #af04ab;">A Visual Sound playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">A Visual Sound playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">DJ Ray Knives</a> on Wed, 05/06/2026 - 10:41am
+                        By <a href="#" class=" hover:text-white transition-colors">DJ Ray Knives</a> on Wed, 05/06/2026 - 10:41am
                     </div>
                 </div>
 
@@ -230,20 +307,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#af04ab] hover:text-white transition-colors flex items-center gap-2" style="color: #af04ab;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 10 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #3b00fc;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #3b00fc;">The Golden Ratio playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">The Golden Ratio playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">igneous_rock</a> on Wed, 05/06/2026 - 12:01pm
+                        By <a href="#" class=" hover:text-white transition-colors">igneous_rock</a> on Wed, 05/06/2026 - 12:01pm
                     </div>
                 </div>
 
@@ -251,20 +328,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#3b00fc] hover:text-white transition-colors flex items-center gap-2" style="color: #3b00fc;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 11 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #a91b00;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #a91b00;">Creature Central playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Creature Central playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Sillyometer</a> on Wed, 05/06/2026 - 1:10pm
+                        By <a href="#" class=" hover:text-white transition-colors">Sillyometer</a> on Wed, 05/06/2026 - 1:10pm
                     </div>
                 </div>
 
@@ -273,20 +350,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#a91b00] hover:text-white transition-colors flex items-center gap-2" style="color: #a91b00;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 12 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #df0781;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df0781;">Suburban Hymns playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Suburban Hymns playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">paul n</a> on Wed, 05/06/2026 - 2:32pm
+                        By <a href="#" class=" hover:text-white transition-colors">paul n</a> on Wed, 05/06/2026 - 2:32pm
                     </div>
                 </div>
 
@@ -294,20 +371,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df0781] hover:text-white transition-colors flex items-center gap-2" style="color: #df0781;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 13 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #8bfa00;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8bfa00;">Blue Grass Time playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Blue Grass Time playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Buddy Merriam</a> on Wed, 05/06/2026 - 4:17pm
+                        By <a href="#" class=" hover:text-white transition-colors">Buddy Merriam</a> on Wed, 05/06/2026 - 4:17pm
                     </div>
                 </div>
 
@@ -316,20 +393,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8bfa00] hover:text-white transition-colors flex items-center gap-2" style="color: #8bfa00;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 14 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #52a1fc;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #52a1fc;">Spiney Norman playlist for 05/06/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Spiney Norman playlist for 05/06/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Spiney Norman</a> on Wed, 05/06/2026 - 10:13pm
+                        By <a href="#" class=" hover:text-white transition-colors">Spiney Norman</a> on Wed, 05/06/2026 - 10:13pm
                     </div>
                 </div>
 
@@ -337,20 +414,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#52a1fc] hover:text-white transition-colors flex items-center gap-2" style="color: #52a1fc;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 15 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #f8e700;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #f8e700;">Cafe`Ali playlist for 05/05/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Cafe`Ali playlist for 05/05/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Ahmad Ali</a> on Tue, 05/05/2026 - 10:38am
+                        By <a href="#" class=" hover:text-white transition-colors">Ahmad Ali</a> on Tue, 05/05/2026 - 10:38am
                     </div>
                 </div>
 
@@ -358,20 +435,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#f8e700] hover:text-white transition-colors flex items-center gap-2" style="color: #f8e700;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 16 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #9800e0;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #9800e0;">Recess playlist for 05/05/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Recess playlist for 05/05/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">chespi</a> on Tue, 05/05/2026 - 12:48pm
+                        By <a href="#" class=" hover:text-white transition-colors">chespi</a> on Tue, 05/05/2026 - 12:48pm
                     </div>
                 </div>
 
@@ -379,20 +456,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#9800e0] hover:text-white transition-colors flex items-center gap-2" style="color: #9800e0;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 17 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #df2331;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #df2331;">Searching for Somewhere playlist for 05/05/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Searching for Somewhere playlist for 05/05/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">musictraveler</a> on Tue, 05/05/2026 - 7:40pm
+                        By <a href="#" class=" hover:text-white transition-colors">musictraveler</a> on Tue, 05/05/2026 - 7:40pm
                     </div>
                 </div>
 
@@ -400,20 +477,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#df2331] hover:text-white transition-colors flex items-center gap-2" style="color: #df2331;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 18 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #eebc00;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #eebc00;">Bustin' Out Blue playlist for 05/05/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Bustin' Out Blue playlist for 05/05/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Joe V</a> on Tue, 05/05/2026 - 8:09pm
+                        By <a href="#" class=" hover:text-white transition-colors">Joe V</a> on Tue, 05/05/2026 - 8:09pm
                     </div>
                 </div>
 
@@ -421,20 +498,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#eebc00] hover:text-white transition-colors flex items-center gap-2" style="color: #eebc00;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 19 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #8febfe;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #8febfe;">Girl from Mars playlist for 05/05/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">Girl from Mars playlist for 05/05/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">stasiathesocialbutterfly</a> on Tue, 05/05/2026 - 11:16pm
+                        By <a href="#" class=" hover:text-white transition-colors">stasiathesocialbutterfly</a> on Tue, 05/05/2026 - 11:16pm
                     </div>
                 </div>
 
@@ -444,20 +521,20 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2" style="color: #8febfe;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
             </article>
             
             <!-- Playlist Node 20 -->
-            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4">
+            <article class="bg-zinc-900/40 border border-zinc-800 p-6 md:p-8 flex flex-col gap-4" style="--card-color: #af04ab;">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-zinc-800 pb-4">
                     <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight wusb-gradient inline-block">
-                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: #af04ab;">More Cowbell playlist for 05/04/2026</a>
+                        <a href="#" class="hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">More Cowbell playlist for 05/04/2026</a>
                     </h3>
                     <div class="font-swiss text-xs text-zinc-500 font-bold tracking-wider uppercase">
-                        By <a href="#" class="text-[#8febfe] hover:text-white transition-colors">Mario Staiano</a> on Mon, 05/04/2026 - 9:37am
+                        By <a href="#" class=" hover:text-white transition-colors">Mario Staiano</a> on Mon, 05/04/2026 - 9:37am
                     </div>
                 </div>
 
@@ -466,7 +543,7 @@
                 </div>
 
                 <div class="pt-4 mt-2 flex justify-end">
-                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#af04ab] hover:text-white transition-colors flex items-center gap-2" style="color: #af04ab;">
+                    <a href="#" class="font-swiss text-sm font-bold uppercase tracking-widest  hover:text-white transition-colors flex items-center gap-2" style="color: var(--card-color);">
                         View program <span class="text-xl leading-none">&rarr;</span>
                     </a>
                 </div>
@@ -474,8 +551,59 @@
         </div>
     </main>
 
-    <!-- COMPONENT: player.html -->
-    <div id="player-placeholder"></div>
+    <!-- COMPONENT: PLAYER -->
+<!-- STICKY BOTTOM RADIO PLAYER -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+        <div class="bg-zinc-950 border-t border-zinc-800 py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="play-pause-btn" class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:scale-105 transition-transform focus:outline-none">
+                    <i id="icon-play" data-lucide="play" class="w-6 h-6 ml-1 block fill-current"></i>
+                    <i id="icon-pause" data-lucide="pause" class="w-6 h-6 hidden fill-current"></i>
+                </button>
+                <div class="hidden sm:block">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span id="live-ping" class="hidden animate-ping absolute inline-flex h-full w-full rounded-full bg-[#df2331] opacity-75"></span>
+                            <span id="live-dot" class="relative inline-flex rounded-full h-3 w-3 bg-zinc-600"></span>
+                        </span>
+                        <span class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">On Air Now</span>
+                    </div>
+                    <div class="font-swiss font-bold text-lg tracking-tight">The Underground Sound w/ DJ Void</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 mr-4">
+                    <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400"></i>
+                    <div class="w-24 h-2 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-white"></div>
+                    </div>
+                </div>
+                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                    Listen Live
+                </button>
+            </div>
+        </div>
+
+        <!-- NEON COLOR STRIP -->
+        <div class="flex h-4 w-full">
+            <div class="flex-1 bg-[#df0781]"></div>
+            <div class="flex-1 bg-[#af04ab]"></div>
+            <div class="flex-1 bg-[#9800e0]"></div>
+            <div class="flex-1 bg-[#8febfe]"></div>
+            <div class="flex-1 bg-[#8bfa00]"></div>
+            <div class="flex-1 bg-[#f8e700]"></div>
+            <div class="flex-1 bg-[#eebc00]"></div>
+            <div class="flex-1 bg-[#df2331]"></div>
+            <div class="flex-1 bg-[#a91b00]"></div>
+            <div class="flex-1 bg-[#52a1fc]"></div>
+            <div class="flex-1 bg-[#3b00fc]"></div>
+            <div class="flex-1 bg-[#badd00]"></div>
+        </div>
+    </div>
+
+    
+<!-- END COMPONENT: PLAYER -->
 
     <!-- JAVASCRIPT LOGIC -->
     <script src="script.js"></script>

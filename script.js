@@ -20,39 +20,6 @@ tailwind.config = {
 };
 
 
-/**
- * COMPONENT LOADER
- * Simulates Drupal block/region inclusion for the static prototype.
- */
-async function loadComponents() {
-    try {
-        const headerRes = await fetch('header.html');
-        const headerHtml = await headerRes.text();
-        const headerPlaceholder = document.getElementById('header-placeholder');
-        if (headerPlaceholder) {
-            headerPlaceholder.outerHTML = headerHtml;
-        }
-
-        const playerRes = await fetch('player.html');
-        const playerHtml = await playerRes.text();
-        const playerPlaceholder = document.getElementById('player-placeholder');
-        if (playerPlaceholder) {
-            playerPlaceholder.outerHTML = playerHtml;
-        }
-
-        // Re-initialize logic after DOM update
-        initLogic();
-    } catch (e) {
-        console.error('Error loading components (Are you running via file://? Need a local server like Live Server):', e);
-        // Fallback for file:// execution: show a message
-        const headerPlaceholder = document.getElementById('header-placeholder');
-        if (headerPlaceholder && window.location.protocol === 'file:') {
-            headerPlaceholder.innerHTML = '<div style="background: red; color: white; padding: 10px;">Please run this prototype using a local web server (like VSCode Live Server) to load modular components.</div>';
-        }
-    }
-}
-
-// Wrap existing logic in an init function so it binds after dynamic load
 function initLogic() {
     lucide.createIcons();
 
@@ -157,4 +124,4 @@ function initLogic() {
 }
 
 // Start sequence
-document.addEventListener('DOMContentLoaded', loadComponents);
+document.addEventListener('DOMContentLoaded', initLogic);
