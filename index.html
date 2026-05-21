@@ -91,6 +91,35 @@
     </header>
 <!-- END COMPONENT: HEADER -->
     
+    <!-- COMPONENT: HERO -->
+    <section class="relative w-full h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden border-b-4 border-zinc-900" style="--hero-overlay-color: rgba(0,0,0,0.6);">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 bg-black">
+            <img src="RadioHero.png" alt="WUSB Studio" class="w-full h-full object-cover object-center opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-[var(--hero-overlay-color)] to-transparent"></div>
+            <div class="absolute inset-0 bg-black mix-blend-color opacity-50"></div> <!-- Slight desaturation -->
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 mt-16 md:mt-24">
+            <h2 class="font-chuck text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-2xl tracking-wide leading-none">
+                <span class="wusb-gradient block mb-2">50 YEARS OF LONG ISLAND</span>
+                FREE FORM RADIO
+            </h2>
+            <p class="font-swiss font-bold text-sm md:text-xl text-zinc-300 uppercase tracking-widest drop-shadow-md border-b-2 border-zinc-800 pb-4 inline-block">
+                Broadcasting live from Stony Brook University
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 mt-2">
+                <a href="schedule.html" class="font-swiss font-bold text-sm md:text-base uppercase tracking-widest px-8 py-3 bg-[#df0781] text-white hover:bg-white hover:text-black transition-colors duration-300">
+                    View Schedule
+                </a>
+                <a href="playlists.html" class="font-swiss font-bold text-sm md:text-base uppercase tracking-widest px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black transition-colors duration-300 bg-black/30 backdrop-blur-sm">
+                    Recent Playlists
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- END COMPONENT: HERO -->
 
     <!-- MAIN CONTENT AREA -->
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
@@ -110,6 +139,11 @@
             <!-- Post 1 -->
             <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #df0781;">
                 <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper (Placeholder) -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:opacity-40" style="color: var(--card-color);"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
+                </div>
                 <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
                     <div class="flex justify-between items-center mb-4">
                         <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Music</span>
@@ -130,6 +164,11 @@
             <!-- Post 2 -->
             <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #8bfa00;">
                 <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper (Placeholder) -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:opacity-40" style="color: var(--card-color);"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
+                </div>
                 <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
                     <div class="flex justify-between items-center mb-4">
                         <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Station News</span>
@@ -150,6 +189,11 @@
             <!-- Post 3 -->
             <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #52a1fc;">
                 <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper (Placeholder) -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:opacity-40" style="color: var(--card-color);"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
+                </div>
                 <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
                     <div class="flex justify-between items-center mb-4">
                         <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Reviews</span>
@@ -170,6 +214,11 @@
             <!-- Post 4 -->
             <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #f8e700;">
                 <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper (Placeholder) -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:opacity-40" style="color: var(--card-color);"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
+                </div>
                 <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
                     <div class="flex justify-between items-center mb-4">
                         <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Events</span>
@@ -190,6 +239,11 @@
             <!-- Post 5 -->
             <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #9800e0;">
                 <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper (Placeholder) -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:opacity-40" style="color: var(--card-color);"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
+                </div>
                 <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
                     <div class="flex justify-between items-center mb-4">
                         <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Editorial</span>
@@ -210,6 +264,11 @@
             <!-- Post 6 -->
             <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #df2331;">
                 <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper (Placeholder) -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-20 transition-all duration-500 group-hover:scale-110 group-hover:opacity-40" style="color: var(--card-color);"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/></svg>
+                </div>
                 <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
                     <div class="flex justify-between items-center mb-4">
                         <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Charts</span>
@@ -220,6 +279,63 @@
                     </h3>
                     <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
                         From indie rock to experimental electronic, here are the tracks our DJs have been spinning the most over the last 30 days.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: var(--card-color);">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+                        <!-- ==========================================
+                 COMPONENT: TRANSMISSION CARD (Instance 7 - With Image)
+                 Notice how the image wrapper sits between the top bar and the content.
+                 It has border-x to maintain the outline consistency.
+                 ========================================== -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #00e5ff;">
+                <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden">
+                    <img src="https://www.radioworld.com/wp-content/uploads/2026/03/1772673022289blob-1536x1152.png" alt="Broadcast console" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Studio</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 10, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">
+                        Upgrading the Broadcast Board
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        A behind-the-scenes look at the brand new mixing console installed in Studio A. It brings a whole new level of clarity to our live transmissions.
+                    </p>
+                    <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: var(--card-color);">
+                        Read More <span class="text-xl leading-none">&rarr;</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ==========================================
+                 COMPONENT: TRANSMISSION CARD (Instance 8 - With Image)
+                 ========================================== -->
+            <article class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #ff5500;">
+                <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+                
+                <!-- Image Wrapper -->
+                <div class="relative w-full aspect-video border-x border-zinc-800 group-hover:border-zinc-700 transition-colors overflow-hidden">
+                    <img src="https://www.radioworld.com/wp-content/uploads/2026/03/1772657102642blob.png" alt="Broadcast equipment" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
+                </div>
+
+                <div class="p-6 flex flex-col flex-grow border border-zinc-800 border-t-0 group-hover:border-zinc-700 transition-colors">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="font-swiss text-xs font-bold uppercase tracking-widest px-2 py-1 bg-zinc-800 text-white" style="color: var(--card-color);">Community</span>
+                        <span class="font-swiss text-xs text-zinc-500 font-bold tracking-wider">MAR 08, 2026</span>
+                    </div>
+                    <h3 class="font-swiss font-bold text-2xl md:text-3xl tracking-tight leading-tight mb-4 group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">
+                        Record Store Day 2026 Prep
+                    </h3>
+                    <p class="font-swiss text-zinc-400 text-sm md:text-base leading-relaxed flex-grow">
+                        We are partnering with local record shops for an all-day vinyl exclusive broadcast. See the list of participating stores and DJ lineups.
                     </p>
                     <div class="mt-6 font-swiss text-sm font-bold tracking-widest uppercase flex items-center gap-2" style="color: var(--card-color);">
                         Read More <span class="text-xl leading-none">&rarr;</span>
