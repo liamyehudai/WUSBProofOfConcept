@@ -1,11 +1,11 @@
 const fs = require('fs');
 
-const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html'];
+const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html'];
 
 // The links to update:
 // 1. "WUSB Requests" -> https://www.wusbrequests.com/
 // 2. "EEO Report" -> https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf
-// 3. "WUSB Public File" -> underwriting.html#wusb-public-file (note the local host URL was requested but relative is better)
+// 3. "WUSB Public File" -> wusbpublicfile.html
 // 4. "Sports" -> https://sites.google.com/view/wusbsports/home
 // 5. "Pledge" -> https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE
 // Remove "Stream Help" and "Create content"
@@ -21,8 +21,8 @@ files.forEach(file => {
     // Update specific links using regex
     content = content.replace(/href="[^"]*">WUSB Requests<\/a>/g, 'href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer">WUSB Requests</a>');
     content = content.replace(/href="[^"]*">EEO Report<\/a>/g, 'href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer">EEO Report</a>');
-    content = content.replace(/href="[^"]*">WUSB Public File<\/a>/g, 'href="underwriting.html#wusb-public-file">WUSB Public File</a>');
-    content = content.replace(/href="[^"]*">Public File<\/a>/g, 'href="underwriting.html#wusb-public-file">Public File</a>');
+    content = content.replace(/href="[^"]*underwriting\.html#wusb-public-file"([^>]*)>WUSB Public File<\/a>/g, 'href="wusbpublicfile.html"$1>WUSB Public File</a>');
+    content = content.replace(/href="[^"]*underwriting\.html#wusb-public-file"([^>]*)>Public File<\/a>/g, 'href="wusbpublicfile.html"$1>Public File</a>');
     content = content.replace(/href="[^"]*"([^>]*)>Sports<\/a>/g, 'href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer"$1>Sports</a>');
     
     // Pledge buttons (there are multiple, desktop and mobile)

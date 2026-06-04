@@ -80,6 +80,35 @@
         .current-day {
             border: 2px solid #8bfa00 !important;
         }
+        
+        /* CSS rules for filtering schedule by day column */
+        .schedule-table[data-active-day] th[data-day],
+        .schedule-table[data-active-day] td[data-day] {
+            display: none;
+        }
+        .schedule-table[data-active-day="Full Week"] th[data-day],
+        .schedule-table[data-active-day="Full Week"] td[data-day] {
+            display: table-cell !important;
+        }
+        .schedule-table[data-active-day="Sunday"] th[data-day="Sunday"],
+        .schedule-table[data-active-day="Sunday"] td[data-day="Sunday"],
+        .schedule-table[data-active-day="Monday"] th[data-day="Monday"],
+        .schedule-table[data-active-day="Monday"] td[data-day="Monday"],
+        .schedule-table[data-active-day="Tuesday"] th[data-day="Tuesday"],
+        .schedule-table[data-active-day="Tuesday"] td[data-day="Tuesday"],
+        .schedule-table[data-active-day="Wednesday"] th[data-day="Wednesday"],
+        .schedule-table[data-active-day="Wednesday"] td[data-day="Wednesday"],
+        .schedule-table[data-active-day="Thursday"] th[data-day="Thursday"],
+        .schedule-table[data-active-day="Thursday"] td[data-day="Thursday"],
+        .schedule-table[data-active-day="Friday"] th[data-day="Friday"],
+        .schedule-table[data-active-day="Friday"] td[data-day="Friday"],
+        .schedule-table[data-active-day="Saturday"] th[data-day="Saturday"],
+        .schedule-table[data-active-day="Saturday"] td[data-day="Saturday"] {
+            display: table-cell !important;
+        }
+        .schedule-table[data-active-day]:not([data-active-day="Full Week"]) {
+            min-width: 100%;
+        }
     </style>
 </head>
 <body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
@@ -104,7 +133,7 @@
                 <nav class="hidden lg:flex items-center gap-8">
                     <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
                     <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
-                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
                     <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
                     
                     <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
@@ -137,7 +166,7 @@
                 <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
                 <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
                 <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
-                <a href="underwriting.html#wusb-public-file" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
                 <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
                 </div>
         </div>
@@ -147,7 +176,7 @@
             <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
                 <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
                 <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
-                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
                 <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
                 <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
                     PLEDGE
@@ -157,7 +186,7 @@
                 <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
                 <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
                 <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
-                <a href="underwriting.html#wusb-public-file" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
                 <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
                 </div>
         </div>
@@ -176,15 +205,50 @@
             </div>
             
             <!-- Day Selector Tabs -->
-            <div class="flex bg-zinc-900 p-1 rounded-sm overflow-x-auto no-scrollbar max-w-full">
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sun</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Mon</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest text-[#8bfa00] bg-zinc-800">Tue</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Wed</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Thu</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Fri</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sat</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Full Week</button>
+            <div id="day-tabs-container" class="flex bg-zinc-900 p-1 rounded-sm overflow-x-auto no-scrollbar max-w-full">
+                <button data-tab="Sunday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Sun</button>
+                <button data-tab="Monday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Mon</button>
+                <button data-tab="Tuesday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest text-[#8bfa00] bg-zinc-800 rounded-sm">Tue</button>
+                <button data-tab="Wednesday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Wed</button>
+                <button data-tab="Thursday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Thu</button>
+                <button data-tab="Friday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Fri</button>
+                <button data-tab="Saturday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Sat</button>
+                <button data-tab="Full Week" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors rounded-sm">Full Week</button>
+            </div>
+        </div>
+
+        <!-- Schedule Navigation & Controls -->
+        <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950/80 backdrop-blur-md border border-zinc-800 p-4 rounded-sm mb-8 gap-4 font-swiss">
+            <!-- Left: Week Navigation -->
+            <div class="flex flex-wrap items-center gap-4 w-full md:w-auto justify-between md:justify-start">
+                <div class="flex items-center gap-2">
+                    <button id="prev-week-btn" class="p-2 bg-zinc-900 border border-zinc-800 hover:border-[#8bfa00] hover:text-[#8bfa00] rounded text-zinc-400 transition-colors flex items-center justify-center cursor-pointer" title="Last Week">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    
+                    <span id="current-week-display" class="font-bold text-sm tracking-tight text-white px-2 min-w-[220px] text-center">
+                        Week of June 1, 2026
+                    </span>
+                    
+                    <button id="next-week-btn" class="p-2 bg-zinc-900 border border-zinc-800 hover:border-[#8bfa00] hover:text-[#8bfa00] rounded text-zinc-400 transition-colors flex items-center justify-center cursor-pointer" title="Next Week">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                
+                <button id="today-btn" class="px-4 py-2 text-xs font-bold uppercase tracking-widest bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-[#8bfa00] hover:border-[#8bfa00] transition-all duration-200 rounded cursor-pointer">
+                    Today
+                </button>
+            </div>
+            
+            <!-- Right: Date Lookup -->
+            <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+                <span class="text-xs font-bold uppercase tracking-widest text-zinc-500 whitespace-nowrap">Go to Date:</span>
+                <div class="flex items-center gap-2 w-full md:w-auto">
+                    <input type="date" id="date-lookup-input" class="bg-black border border-zinc-800 text-white rounded px-3 py-1.5 text-sm focus:outline-none focus:border-[#8febfe] transition-colors w-full md:w-44" />
+                    <button id="date-lookup-btn" class="px-4 py-1.5 text-xs font-bold uppercase tracking-widest bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-[#8febfe] hover:border-[#8febfe] transition-all duration-200 rounded whitespace-nowrap cursor-pointer">
+                        Go
+                    </button>
+                </div>
             </div>
         </div>
 

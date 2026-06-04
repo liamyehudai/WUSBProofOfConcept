@@ -1,0 +1,26 @@
+# macOS directory metadata files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+Thumbs.db
+ehthumbs.db
+
+# Local VS Code settings
+.vscode/
+
+# Tool-specific config and cache directory
+.antigravitycli/
+
+# Dependency directory
+node_modules/
+
+# Compilation / test output logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
+
+# Local scratch directory (agent workspace)
+scratch/
