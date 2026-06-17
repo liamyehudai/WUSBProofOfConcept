@@ -11,13 +11,15 @@ These files make up the actual HTML/CSS/JS frontend that users interact with.
 * **`playlists.html`** - The directory page for recent program playlists.
 * **`schedule.html`** - The interactive grid schedule page.
 * **`underwriting.html`** - The underwriting information page.
-* **`style.css`** - The main stylesheet containing custom CSS utilities, scrollbar hiding, and gradient text definitions complementing Tailwind.
+* **`wusbpublicfile.html`** - The FCC Online Public Inspection File information page.
+* **`style.css`** - The main stylesheet containing custom CSS utilities, scrollbar hiding, marquee scrolling keyframes, and gradient text definitions complementing Tailwind.
 * **`script.js`** - The core client-side JavaScript handling the mobile menu, theme toggling (light/dark mode), and radio player UI logic.
 * **`Underwritingbanner.png`** - Image asset displayed on the underwriting page.
 
 ## 📘 Documentation & Guidelines
 * **`README.md`** - General project documentation.
-* **`AGENTS.md`** - Instructions and best practices for AI agents/developers working on this project (e.g., the Drupal SDC philosophy, avoiding JS-based components, using CSS variables).
+* **`components.md`** - Modular component breakdown detailing machine names, fields, and Drupal SDC-ready mappings.
+* **`agentInstructions.md`** - Technical instructions and best practices for developers and agents working on this project.
 
 ## 🟡 Reference Data & Component Snippets
 These files were used to store raw data or component markup. Now that components are statically compiled into the HTML files, these act primarily as reference materials.

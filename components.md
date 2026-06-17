@@ -87,6 +87,20 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 
 ---
 
+### 🟢 2.4 Conveyor Belt Carousel (`conveyor_belt_carousel`)
+*   **Description:** Two infinite-scrolling marquee lists moving in opposite directions (conveyor belt style) placed below the content card grid on the homepage. The top carousel scrolls DJ profile avatars (circles), and the bottom carousel scrolls On-Air show covers (rounded squares). Items are dynamically randomized and repeated on page load, pausing on hover.
+*   **Component Type:** Custom block or Homepage content region template.
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `dj_list` | DJs Data Array | List (Object) | `[{"name": "DJ Void", "initials": "DV"}]` | Array of DJ profiles containing initials and name. |
+| `show_list` | Shows Data Array | List (Object) | `[{"name": "Radio Kaos", "initials": "RK"}]` | Array of Radio shows containing initials and title. |
+| `gradient_presets` | Neon Gradient Array | List (Text) | `["from-[#df0781] to-[#af04ab]"]` | Preset CSS classes for high-fidelity gradients applied to profile icons. |
+| `scroll_speed` | Carousel Scroll Speed | Text (CSS Time) | `45s` | Animation duration parameter for speed customization. |
+
+---
+
 ## 3. Structural Content Components
 
 ### 🟢 3.1 Content Block / Column Panel (`content_column_panel`)

@@ -27,6 +27,12 @@ You can explore the live, fully interactive prototype deployed on GitHub Pages h
 *   Features a premium, high-contrast dark aesthetic that transitions into a clean light aesthetic at the click of the header toggle.
 *   Syncs preferences automatically to `localStorage` for cross-page persistence.
 
+### 🎡 4. Conveyor Belt Carousel
+*   **Opposing Marquees:** Two horizontal marquee bands below the cards feed that slowly auto-scroll in opposite directions. The Featured DJs row scrolls right-to-left, while the On Air Programs row scrolls left-to-right.
+*   **Vibrant Profile Badges:** DJ icons are rendered as large circle avatars (`w-24 h-24`), and On Air Shows are rounded squares. Badges feature bold, stylized initials centered over high-fidelity gradients that sync automatically with dark and light themes.
+*   **Order Randomization:** Shuffles DJ and Show arrays dynamically on page load to keep the homepage layout fresh and engaging.
+*   **Hover-to-Pause:** Seamlessly pauses the marquee movement when the user hovers over an icon, allowing for easy selection and click-through to DJ playlists or schedule entries.
+
 ---
 
 ## 📂 Project Structure

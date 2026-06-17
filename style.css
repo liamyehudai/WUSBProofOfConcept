@@ -33,13 +33,25 @@
   background: linear-gradient(90deg, #badd00 0%, #8bfa00 100%);
 }
 
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-zinc-400: #f4f4f5; /* zinc-100: primary text color, high contrast */
+  --color-zinc-500: #cbd5e1; /* slate-300: secondary text, metadata, times, tabs */
+  --color-zinc-600: #94a3b8; /* slate-400: muted labels, visual details */
+  --color-zinc-700: #3f3f46; /* border and line details */
+  --color-zinc-800: #27272a; /* border and line details */
+  --color-zinc-900: #18181b; /* card and secondary block backgrounds */
+  --color-zinc-950: #09090b; /* primary dark background */
+}
+
 /* DRUPAL MAPPING: Theme specific variable overrides */
 .light-theme {
   --color-black: #f4f4f5;
   --color-white: #09090b;
-  --color-zinc-400: #52525b;
-  --color-zinc-500: #71717a;
-  --color-zinc-600: #a1a1aa;
+  --color-zinc-400: #18181b; /* zinc-900: primary text color, high contrast */
+  --color-zinc-500: #3f3f46; /* zinc-700: secondary text, metadata, times, tabs */
+  --color-zinc-600: #52525b; /* zinc-600: muted labels, visual details */
   --color-zinc-700: #d4d4d8;
   --color-zinc-800: #e4e4e7;
   --color-zinc-900: #ffffff;
@@ -53,4 +65,34 @@
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+/* Conveyor Belt Marquee Animations */
+.animate-marquee-left {
+  display: inline-flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee-left 45s linear infinite;
+}
+
+.animate-marquee-right {
+  display: inline-flex;
+  gap: 1rem;
+  width: max-content;
+  animation: marquee-right 45s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
