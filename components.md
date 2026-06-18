@@ -101,6 +101,19 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 
 ---
 
+### 🟢 2.5 DJ Grid (`dj_grid`)
+*   **Description:** A searchable, filterable grid displaying all DJ profiles on the dedicated DJs page ([djs.html](file:///Users/liam_yehudai/Documents/VSCode/WUSBProofOfConcept/djs.html)). Active DJs are automatically sorted first, followed by inactive DJs in alphabetical order. Features responsive card layouts with active status badges and search capabilities.
+*   **Component Type:** Drupal View page or custom block.
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `dj_list` | DJs Data Array | List (Object) | `[{"name": "DJ Void", "initials": "DV", "active": true}]` | Array of DJ profiles with active status and initials. |
+| `search_placeholder`| Search Input Placeholder| Text | `Search DJs...` | Placeholder text inside search query box. |
+| `no_results_text` | No Results Label | Text | `No DJs match your search.` | Text display when search query matches zero records. |
+
+---
+
 ## 3. Structural Content Components
 
 ### 🟢 3.1 Content Block / Column Panel (`content_column_panel`)

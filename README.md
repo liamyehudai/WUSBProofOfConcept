@@ -33,6 +33,11 @@ You can explore the live, fully interactive prototype deployed on GitHub Pages h
 *   **Order Randomization:** Shuffles DJ and Show arrays dynamically on page load to keep the homepage layout fresh and engaging.
 *   **Hover-to-Pause:** Seamlessly pauses the marquee movement when the user hovers over an icon, allowing for easy selection and click-through to DJ playlists or schedule entries.
 
+### 🔍 5. Searchable DJ Directory (`djs.html`)
+*   **Status & Alphabetical Sorting:** Automatically displays active host DJs first (marked with pulsing neon status badges), followed by inactive DJs sorted alphabetically.
+*   **Real-time Search Filter:** Instantly filters DJ profiles in a fully responsive grid as the user types.
+*   **Cohesive Aesthetic:** Adapts beautifully to dark and light mode variable shifts, utilizing stable gradient profiles for each card avatar.
+
 ---
 
 ## 📂 Project Structure
@@ -42,6 +47,7 @@ You can explore the live, fully interactive prototype deployed on GitHub Pages h
 *   `contact.html` - Request, general feedback, and contact details.
 *   `schedule.html` - Interactive programming grid.
 *   `playlists.html` - Directory of DJ playlist logs.
+*   `djs.html` - Searchable and filterable DJ profiles directory page.
 *   `underwriting.html` - Station support and sponsorship information.
 *   `wusbpublicfile.html` - FCC public inspection files checklist.
 *   `style.css` - Custom styles, layout variables, and typography defaults.

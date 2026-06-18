@@ -12,6 +12,7 @@ These files make up the actual HTML/CSS/JS frontend that users interact with.
 * **`schedule.html`** - The interactive grid schedule page.
 * **`underwriting.html`** - The underwriting information page.
 * **`wusbpublicfile.html`** - The FCC Online Public Inspection File information page.
+* **`djs.html`** - The searchable DJ profiles list and status directory.
 * **`style.css`** - The main stylesheet containing custom CSS utilities, scrollbar hiding, marquee scrolling keyframes, and gradient text definitions complementing Tailwind.
 * **`script.js`** - The core client-side JavaScript handling the mobile menu, theme toggling (light/dark mode), and radio player UI logic.
 * **`Underwritingbanner.png`** - Image asset displayed on the underwriting page.

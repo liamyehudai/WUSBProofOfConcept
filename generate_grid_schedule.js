@@ -293,5 +293,11 @@ ${rowsHtml}
 </body>
 </html>`;
 
+const headerHtml = fs.readFileSync('header.html', 'utf-8');
+const playerHtml = fs.readFileSync('player.html', 'utf-8');
+
+template = template.replace('<div id="header-placeholder"></div>', headerHtml);
+template = template.replace('<div id="player-placeholder"></div>', playerHtml);
+
 fs.writeFileSync('schedule.html', template);
 console.log('Successfully regenerated grided schedule.html');

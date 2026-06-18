@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html'];
+const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html', 'djs.html', 'player.html'];
 
 // The links to update:
 // 1. "WUSB Requests" -> https://www.wusbrequests.com/
@@ -25,6 +25,18 @@ files.forEach(file => {
     content = content.replace(/href="[^"]*underwriting\.html#wusb-public-file"([^>]*)>Public File<\/a>/g, 'href="wusbpublicfile.html"$1>Public File</a>');
     content = content.replace(/href="[^"]*"([^>]*)>Sports<\/a>/g, 'href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer"$1>Sports</a>');
     
+    // Inject DJs link in submenus if not already present
+    // Desktop:
+    if (!content.includes('href="djs.html" class="font-swiss text-sm font-medium tracking-wide')) {
+        content = content.replace(/(<a href="underwriting\.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting<\/a>)/g, 
+            '$1\n                <a href="djs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">DJs</a>');
+    }
+    // Mobile:
+    if (!content.includes('href="djs.html" class="font-swiss text-sm tracking-wide')) {
+        content = content.replace(/(<a href="underwriting\.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting<\/a>)/g, 
+            '$1\n                <a href="djs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs</a>');
+    }
+
     // Pledge buttons (there are multiple, desktop and mobile)
     content = content.replace(/<button class="font-chuck text-3xl[^>]*>\s*PLEDGE\s*<\/button>/g, 
         '<a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-3xl px-8 py-3 rounded text-[#000] pledge-gradient transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] transition-all duration-200 inline-block text-center">\n                        PLEDGE\n                    </a>');
