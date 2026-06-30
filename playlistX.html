@@ -30,7 +30,7 @@
                 <nav class="hidden lg:flex items-center gap-8">
                     <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
                     <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
-                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
                     <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
                     
                     <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
@@ -75,7 +75,7 @@
             <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
                 <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
                 <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
-                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
                 <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
                 <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
                     PLEDGE
@@ -119,6 +119,10 @@
             </div>
             
             <div class="flex flex-wrap gap-3">
+                <a href="player.html?archive=4Thu-1800&date=1800-06-25-2026&title=Program%20X" class="flex items-center gap-2 px-4 py-2 bg-[#8bfa00] text-black hover:bg-white font-swiss font-bold text-xs uppercase tracking-widest rounded transition-colors duration-200">
+                    <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+                    <span>Listen to Show</span>
+                </a>
                 <a href="programX.html" class="flex items-center gap-2 px-4 py-2 border-2 border-[#8febfe] text-[#8febfe] hover:bg-[#8febfe] hover:text-black font-swiss font-bold text-xs uppercase tracking-widest rounded transition-colors duration-200">
                     <i data-lucide="radio" class="w-4 h-4"></i>
                     <span>Show Profile</span>
@@ -133,47 +137,62 @@
         <!-- Playlist Details Layout -->
         <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
             
-            <!-- Left Side (8 cols): DJ Meta, Description, Tracklist Table -->
-            <div class="lg:col-span-8 flex flex-col gap-8">
+            <!-- Left Side (8 cols): DJ Meta, Description, Tracklist Table in Mock Article Card style -->
+            <div class="lg:col-span-8 flex flex-col">
                 
-                <!-- DJ Info & Show Description -->
-                <div class="bg-zinc-900/20 border border-zinc-800 p-6 sm:p-8 rounded-lg flex flex-col sm:flex-row gap-6 items-start">
-                    <!-- Host DJ Avatar -->
-                    <a href="djx.html" class="w-16 h-16 rounded-full overflow-hidden border-2 border-white/20 hover:border-white transition-colors flex-shrink-0">
-                        <img src="djx_avatar.jpg" alt="DJx Avatar" class="w-full h-full object-cover">
-                    </a>
-                    
-                    <div class="flex-grow">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span class="text-zinc-500 text-xs font-swiss uppercase tracking-wider font-bold">Hosted By</span>
-                            <a href="djx.html" class="text-white hover:text-[#8febfe] font-swiss font-bold text-sm uppercase tracking-wider leading-none transition-colors">DJx</a>
+                <!-- COMPONENT: playlist_article -->
+                <article class="bg-zinc-900/20 border border-zinc-800 rounded-lg p-6 sm:p-8 hover:border-zinc-700 transition-all duration-300 shadow-xl" style="--card-color: #8febfe;">
+                    <!-- Card Header -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-zinc-800 pb-4 mb-6">
+                        <div>
+                            <h3 class="font-swiss font-bold text-2xl md:text-3xl text-white">Episode 45: Retro-Future Beats & Tape Loops</h3>
+                            <p class="text-xs text-zinc-500 mt-1 uppercase font-swiss font-bold tracking-wider">Broadcast Date: June 25, 2026</p>
                         </div>
-                        <h2 class="text-lg font-swiss font-bold text-zinc-200 mb-3">Episode Narrative</h2>
-                        <div class="prose prose-invert font-swiss text-zinc-400 text-sm leading-relaxed">
-                            <p>
-                                Tonight on Program X, host DJx takes us on an analog synthesizer odyssey, exploring late-night retro beats, arpeggiated basslines, and classic cyberpunk synthwaves. We showcase new independent tape releases, live hardware sequences, and look back at ambient electronic soundscapes that defined the genre.
-                            </p>
-                        </div>
+                        <span class="text-[10px] font-swiss font-bold tracking-widest px-2.5 py-1 bg-zinc-950 rounded uppercase border border-zinc-800 text-[#8febfe]">
+                            Featured Log
+                        </span>
                     </div>
-                </div>
 
-                <!-- Tracklist Table -->
-                <div class="bg-zinc-900/10 border border-zinc-800 rounded-lg overflow-hidden shadow-lg">
-                    <div class="px-6 py-4 border-b border-zinc-800 bg-zinc-900/40 flex justify-between items-center">
-                        <h2 class="font-swiss font-bold text-lg uppercase tracking-tight">Tracklist</h2>
-                        <span class="text-[10px] font-swiss text-zinc-500 uppercase tracking-widest">* = New Release</span>
+                    <!-- Host & Narrative Block -->
+                    <div class="prose prose-invert max-w-none font-swiss text-zinc-300 leading-relaxed space-y-6 text-base">
+                        
+                        <!-- Host DJ Info badge inline -->
+                        <div class="flex items-center gap-3 bg-zinc-950/40 p-4 border border-zinc-800 rounded-lg mb-6 max-w-sm">
+                            <a href="djx.html" class="w-12 h-12 rounded-full overflow-hidden border border-zinc-800 hover:border-white transition-colors flex-shrink-0">
+                                <img src="djx_avatar.jpg" alt="DJx Avatar" class="w-full h-full object-cover">
+                            </a>
+                            <div>
+                                <span class="block text-[9px] font-swiss uppercase tracking-wider text-zinc-500 leading-none mb-1">Hosted By</span>
+                                <a href="djx.html" class="text-white hover:text-[#8febfe] font-swiss font-bold text-sm uppercase tracking-wider leading-none transition-colors">DJx</a>
+                            </div>
+                        </div>
+
+                        <p>Tonight on <strong>Program X</strong>, host DJx took listeners on an analog odyssey, exploring the unique warm textures of late-80s tape loops, featured recent cassettes from local synth labels, and showcased modular synth patches crafted live in the studio.</p>
+                        
+                        <!-- Embedded tape visualizer GIF (Simulating editor insert) -->
+                        <div class="my-6 rounded-lg overflow-hidden border border-zinc-800 shadow-md w-full flex flex-col items-center bg-zinc-950 p-2 select-none">
+                            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3A1dHd0NGJub3B2aDFqOHVzMnhyYXdpcThxcm40NDcxb2ZkOHhnbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vRbfV7vQQb4sXSM/giphy.gif" alt="Retro Neon Tape Deck Spin" class="w-full aspect-video md:aspect-[21/9] object-cover rounded" />
+                            <span class="text-[10px] text-zinc-500 font-swiss italic mt-2">GIF Preset: Embedded Cassette Deck Visualizer</span>
+                        </div>
+
+                        <blockquote class="border-l-4 border-[#df0781] pl-4 italic text-zinc-400 my-6 bg-zinc-900/20 py-2 pr-2">
+                            "The compression and slight pitch wobbles of old tape reels aren't defects; they are the organic dust and shadows that make synthesized sounds feel alive." - DJx
+                        </blockquote>
+
+                        <p>Below is the complete setlist of tracks played during the 2-hour broadcast. You can download this playlist as a CSV file or check out the Spotify companion playlist on the right panel.</p>
                     </div>
-                    
-                    <div class="overflow-x-auto">
-                        <table class="w-full text-left font-swiss text-sm">
+
+                    <!-- Tracklist Table (Embedded inside article card) -->
+                    <div class="my-8 overflow-x-auto border border-zinc-800 rounded-lg bg-zinc-950/40">
+                        <table class="w-full text-left font-swiss border-collapse">
                             <thead>
-                                <tr class="border-b border-zinc-800 text-zinc-500 text-xs uppercase tracking-wider bg-zinc-950/50">
+                                <tr class="border-b border-zinc-800 bg-zinc-900/60 text-zinc-400 text-xs font-bold uppercase tracking-wider">
                                     <th class="py-3 px-6 font-bold">Artist</th>
                                     <th class="py-3 px-6 font-bold">Title</th>
                                     <th class="py-3 px-6 font-bold">Album</th>
                                 </tr>
                             </thead>
-                            <tbody class="divide-y divide-zinc-900">
+                            <tbody class="text-sm text-zinc-300 divide-y divide-zinc-900">
                                 <tr class="hover:bg-zinc-900/30 transition-colors">
                                     <td class="py-4 px-6 font-bold text-white">Gunship</td>
                                     <td class="py-4 px-6 text-zinc-300">Fly for Your Life</td>
@@ -207,45 +226,49 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+
+                    <!-- Embedded video from editor output -->
+                    <p class="mt-6">To conclude the evening, we streamed the video for Gunship's latest release. Watch the official music video embedded below:</p>
+                    <div class="relative w-full aspect-video my-6 rounded-lg overflow-hidden border border-zinc-800 shadow-lg">
+                        <iframe src="https://www.youtube.com/embed/4xDzrJKXOOY" class="absolute inset-0 w-full h-full" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </article>
+                <!-- END COMPONENT: playlist_article -->
 
             </div>
 
             <!-- Right Side (4 cols): Playlist Thumbnail, Spotify Embed -->
             <div class="lg:col-span-4 flex flex-col gap-6">
                 
+                <!-- COMPONENT: playlist_thumbnail -->
                 <!-- Playlist Thumbnail component -->
                 <!-- BACKEND NOTE FOR DEVELOPERS:
                      This is a backend-configured field. DJs can configure the thumbnail in their dashboard.
-                     By default, it renders the dynamically generated vinyl graphic (using program initials 'DX' and title).
-                     If the DJ uploads a custom cover, the backend serves the custom image (e.g. program_x_thumbnail.jpg) instead.
+                     By default, it renders the uploaded program picture (program_x_thumbnail.jpg).
+                     If no image is uploaded, it falls back to WUSB's dynamic brand visual generator (spinning vinyl graphic).
                 -->
                 <div class="bg-zinc-900/30 border border-zinc-800 rounded-lg p-5 flex flex-col items-center">
                     <h3 class="text-xs font-swiss font-bold uppercase tracking-widest text-zinc-500 mb-4 self-start border-b border-zinc-800 pb-2 w-full">Playlist Thumbnail</h3>
                     
                     <!-- Thumbnail Canvas Box -->
                     <div class="relative w-full aspect-square rounded-md overflow-hidden border border-zinc-800 flex items-center justify-center bg-zinc-950 shadow-inner group">
+                        <!-- Default: program thumbnail image -->
+                        <img src="program_x_thumbnail.jpg" alt="Program X Cover Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         
-                        <!-- Default program-themed styling (Text/Dynamic Visual) -->
-                        <div id="thumb-default" class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-zinc-900 to-black select-none transition-all duration-300">
-                            <!-- Styled Vinyl Graphic -->
+                        <!-- Note: Dynamic brand vinyl graphic generator fallback:
+                        <div class="absolute inset-0 flex flex-col items-center justify-center p-6 bg-gradient-to-br from-zinc-900 to-black select-none">
                             <div class="w-32 h-32 rounded-full border-4 border-zinc-800/80 bg-zinc-950 flex items-center justify-center relative mb-4 animate-spin" style="animation-duration: 20s;">
                                 <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#df0781] to-[#8febfe] flex items-center justify-center border border-black shadow-lg">
                                     <span class="font-chuck text-sm text-black uppercase">DX</span>
                                 </div>
-                                <!-- Grooves on the vinyl -->
-                                <div class="absolute inset-2 border border-zinc-900/40 rounded-full"></div>
-                                <div class="absolute inset-6 border border-zinc-900/40 rounded-full"></div>
-                                <div class="absolute inset-10 border border-zinc-900/40 rounded-full"></div>
                             </div>
-                            <h2 class="font-chuck text-3xl text-center leading-none wusb-gradient">
-                                PROGRAM X
-                            </h2>
-                            <p class="text-[9px] font-swiss text-zinc-500 uppercase tracking-widest mt-1">Default Template Visual</p>
                         </div>
+                        -->
                     </div>
                 </div>
+                <!-- END COMPONENT: playlist_thumbnail -->
 
+                <!-- COMPONENT: spotify_playlist -->
                 <!-- Spotify Embed Component -->
                 <div class="bg-zinc-900/30 border border-zinc-800 rounded-lg p-5">
                     <h3 class="text-xs font-swiss font-bold uppercase tracking-widest text-zinc-500 mb-4 border-b border-zinc-800 pb-2">Spotify Playlist Companion</h3>
@@ -263,30 +286,15 @@
                         </iframe>
                     </div>
                 </div>
+                <!-- END COMPONENT: spotify_playlist -->
 
             </div>
         </section>
 
-        <!-- Program Media Showcase (Video and Extra Pictures) -->
+        <!-- Program Media Showcase (Extra Pictures) -->
         <section class="border-t border-zinc-800 pt-12 flex flex-col gap-10">
-            
-            <!-- Video Embedded Player -->
-            <div class="bg-zinc-900/20 border border-zinc-800 rounded-lg p-6 sm:p-8 hover:border-zinc-700 transition-colors duration-300 shadow-md">
-                <div class="border-b border-zinc-800 pb-4 mb-6">
-                    <h2 class="font-swiss font-bold text-2xl text-white uppercase tracking-tight">Linked Program Video</h2>
-                    <p class="text-xs text-zinc-500 mt-1 uppercase font-swiss font-bold tracking-wider">Video broadcast record of the show</p>
-                </div>
-                
-                <div class="relative w-full aspect-video rounded-lg overflow-hidden border border-zinc-800 shadow-lg">
-                    <iframe src="https://www.youtube.com/embed/MVgM6X1hM8E" 
-                            class="absolute inset-0 w-full h-full" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
 
+            <!-- COMPONENT: attached_gallery -->
             <!-- Gallery Section -->
             <div class="bg-zinc-900/20 border border-zinc-800 rounded-lg p-6 sm:p-8 hover:border-zinc-700 transition-colors duration-300 shadow-md">
                 <div class="border-b border-zinc-800 pb-4 mb-6">
@@ -323,6 +331,7 @@
 
                 </div>
             </div>
+            <!-- END COMPONENT: attached_gallery -->
 
         </section>
 

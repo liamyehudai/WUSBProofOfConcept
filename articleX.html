@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WUSB FCC Public File - WUSB 90.1 FM</title>
-    <meta name="description" content="Access WUSB 90.1 FM's FCC Online Public Inspection File, Certificate of Renewal, and disability accommodation contact details.">
+    <title>Article X | WUSB 90.1 FM</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: 'var(--color-black, #000000)',
+              white: 'var(--color-white, #ffffff)',
+              zinc: {
+                400: 'var(--color-zinc-400, #a1a1aa)',
+                450: '#7e7e86',
+                500: 'var(--color-zinc-500, #71717a)',
+                800: 'var(--color-zinc-800, #27272a)',
+                900: 'var(--color-zinc-900, #18181b)',
+                950: 'var(--color-zinc-950, #09090b)',
+              }
+            },
+            fontFamily: {
+              swiss: ['Inter', 'sans-serif'],
+              chuck: ['Outfit', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-custom.css">
 </head>
 <body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
 
@@ -31,7 +55,7 @@
                 <nav class="hidden lg:flex items-center gap-8">
                     <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
                     <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
-                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
                     <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
                     
                     <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
@@ -66,9 +90,9 @@
                 <a href="programs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Shows</a>
                 <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
                 <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
-                <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-white border-b-2 border-[#df0781] pb-1 whitespace-nowrap transition-colors">WUSB Public File</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
                 <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
-            </div>
+                </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
@@ -76,7 +100,7 @@
             <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
                 <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
                 <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
-                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
                 <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
                 <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
                     PLEDGE
@@ -88,48 +112,124 @@
                 <a href="programs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Shows</a>
                 <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
                 <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
-                <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-white">WUSB Public File</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
                 <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
-            </div>
+                </div>
         </div>
     </header>
     <!-- END COMPONENT: HEADER -->
 
     <!-- MAIN CONTENT AREA -->
-    <!-- DRUPAL MAPPING: Main Content Region / Node Display -->
-    <main class="flex-grow max-w-4xl mx-auto px-4 py-12 w-full pb-32 animate-fade-in">
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full pb-36">
         
-        <div class="border-b-2 border-zinc-800 pb-4 mb-8">
-            <h1 class="font-swiss font-bold text-5xl wusb-gradient inline-block uppercase tracking-tighter">WUSB Public File</h1>
-        </div>
-        
-        <!-- DRUPAL MAPPING: Node Body Field (Text formatted) -->
-        <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed space-y-6 text-lg">
-            
-            <p>WUSB 90.1 FM maintains its official, FCC-mandated Online Public Inspection File to ensure transparency regarding ownership, broadcast authorizations, and service to the community. You can access the public file directly on the Federal Communications Commission database:</p>
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 mb-8 text-xs font-swiss font-bold uppercase tracking-widest text-zinc-500">
+            <a href="index.html" class="hover:text-white transition-colors">Home</a>
+            <span>/</span>
+            <a href="playlists.html" class="hover:text-white transition-colors">Transmissions</a>
+            <span>/</span>
+            <span class="wusb-gradient">Article X</span>
+        </nav>
 
-            <div class="flex gap-6 my-8">
-                <a href="https://publicfiles.fcc.gov/fm-profile/WUSB" target="_blank" rel="noopener noreferrer" class="font-swiss text-base font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2">
-                    WUSB FCC Online Public File <span class="text-xl leading-none">&rarr;</span>
-                </a>
+        <!-- COMPONENT: article_header -->
+        <!-- Article Header and Hero Section -->
+        <header class="border-b border-zinc-850 pb-8 mb-10">
+            <!-- Article Category Tag -->
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-xs font-swiss font-bold uppercase tracking-widest px-3 py-1 bg-zinc-900 border border-zinc-800 rounded-sm text-[#8febfe]" style="--tag-color: #8febfe; border-color: var(--tag-color);">
+                    Music Review & Culture
+                </span>
             </div>
 
-            <p>For Disability related accommodation in accessing WUSB public file information please email <a href="mailto:gm@wusb.fm" class="text-[#8febfe] hover:underline font-medium">gm@wusb.fm</a>.</p>
+            <!-- Title -->
+            <h1 class="font-chuck text-4xl sm:text-6xl md:text-7xl font-extrabold leading-none tracking-tight text-white mb-6 uppercase">
+                Cyberpunk and the Evolution of Electronic Radio
+            </h1>
 
-            <div class="mt-12 pt-8 border-t border-zinc-800">
-                <h2 class="text-3xl font-bold mb-4 uppercase tracking-tighter text-white font-swiss">Certificate of Renewal</h2>
-                <p>The Federal Communications Commission Certificate of Renewal and related broadcast licensing documents for WUSB are part of the station's official public records and can be accessed within the licensing directory of the FCC online cabinet.</p>
-                
-                <div class="flex gap-6 mt-8">
-                    <a href="https://publicfiles.fcc.gov/fm-profile/WUSB/cabinet/licensing-and-holdings:licenses" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-bold uppercase tracking-widest text-[#8febfe] hover:text-white transition-colors flex items-center gap-2">
-                        View Renewal Filings <span class="text-xl leading-none">&rarr;</span>
+            <!-- Author & Date Metadata -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-b border-zinc-900 py-4 my-6">
+                <div class="flex items-center gap-3">
+                    <!-- Host DJ Avatar Badge -->
+                    <a href="djx.html" class="w-10 h-10 rounded-full overflow-hidden border border-zinc-800 hover:border-white transition-colors flex-shrink-0">
+                        <img src="djx_avatar.jpg" alt="DJx Avatar" class="w-full h-full object-cover">
                     </a>
+                    <div>
+                        <span class="block text-[10px] font-swiss uppercase tracking-wider text-zinc-500 leading-none mb-1">Written By</span>
+                        <a href="djx.html" class="text-white hover:text-[#8febfe] font-swiss font-bold text-sm uppercase tracking-wider leading-none transition-colors">DJx</a>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:items-end">
+                    <span class="text-[10px] font-swiss uppercase tracking-wider text-zinc-500 leading-none mb-1">Published On</span>
+                    <p class="text-zinc-300 font-swiss font-bold text-sm tracking-widest uppercase">June 30, 2026</p>
                 </div>
             </div>
 
-        </div>
+            <!-- Hero Thumbnail Image -->
+            <div class="w-full aspect-video rounded-lg overflow-hidden border border-zinc-800 bg-zinc-950 shadow-2xl mt-8">
+                <img src="article_hero.jpg" alt="Cyberpunk radio station neon scene" class="w-full h-full object-cover">
+            </div>
+        </header>
+        <!-- END COMPONENT: article_header -->
+
+        <!-- COMPONENT: rich_text_content -->
+        <!-- BACKEND NOTE FOR DEVELOPERS:
+             This section renders the raw, formatted HTML payload generated from Drupal's rich text field (e.g. CKEditor 5).
+             DJs and editors use the Drupal back-end block composer to format headings, embed media gallery images,
+             write blockquotes, and link tracks.
+        -->
+        <article class="prose prose-invert max-w-4xl mx-auto font-swiss text-zinc-350 text-base sm:text-lg leading-relaxed flex flex-col gap-6">
+            
+            <p class="font-semibold text-white text-lg sm:text-xl">
+                How did free-form college radio become the testing ground for underground electronic synthesis? We explore the historical intersection of late-night frequency modulation, ambient tape loops, and the cybernetic soundscapes that continue to define the cyberpunk subculture.
+            </p>
+
+            <h2 class="text-white font-chuck text-2xl sm:text-3xl font-extrabold uppercase mt-6 tracking-tight border-b border-zinc-900 pb-2">
+                1. The Roots of Electronic Broadcast
+            </h2>
+            <p>
+                Long before home computers and high-bandwidth streaming platforms, experimental audio designers had to rely on analog transmission methods. Free-form radio stations, operating out of university basements with high-power transmitters, provided the perfect canvas for sonic exploration. Synthesizer builders and early electronic keyboardists would literally bring their massive hardware patch systems directly into the broadcast studio, patching output boards directly into the transmitter boards.
+            </p>
+
+            <blockquote class="border-l-4 border-[#df0781] bg-zinc-900/20 p-5 rounded-r my-6 font-swiss italic text-zinc-300">
+                "There was something magical about late-night frequency modulation. You were broadcasting a live analog patch to thousands of listeners driving through the suburbs in the dark. It was the ultimate cybernetic feedback loop."
+                <span class="block mt-2 text-xs font-swiss font-bold uppercase tracking-widest text-[#df0781] not-italic">— DJx, Midnight Frequencies Host</span>
+            </blockquote>
+
+            <p>
+                This analog transmission created a unique texture. The tape hiss, the subtle radio static, and the natural compression of the FM signal path added a warm, dream-like quality to the cold arpeggiations of the hardware.
+            </p>
+
+            <h2 class="text-white font-chuck text-2xl sm:text-3xl font-extrabold uppercase mt-6 tracking-tight border-b border-zinc-900 pb-2">
+                2. Embedded Studio Sessions
+            </h2>
+            
+            <!-- Embedded image inside rich text block -->
+            <figure class="my-8 flex flex-col gap-3">
+                <div class="rounded border border-zinc-800 overflow-hidden aspect-video max-w-full">
+                    <img src="wusb_studio.jpg" alt="Analog mixing console in WUSB Studio A" class="w-full h-full object-cover">
+                </div>
+                <figcaption class="text-xs text-zinc-500 uppercase tracking-wider font-bold font-swiss text-center">
+                    Figure 1: The WUSB Studio A mixer desk during a live late-night hardware broadcast.
+                </figcaption>
+            </figure>
+
+            <p>
+                In the modern WUSB studios (shown in Figure 1), the legacy continues. Modern hosts integrate modular racks, Roland drum machines, and digital audio workstations side-by-side with vinyl turntables and CD decks. This hybrid workflow is the hallmark of modern synthwave and industrial noise genres. DJs can build live beat progressions on-the-fly, layering track selections with synthesized textures.
+            </p>
+
+            <h2 class="text-white font-chuck text-2xl sm:text-3xl font-extrabold uppercase mt-6 tracking-tight border-b border-zinc-900 pb-2">
+                3. Bridging Retro and Future Sound
+            </h2>
+            <p>
+                As we look to the future, the boundary between listener and broadcaster continues to blur. Modern interactive chatrooms, live-stream playlists, and instant track log spreadsheets (like our browser-generated CSV outputs) let audiences explore the exact tracks played during a show in real-time. Yet, the core experience remains unchanged: a single host, a stack of records or patches, and an open transmission to the world.
+            </p>
+            
+        </article>
+        <!-- END COMPONENT: rich_text_content -->
+
     </main>
 
+    <!-- COMPONENT: PLAYER -->
     <!-- COMPONENT: PLAYER -->
     <!-- STICKY BOTTOM RADIO PLAYER -->
     <div class="fixed bottom-0 left-0 w-full z-50">

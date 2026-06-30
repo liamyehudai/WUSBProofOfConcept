@@ -163,7 +163,7 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 ---
 
 ### 🟢 3.3 Playlist Directory Item (`playlist_item`)
-*   **Description:** An structured list row displaying broadcast logs, dj names, broadcast time, and genre tags.
+*   **Description:** A structured list item displaying broadcast logs, DJ/host name, broadcast date/time, and a custom thumbnail. The thumbnail displays the program cover art (e.g. `program_x_thumbnail.jpg` for Program X) or falls back to a dynamically themed spinning vinyl record displaying the program's initials.
 *   **Component Type:** Playlist Node Teaser View Mode (`node--playlist--teaser.html.twig`).
 
 #### Component Fields
@@ -172,13 +172,13 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 | `show_title` | Radio Program Name | Text | `With The Beatles` | Name of the radio program. |
 | `dj_name` | DJ / Host Name | Text | `DJ Pete` | Host associated with the broadcast. |
 | `broadcast_date` | Date of Broadcast | Date/Time | `May 28, 2026` | Date of the show airing. |
-| `tags` | Genre Tag Array | List (Term) | `["Rock", "60s", "Indie"]` | Small tags highlighted in grey pill boxes. |
+| `thumbnail` | Cover Art Thumbnail | Image / Custom HTML | Dynamic spinning vinyl / `program_x_thumbnail.jpg` | Square cover picture or styled spinning vinyl template. |
 | `detail_url` | View Details URL | URL | `playlist-detail.html` | Click-through route to track-by-track tables. |
 
 ---
 
 ### 🟢 3.4 Interactive Schedule Slot (`schedule_slot`)
-*   **Description:** A precise programming slot placed inside the interactive weekly programming calendar. It displays show name, host, and timing brackets. It has been upgraded with a dynamic Play button that generates archive URL requests pointing to `player.html`.
+*   **Description:** A precise programming slot placed inside the interactive weekly programming calendar. It displays the show name (linking to its program profile page, e.g. `programX.html`), host, and timing brackets. It has been upgraded with a dynamic Play button that redirects the user to the standalone `player.html` player page.
 *   **Component Type:** View row within the schedule grid calendar page.
 
 #### Component Fields
@@ -243,23 +243,40 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 ---
 
 ### 🟢 3.8 Playlist Detail Page (`playlist_detail`)
-*   **Description:** The detailed playlist log detail view page showing a list of tracks played during a single broadcast window, host metadata, Spotify companions, linked videos, and attached media ([playlistX.html](file:///Users/liam_yehudai/Documents/VSCode/WUSBProofOfConcept/playlistX.html)).
+*   **Description:** The detailed playlist log detail view page, unified as a card article layout matching `Episode 45` from `programX.html` ([playlistX.html](file:///Users/liam_yehudai/Documents/VSCode/WUSBProofOfConcept/playlistX.html)).
 *   **Component Type:** Node Playlist Full View Mode (`node--playlist--full.html.twig`).
 
 #### Component Fields
 | Field Machine Name | Field Label | Field Type | Example Value | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| `program_title` | Program Name | Text | `Program X` | Name of the radio program. |
+| `program_title` | Episode/Program Title | Text | `Episode 45: Retro-Future Beats & Tape Loops` | Heading name of the broadcast block. |
 | `broadcast_date` | Date of Release | Date | `June 25, 2026` | Date this specific episode aired. |
 | `attached_dj` | Host DJ Profile | Entity Reference | `[{"name": "DJx"}]` | Link reference to the DJ profile page. |
 | `narrative` | Show Description | Rich Text | `<p>Tonight on Program X...</p>` | Text block summarizing the specific episode's theme. |
 | `tracklist` | Tracklist Rows | List (Object) | `[{"artist": "Gunship", "title": "Fly for Your Life", "album": "Gunship", "new": false}]` | Table items with Artist, Title, and Album columns. New releases are marked with an asterisk `*` in the text. |
 | `program_profile` | Program Link | Link | `programX.html` | Click-through route to the master show profile. |
+| `archive_play` | Archive Play Button | Link | `player.html?archive=...` | Direct link button to load and listen to this show's broadcast archive in the standalone media player. |
 | `download_csv` | Download CSV trigger| File / Action | Local Download Generator | Real-time browser spreadsheet compilation & download. |
 | `thumbnail_mode` | Thumbnail Mode | Choice (Enum) | `default` / `uploaded` | **Backend Feature Only:** Dictates whether the page renders the dynamically generated brand visual (rotating Vinyl graphic) or a custom uploaded image. Configurable by DJs on the dashboard and not exposed as a front-end toggle. |
-| `youtube_video` | Linked Program Video | URL | `https://www.youtube.com/embed/MVgM6X1hM8E` | Embed link for video archive playback. |
+| `youtube_video` | Embedded Episode Video | URL | `https://www.youtube.com/embed/MVgM6X1hM8E` | Video iframe embedded directly inside the rich text narrative block at the bottom of the article card. |
 | `spotify_playlist` | Spotify Embed URL | URL | `https://open.spotify.com/embed/playlist/...` | Widget embed for companion playlist. |
 | `attached_gallery` | Attached Studio Media | List (Media Image) | `["wusb_studio.jpg"]` | Gallery of files attached to the playlist with click lightbox. |
+
+---
+
+### 🟢 3.9 Article Detail Page (`article_detail`)
+*   **Description:** The detailed page view for news articles, blogs, music reviews, and events ([articleX.html](file:///Users/liam_yehudai/Documents/VSCode/WUSBProofOfConcept/articleX.html)).
+*   **Component Type:** Node Article Full View Mode (`node--article--full.html.twig`).
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `title` | Article Title | Text | `Cyberpunk and the Evolution of Electronic Radio` | Heading name of the post. |
+| `published_date` | Date of Publication | Date | `June 30, 2026` | Date the article was published. |
+| `author_dj` | Author DJ reference | Entity Reference | `[{"name": "DJx"}]` | Reference to the authoring user or DJ profile page. |
+| `hero_image` | Hero Thumbnail Banner | Media Image | `article_hero.jpg` | Main visually prominent banner photo. |
+| `category` | Taxonomy Category | Taxonomy reference | `Music Review` | Taxonomy tag reference displaying with colored highlight outline. |
+| `body` | Rich Text Content | Rich Text | `<p>How did free-form...</p>` | The complete editor-generated body text containing paragraphs, headings, blockquotes, and embedded image figures. |
 
 ---
 

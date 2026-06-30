@@ -116,14 +116,14 @@ for (let i = 0; i < 48; i++) {
         let bgClass = day === 'Tuesday' ? 'bg-zinc-900/30 current-day' : '';
         
         if (cell.shows.length === 0) {
-            rowsHtml += `                        <td rowspan="${cell.rowspan}" class="border-r border-zinc-800 border-b border-zinc-800 ${bgClass}"></td>\n`;
+            rowsHtml += `                        <td data-day="${day}" rowspan="${cell.rowspan}" class="border-r border-zinc-800 border-b border-zinc-800 ${bgClass}"></td>\n`;
         } else {
-            rowsHtml += `                        <td rowspan="${cell.rowspan}" class="border-r border-zinc-800 border-b border-zinc-800 ${bgClass} p-0">\n`;
+            rowsHtml += `                        <td data-day="${day}" rowspan="${cell.rowspan}" class="border-r border-zinc-800 border-b border-zinc-800 ${bgClass} p-0">\n`;
             rowsHtml += `                            <div class="show-container">\n`;
             cell.shows.forEach((show) => {
                 rowsHtml += `                                <div class="show-item" style="border-left-color: ${show.color};">
                                     <span class="show-time">${show.time}</span>
-                                    <span class="show-title">${show.title}</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">${show.title}</a>
                                     ${show.is_alt ? '<div class="alt-show">-ALT-</div>' : ''}
                                 </div>\n`;
             });
@@ -247,23 +247,42 @@ let template = `<!DOCTYPE html>
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         
         <!-- Section Header -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end border-b-2 border-zinc-800 pb-4 mb-8 gap-6">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end border-b-2 border-zinc-800 pb-4 mb-8 gap-6">
             <div>
                 <h2 class="font-swiss font-bold text-4xl md:text-5xl uppercase tracking-tighter">Weekly Schedule</h2>
                 <p class="text-zinc-500 font-swiss font-bold text-sm tracking-widest mt-2 uppercase">Spring 2026 Season</p>
             </div>
             
-            <!-- Day Selector Tabs -->
-            <div class="flex bg-zinc-900 p-1 rounded-sm overflow-x-auto no-scrollbar max-w-full">
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sun</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Mon</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest text-[#8bfa00] bg-zinc-800">Tue</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Wed</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Thu</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Fri</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sat</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Full Week</button>
+            <!-- Date Search and Day Selector -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto">
+                <!-- Date Picker Input Component -->
+                <div class="flex items-center bg-zinc-900 border border-zinc-800 rounded-sm px-3 py-2 gap-2 text-zinc-400 focus-within:border-[#8febfe] transition-colors">
+                    <i data-lucide="calendar" class="w-4 h-4 text-zinc-400"></i>
+                    <input type="date" id="schedule-date-picker" class="bg-transparent text-white font-swiss text-xs font-bold uppercase tracking-widest focus:outline-none cursor-pointer border-none" style="color-scheme: dark;" />
+                </div>
+
+                <!-- Day Selector Tabs -->
+                <div id="day-selector" class="flex bg-zinc-900 p-1 rounded-sm overflow-x-auto no-scrollbar max-w-full">
+                    <button data-filter="Sunday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sun</button>
+                    <button data-filter="Monday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Mon</button>
+                    <button data-filter="Tuesday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Tue</button>
+                    <button data-filter="Wednesday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Wed</button>
+                    <button data-filter="Thursday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Thu</button>
+                    <button data-filter="Friday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Fri</button>
+                    <button data-filter="Saturday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sat</button>
+                    <button data-filter="all" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest text-[#8bfa00] bg-zinc-800">Full Week</button>
+                </div>
             </div>
+        </div>
+
+        <!-- Date Info Alert -->
+        <div id="date-info-display" class="hidden bg-zinc-900/40 border border-zinc-800 rounded p-4 mb-6 flex items-center justify-between">
+            <span class="font-swiss text-sm text-zinc-300">
+                Viewing schedule for <strong id="date-info-day" class="text-white">Tuesday</strong> (<span id="date-info-formatted" class="text-zinc-400">July 1, 2026</span>)
+            </span>
+            <button id="clear-date-btn" class="text-xs font-swiss font-bold uppercase tracking-widest text-[#df0781] hover:text-white transition-colors">
+                Show Full Week
+            </button>
         </div>
 
         <!-- Schedule Table -->
@@ -272,13 +291,13 @@ let template = `<!DOCTYPE html>
                 <thead>
                     <tr class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">
                         <th class="w-16 border-r border-zinc-800 text-center">Time</th>
-                        <th class="border-r border-zinc-800 text-center">Sunday</th>
-                        <th class="border-r border-zinc-800 text-center">Monday</th>
-                        <th class="current-day border-r border-zinc-800 bg-zinc-900/80 text-center">Tuesday</th>
-                        <th class="border-r border-zinc-800 text-center">Wednesday</th>
-                        <th class="border-r border-zinc-800 text-center">Thursday</th>
-                        <th class="border-r border-zinc-800 text-center">Friday</th>
-                        <th class="text-center">Saturday</th>
+                        <th data-day="Sunday" class="border-r border-zinc-800 text-center">Sunday</th>
+                        <th data-day="Monday" class="border-r border-zinc-800 text-center">Monday</th>
+                        <th data-day="Tuesday" class="current-day border-r border-zinc-800 bg-zinc-900/80 text-center">Tuesday</th>
+                        <th data-day="Wednesday" class="border-r border-zinc-800 text-center">Wednesday</th>
+                        <th data-day="Thursday" class="border-r border-zinc-800 text-center">Thursday</th>
+                        <th data-day="Friday" class="border-r border-zinc-800 text-center">Friday</th>
+                        <th data-day="Saturday" class="text-center">Saturday</th>
                     </tr>
                 </thead>
                 <tbody class="font-swiss">
@@ -288,16 +307,164 @@ ${rowsHtml}
         </div>
     </main>
 
-    <!-- COMPONENT: player.html -->\n    <div id="player-placeholder"></div>\n\n    <!-- JAVASCRIPT LOGIC -->
+    <!-- COMPONENT: player-sticky -->
+    <div id="player-placeholder"></div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('#day-selector button');
+            const tableCells = document.querySelectorAll('.schedule-table th[data-day], .schedule-table td[data-day]');
+            const datePicker = document.getElementById('schedule-date-picker');
+            const dateInfoDisplay = document.getElementById('date-info-display');
+            const dateInfoDay = document.getElementById('date-info-day');
+            const dateInfoFormatted = document.getElementById('date-info-formatted');
+            const clearDateBtn = document.getElementById('clear-date-btn');
+            
+            // Function to filter grid by day name
+            function filterDay(dayName) {
+                if (dayName === 'all') {
+                    tableCells.forEach(cell => {
+                        cell.style.display = '';
+                    });
+                } else {
+                    tableCells.forEach(cell => {
+                        if (cell.getAttribute('data-day') === dayName) {
+                            cell.style.display = '';
+                        } else {
+                            cell.style.display = 'none';
+                        }
+                    });
+                }
+            }
+
+            // Tab click handling
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('text-[#8bfa00]', 'bg-zinc-800');
+                        t.classList.add('text-zinc-500', 'hover:text-white');
+                    });
+                    
+                    tab.classList.remove('text-zinc-500', 'hover:text-white');
+                    tab.classList.add('text-[#8bfa00]', 'bg-zinc-800');
+                    
+                    const filter = tab.getAttribute('data-filter');
+                    filterDay(filter);
+                    
+                    // Reset date picker and hide banner if user manually clicks a weekday or Full Week
+                    if (filter === 'all' || !datePicker.value) {
+                        datePicker.value = '';
+                        dateInfoDisplay.classList.add('hidden');
+                    } else {
+                        // Check if picker matches selected day; if not, clear it
+                        const dateVal = datePicker.value;
+                        if (dateVal) {
+                            const date = new Date(dateVal + 'T00:00:00');
+                            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                            const dayName = days[date.getDay()];
+                            if (dayName !== filter) {
+                                datePicker.value = '';
+                                dateInfoDisplay.classList.add('hidden');
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Date picker change handling
+            datePicker.addEventListener('change', () => {
+                const dateVal = datePicker.value;
+                if (dateVal) {
+                    const date = new Date(dateVal + 'T00:00:00');
+                    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    const dayName = days[date.getDay()];
+                    
+                    // Click matching day tab
+                    const matchingTab = document.querySelector('#day-selector button[data-filter="' + dayName + '"]');
+                    if (matchingTab) {
+                        matchingTab.click();
+                    }
+                    
+                    // Format display date
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    const formatted = date.toLocaleDateString(undefined, options);
+                    
+                    dateInfoDay.textContent = dayName;
+                    dateInfoFormatted.textContent = formatted.replace(dayName + ', ', '');
+                    dateInfoDisplay.classList.remove('hidden');
+                } else {
+                    // Reset
+                    const allTab = document.querySelector('#day-selector button[data-filter="all"]');
+                    if (allTab) allTab.click();
+                }
+            });
+
+            // Clear button handling
+            clearDateBtn.addEventListener('click', () => {
+                const allTab = document.querySelector('#day-selector button[data-filter="all"]');
+                if (allTab) allTab.click();
+            });
+        });
+    </script>
 </body>
 </html>`;
 
 const headerHtml = fs.readFileSync('header.html', 'utf-8');
-const playerHtml = fs.readFileSync('player.html', 'utf-8');
+const playerStickyHtml = `<!-- COMPONENT: PLAYER -->
+    <!-- STICKY BOTTOM RADIO PLAYER -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+        <div class="bg-zinc-950 border-t border-zinc-800 py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="play-pause-btn" class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:scale-105 transition-transform focus:outline-none">
+                    <i id="icon-play" data-lucide="play" class="w-6 h-6 ml-1 block fill-current"></i>
+                    <i id="icon-pause" data-lucide="pause" class="w-6 h-6 hidden fill-current"></i>
+                </button>
+                <div class="hidden sm:block">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span id="live-ping" class="hidden animate-ping absolute inline-flex h-full w-full rounded-full bg-[#df2331] opacity-75"></span>
+                            <span id="live-dot" class="relative inline-flex rounded-full h-3 w-3 bg-zinc-600"></span>
+                        </span>
+                        <span class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">On Air Now</span>
+                    </div>
+                    <div class="font-swiss font-bold text-lg tracking-tight">The Underground Sound w/ DJ Void</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 mr-4">
+                    <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400"></i>
+                    <div class="w-24 h-2 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-white"></div>
+                    </div>
+                </div>
+                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                    Listen Live
+                </button>
+            </div>
+        </div>
+
+        <!-- NEON COLOR STRIP -->
+        <div class="flex h-4 w-full">
+            <div class="flex-1 bg-[#df0781]"></div>
+            <div class="flex-1 bg-[#af04ab]"></div>
+            <div class="flex-1 bg-[#9800e0]"></div>
+            <div class="flex-1 bg-[#8febfe]"></div>
+            <div class="flex-1 bg-[#8bfa00]"></div>
+            <div class="flex-1 bg-[#f8e700]"></div>
+            <div class="flex-1 bg-[#eebc00]"></div>
+            <div class="flex-1 bg-[#df2331]"></div>
+            <div class="flex-1 bg-[#a91b00]"></div>
+            <div class="flex-1 bg-[#52a1fc]"></div>
+            <div class="flex-1 bg-[#3b00fc]"></div>
+            <div class="flex-1 bg-[#badd00]"></div>
+        </div>
+    </div>`;
 
 template = template.replace('<div id="header-placeholder"></div>', headerHtml);
-template = template.replace('<div id="player-placeholder"></div>', playerHtml);
+template = template.replace('<div id="player-placeholder"></div>', playerStickyHtml);
 
 fs.writeFileSync('schedule.html', template);
 console.log('Successfully regenerated grided schedule.html');

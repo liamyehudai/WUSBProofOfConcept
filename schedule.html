@@ -192,23 +192,42 @@
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
         
         <!-- Section Header -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end border-b-2 border-zinc-800 pb-4 mb-8 gap-6">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end border-b-2 border-zinc-800 pb-4 mb-8 gap-6">
             <div>
                 <h2 class="font-swiss font-bold text-4xl md:text-5xl uppercase tracking-tighter">Weekly Schedule</h2>
                 <p class="text-zinc-500 font-swiss font-bold text-sm tracking-widest mt-2 uppercase">Spring 2026 Season</p>
             </div>
             
-            <!-- Day Selector Tabs -->
-            <div class="flex bg-zinc-900 p-1 rounded-sm overflow-x-auto no-scrollbar max-w-full">
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sun</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Mon</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest text-[#8bfa00] bg-zinc-800">Tue</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Wed</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Thu</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Fri</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sat</button>
-                <button class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Full Week</button>
+            <!-- Date Search and Day Selector -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full lg:w-auto">
+                <!-- Date Picker Input Component -->
+                <div class="flex items-center bg-zinc-900 border border-zinc-800 rounded-sm px-3 py-2 gap-2 text-zinc-400 focus-within:border-[#8febfe] transition-colors">
+                    <i data-lucide="calendar" class="w-4 h-4 text-zinc-400"></i>
+                    <input type="date" id="schedule-date-picker" class="bg-transparent text-white font-swiss text-xs font-bold uppercase tracking-widest focus:outline-none cursor-pointer border-none" style="color-scheme: dark;" />
+                </div>
+
+                <!-- Day Selector Tabs -->
+                <div id="day-selector" class="flex bg-zinc-900 p-1 rounded-sm overflow-x-auto no-scrollbar max-w-full">
+                    <button data-filter="Sunday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sun</button>
+                    <button data-filter="Monday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Mon</button>
+                    <button data-filter="Tuesday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Tue</button>
+                    <button data-filter="Wednesday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Wed</button>
+                    <button data-filter="Thursday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Thu</button>
+                    <button data-filter="Friday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Fri</button>
+                    <button data-filter="Saturday" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest hover:text-white text-zinc-500 transition-colors">Sat</button>
+                    <button data-filter="all" class="px-4 py-2 font-swiss text-xs font-bold uppercase tracking-widest text-[#8bfa00] bg-zinc-800">Full Week</button>
+                </div>
             </div>
+        </div>
+
+        <!-- Date Info Alert -->
+        <div id="date-info-display" class="hidden bg-zinc-900/40 border border-zinc-800 rounded p-4 mb-6 flex items-center justify-between">
+            <span class="font-swiss text-sm text-zinc-300">
+                Viewing schedule for <strong id="date-info-day" class="text-white">Tuesday</strong> (<span id="date-info-formatted" class="text-zinc-400">July 1, 2026</span>)
+            </span>
+            <button id="clear-date-btn" class="text-xs font-swiss font-bold uppercase tracking-widest text-[#df0781] hover:text-white transition-colors">
+                Show Full Week
+            </button>
         </div>
 
         <!-- Schedule Table -->
@@ -217,97 +236,97 @@
                 <thead>
                     <tr class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">
                         <th class="w-16 border-r border-zinc-800 text-center">Time</th>
-                        <th class="border-r border-zinc-800 text-center">Sunday</th>
-                        <th class="border-r border-zinc-800 text-center">Monday</th>
-                        <th class="current-day border-r border-zinc-800 bg-zinc-900/80 text-center">Tuesday</th>
-                        <th class="border-r border-zinc-800 text-center">Wednesday</th>
-                        <th class="border-r border-zinc-800 text-center">Thursday</th>
-                        <th class="border-r border-zinc-800 text-center">Friday</th>
-                        <th class="text-center">Saturday</th>
+                        <th data-day="Sunday" class="border-r border-zinc-800 text-center">Sunday</th>
+                        <th data-day="Monday" class="border-r border-zinc-800 text-center">Monday</th>
+                        <th data-day="Tuesday" class="current-day border-r border-zinc-800 bg-zinc-900/80 text-center">Tuesday</th>
+                        <th data-day="Wednesday" class="border-r border-zinc-800 text-center">Wednesday</th>
+                        <th data-day="Thursday" class="border-r border-zinc-800 text-center">Thursday</th>
+                        <th data-day="Friday" class="border-r border-zinc-800 text-center">Friday</th>
+                        <th data-day="Saturday" class="text-center">Saturday</th>
                     </tr>
                 </thead>
                 <tbody class="font-swiss">
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">12 AM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">12-2am</span>
-                                    <span class="show-title">Melting World</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Melting World</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">12-2am</span>
-                                    <span class="show-title">Ménage à trois</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Ménage à trois</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">12-3am</span>
-                                    <span class="show-title">Purple Starlight</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Purple Starlight</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">12-3am</span>
-                                    <span class="show-title">Ridding The Mind Of Waste</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Ridding The Mind Of Waste</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">12-3am</span>
-                                    <span class="show-title">Street FM</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Street FM</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">12-1am</span>
-                                    <span class="show-title">Stereo Sanctity</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Stereo Sanctity</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">12-1am</span>
-                                    <span class="show-title">Stereo Types</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Stereo Types</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">12-3am</span>
-                                    <span class="show-title">With The Beatles</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">With The Beatles</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="12" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="12" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">12-6am</span>
-                                    <span class="show-title">Trim Mix Party</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Trim Mix Party</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">12-2am</span>
-                                    <span class="show-title">Threat Level Midnight</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Threat Level Midnight</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">12-2am</span>
-                                    <span class="show-title">Mental Out</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Mental Out</a>
                                     
                                 </div>
                             </div>
@@ -318,11 +337,11 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">1 AM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">1-2am</span>
-                                    <span class="show-title">Close The Door</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Close The Door</a>
                                     
                                 </div>
                             </div>
@@ -333,34 +352,34 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">2 AM</td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">2-5am</span>
-                                    <span class="show-title">Melting World</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Melting World</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">2-3am</span>
-                                    <span class="show-title">Wayback Wednesday</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Wayback Wednesday</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">2-3am</span>
-                                    <span class="show-title">Threat Level Midnight</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Threat Level Midnight</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">2-3am</span>
-                                    <span class="show-title">No Apologies</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">No Apologies</a>
                                     
                                 </div>
                             </div>
@@ -371,57 +390,57 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">3 AM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">3-4am</span>
-                                    <span class="show-title">Moods 4 Moderns</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Moods 4 Moderns</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">3-4am</span>
-                                    <span class="show-title">Omega</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Omega</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">3-6am</span>
-                                    <span class="show-title">The Destinies Archives Mini-Marathon</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Destinies Archives Mini-Marathon</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">3-6am</span>
-                                    <span class="show-title">Flesh Uncovered</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Flesh Uncovered</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">3-5am</span>
-                                    <span class="show-title">How's That?</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">How's That?</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">3-5am</span>
-                                    <span class="show-title">The Groove</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Groove</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">3-5am</span>
-                                    <span class="show-title">No Apologies</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">No Apologies</a>
                                     
                                 </div>
                             </div>
@@ -432,11 +451,11 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">4 AM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">4-5am</span>
-                                    <span class="show-title">WUSB Alternatives</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">WUSB Alternatives</a>
                                     
                                 </div>
                             </div>
@@ -447,43 +466,43 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">5 AM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">5-6am</span>
-                                    <span class="show-title">WUSB Alternatives</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">WUSB Alternatives</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">5-6am</span>
-                                    <span class="show-title">Global Alert News</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Global Alert News</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">5-6am</span>
-                                    <span class="show-title">A Face In The Crowd</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">A Face In The Crowd</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">5-6am</span>
-                                    <span class="show-title">No Apologies</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">No Apologies</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">5-6am</span>
-                                    <span class="show-title">Pacifica Network</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Pacifica Network</a>
                                     
                                 </div>
                             </div>
@@ -494,70 +513,70 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">6 AM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">6-8am</span>
-                                    <span class="show-title">Music Library Gems</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Music Library Gems</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">6-7am</span>
-                                    <span class="show-title">Ralph Nader Radio Hour</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Ralph Nader Radio Hour</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">6-7am</span>
-                                    <span class="show-title">Country Pocket Rewinds and B-Sides</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Country Pocket Rewinds and B-Sides</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">6-8am</span>
-                                    <span class="show-title">Hot Wax</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Hot Wax</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">6-8am</span>
-                                    <span class="show-title">Workhorse Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Workhorse Radio</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">6-8am</span>
-                                    <span class="show-title">The Last DJ</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Last DJ</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">6-9am</span>
-                                    <span class="show-title">a million open tabs</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">a million open tabs</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">6-9am</span>
-                                    <span class="show-title">Sunrise Angels</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Sunrise Angels</a>
                                     
                                 </div>
                             </div>
@@ -568,25 +587,25 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">7 AM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">7-9am</span>
-                                    <span class="show-title">An Eclectic Mess</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">An Eclectic Mess</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">7-9am</span>
-                                    <span class="show-title">Fishing With Bill</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Fishing With Bill</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">7-8am</span>
-                                    <span class="show-title">Uncritical Thinking</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Uncritical Thinking</a>
                                     
                                 </div>
                             </div>
@@ -597,62 +616,62 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">8 AM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">8-9am</span>
-                                    <span class="show-title">volume @ full</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">volume @ full</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">The Spin Zone</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Spin Zone</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">Megapolitan</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Megapolitan</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">Country Pocket</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Country Pocket</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">Blues At Dawn</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Blues At Dawn</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">Steve K's Radio Kaos</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Steve K's Radio Kaos</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">The Flip Side</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Flip Side</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">8-10am</span>
-                                    <span class="show-title">Blues Warehouse</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Blues Warehouse</a>
                                     
                                 </div>
                             </div>
@@ -663,39 +682,39 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">9 AM</td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">9am-12pm</span>
-                                    <span class="show-title">Sunday Street</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Sunday Street</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">9-10am</span>
-                                    <span class="show-title">More Cowbell</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">More Cowbell</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">9-10am</span>
-                                    <span class="show-title">Clam Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Clam Radio</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">9-11am</span>
-                                    <span class="show-title">Flywheel</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Flywheel</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">9-11am</span>
-                                    <span class="show-title">Bob Duffy</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Bob Duffy</a>
                                     
                                 </div>
                             </div>
@@ -706,39 +725,39 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">10 AM</td>
-                        <td rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800 "></td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Monday" rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800 "></td>
+                        <td data-day="Tuesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">10am-12pm</span>
-                                    <span class="show-title">Cafe`Ali</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Cafe`Ali</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">10am-12pm</span>
-                                    <span class="show-title">Wizzy's Brew</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Wizzy's Brew</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">10am-12pm</span>
-                                    <span class="show-title">Musicality</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Musicality</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">10am-12pm</span>
-                                    <span class="show-title">Fermented Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Fermented Radio</a>
                                     
                                 </div>
                             </div>
@@ -746,29 +765,29 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: 1px solid var(--color-zinc-800);"></td>
-                        <td rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800 "></td>
+                        <td data-day="Monday" rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800 "></td>
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">11 AM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">11am-12pm</span>
-                                    <span class="show-title">Health Matters</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Health Matters</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">11am-12pm</span>
-                                    <span class="show-title">Bob Duffy</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Bob Duffy</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">11am-12pm</span>
-                                    <span class="show-title">Health Matters</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Health Matters</a>
                                     
                                 </div>
                             </div>
@@ -779,70 +798,70 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">12 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">12-1pm</span>
-                                    <span class="show-title">Down Home Country</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Down Home Country</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">12-2pm</span>
-                                    <span class="show-title">DJ Joi: 60s, 70s, And</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">DJ Joi: 60s, 70s, And</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">12-1pm</span>
-                                    <span class="show-title">Lost Transmissions</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Lost Transmissions</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">12-1pm</span>
-                                    <span class="show-title">The Cole Show</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Cole Show</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">12-1pm</span>
-                                    <span class="show-title">The Golden Ratio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Golden Ratio</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">12-2pm</span>
-                                    <span class="show-title">Lunch On Thursdays</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Lunch On Thursdays</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">12-1pm</span>
-                                    <span class="show-title">Whenever, Wherever</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Whenever, Wherever</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">12-1pm</span>
-                                    <span class="show-title">Rock Round Up</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Rock Round Up</a>
                                     
                                 </div>
                             </div>
@@ -853,62 +872,62 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">1 PM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">1-3pm</span>
-                                    <span class="show-title">Sunday Classical</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Sunday Classical</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">1-3pm</span>
-                                    <span class="show-title">Bob Longman Show</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Bob Longman Show</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">1-3pm</span>
-                                    <span class="show-title">Recess</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Recess</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">1-2pm</span>
-                                    <span class="show-title">Creature Central</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Creature Central</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">1-2pm</span>
-                                    <span class="show-title">Tech &amp; Friends: GSO Radio Hour</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Tech &amp; Friends: GSO Radio Hour</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">1-2pm</span>
-                                    <span class="show-title">Campus Connect</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Campus Connect</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">1-3pm</span>
-                                    <span class="show-title">Saturday's a Party</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Saturday's a Party</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">1-3pm</span>
-                                    <span class="show-title">S. T. E. M. Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">S. T. E. M. Radio</a>
                                     
                                 </div>
                             </div>
@@ -919,48 +938,48 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">2 PM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">2-4pm</span>
-                                    <span class="show-title">Equilibrium</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Equilibrium</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">2-4pm</span>
-                                    <span class="show-title">Music Library Gems</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Music Library Gems</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">2-5pm</span>
-                                    <span class="show-title">Suburban Hymns</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Suburban Hymns</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">2-5pm</span>
-                                    <span class="show-title">The Juke Joint</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Juke Joint</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">2-4pm</span>
-                                    <span class="show-title">If This Be Treason</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">If This Be Treason</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">2-3pm</span>
-                                    <span class="show-title">The Robin's Nest</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Robin's Nest</a>
                                     
                                 </div>
                             </div>
@@ -971,43 +990,43 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">3 PM</td>
-                        <td rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="6" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">3-6pm</span>
-                                    <span class="show-title">Jazz On The Air</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Jazz On The Air</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">3-4pm</span>
-                                    <span class="show-title">C4E Presents</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">C4E Presents</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">3-5pm</span>
-                                    <span class="show-title">A Visual Sound</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">A Visual Sound</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">3-5pm</span>
-                                    <span class="show-title">Unclassic Rock</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Unclassic Rock</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">3-5pm</span>
-                                    <span class="show-title">Gabe's Flight</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Gabe's Flight</a>
                                     
                                 </div>
                             </div>
@@ -1018,29 +1037,29 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">4 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">4-5pm</span>
-                                    <span class="show-title">Notes from Underground</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Notes from Underground</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">4-5pm</span>
-                                    <span class="show-title">HEALTH Yeah!</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">HEALTH Yeah!</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">4-5pm</span>
-                                    <span class="show-title">Captain Phil's Planet</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Captain Phil's Planet</a>
                                     
                                 </div>
                             </div>
@@ -1051,56 +1070,56 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">5 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">5-6pm</span>
-                                    <span class="show-title">Democracy Now!</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Democracy Now!</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">5-6pm</span>
-                                    <span class="show-title">Democracy Now!</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Democracy Now!</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">5-6pm</span>
-                                    <span class="show-title">Democracy Now!</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Democracy Now!</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">5-6pm</span>
-                                    <span class="show-title">Democracy Now!</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Democracy Now!</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">5-6pm</span>
-                                    <span class="show-title">Democracy Now!</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Democracy Now!</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">5-6pm</span>
-                                    <span class="show-title">MTSG</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">MTSG</a>
                                     
                                 </div>
                             </div>
@@ -1111,75 +1130,75 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">6 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">6-7pm</span>
-                                    <span class="show-title">China Blue</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">China Blue</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">6-8pm</span>
-                                    <span class="show-title">Unbound: The Arts and Culture of Palestine</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Unbound: The Arts and Culture of Palestine</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">6-8pm</span>
-                                    <span class="show-title">Movie News and Music</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Movie News and Music</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">6-7pm</span>
-                                    <span class="show-title">Off The Wall</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Off The Wall</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">6-8pm</span>
-                                    <span class="show-title">Blue Grass Time</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Blue Grass Time</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">6-8pm</span>
-                                    <span class="show-title">The Sounds of Film with Tom Needham</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Sounds of Film with Tom Needham</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df2331;">
                                     <span class="show-time">6-7pm</span>
-                                    <span class="show-title">The Healthy Planet / Natural Alternatives</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Healthy Planet / Natural Alternatives</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">6-8pm</span>
-                                    <span class="show-title">Anything Goes</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Anything Goes</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">6-8pm</span>
-                                    <span class="show-title">Meanwhile, In Europe</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Meanwhile, In Europe</a>
                                     
                                 </div>
                             </div>
@@ -1190,29 +1209,29 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">7 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">7-8pm</span>
-                                    <span class="show-title">Counter Lock</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Counter Lock</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">7-8pm</span>
-                                    <span class="show-title">Searching for Somewhere</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Searching for Somewhere</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">7-9pm</span>
-                                    <span class="show-title">Rockin' Iration</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Rockin' Iration</a>
                                     
                                 </div>
                             </div>
@@ -1223,76 +1242,76 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">8 PM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">Shades of Blues</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Shades of Blues</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">Salvage &amp; Recovery Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Salvage &amp; Recovery Radio</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">In the Mix with DJ Robbo</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">In the Mix with DJ Robbo</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">Bustin' Out  Blue</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Bustin' Out  Blue</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #eebc00;">
                                     <span class="show-time">8-9pm</span>
-                                    <span class="show-title">Waxx Traxx to the Maxx</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Waxx Traxx to the Maxx</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">8-9pm</span>
-                                    <span class="show-title">Davie Jones Locker</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Davie Jones Locker</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">The Bayou</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Bayou</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">Global Rhythms</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Global Rhythms</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">Over the Horizon Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Over the Horizon Radio</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">8-10pm</span>
-                                    <span class="show-title">Everything Must Go</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Everything Must Go</a>
                                     
                                 </div>
                             </div>
@@ -1303,25 +1322,25 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">9 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">9-10pm</span>
-                                    <span class="show-title">Turmoil</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Turmoil</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">9-10pm</span>
-                                    <span class="show-title">Waxx Traxx to the Maxx</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Waxx Traxx to the Maxx</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8febfe;">
                                     <span class="show-time">9-10pm</span>
-                                    <span class="show-title">Cowboy's Blues</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Cowboy's Blues</a>
                                     
                                 </div>
                             </div>
@@ -1332,75 +1351,75 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">10 PM</td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Sunday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">10pm-12am</span>
-                                    <span class="show-title">The Sports Section</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Sports Section</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #52a1fc;">
                                     <span class="show-time">10-11pm</span>
-                                    <span class="show-title">In Transit</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">In Transit</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">10-11pm</span>
-                                    <span class="show-title">The Nervous System</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The Nervous System</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">10-11pm</span>
-                                    <span class="show-title">Nothin' On (But The Radio)</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Nothin' On (But The Radio)</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Wednesday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #a91b00;">
                                     <span class="show-time">10pm-12am</span>
-                                    <span class="show-title">Spiney Norman</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Spiney Norman</a>
                                     <div class="alt-show">-ALT-</div>
                                 </div>
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">10pm-12am</span>
-                                    <span class="show-title">The End of Radio</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">The End of Radio</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Thursday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #9800e0;">
                                     <span class="show-time">10pm-12am</span>
-                                    <span class="show-title">No Sound Test</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">No Sound Test</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="3" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="3" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #af04ab;">
                                     <span class="show-time">10-11:30pm</span>
-                                    <span class="show-title">Friday Nite Free-Form</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Friday Nite Free-Form</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Saturday" rowspan="4" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #df0781;">
                                     <span class="show-time">10pm-12am</span>
-                                    <span class="show-title">Reggaematic Vibes</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Reggaematic Vibes</a>
                                     
                                 </div>
                             </div>
@@ -1411,20 +1430,20 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: none;">11 PM</td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Monday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #f8e700;">
                                     <span class="show-time">11pm-12am</span>
-                                    <span class="show-title">Late Dawns &amp; Early Sunsets</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Late Dawns &amp; Early Sunsets</a>
                                     
                                 </div>
                             </div>
                         </td>
-                        <td rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
+                        <td data-day="Tuesday" rowspan="2" class="border-r border-zinc-800 border-b border-zinc-800 bg-zinc-900/30 current-day p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #8bfa00;">
                                     <span class="show-time">11pm-12am</span>
-                                    <span class="show-title">Girl from Mars</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Girl from Mars</a>
                                     
                                 </div>
                             </div>
@@ -1432,11 +1451,11 @@
                     </tr>
                     <tr>
                         <td class="text-zinc-500 text-xs font-bold border-r border-zinc-800 bg-zinc-900/20 text-center align-middle w-16" style="border-bottom: 1px solid var(--color-zinc-800);"></td>
-                        <td rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
+                        <td data-day="Friday" rowspan="1" class="border-r border-zinc-800 border-b border-zinc-800  p-0">
                             <div class="show-container">
                                 <div class="show-item" style="border-left-color: #3b00fc;">
                                     <span class="show-time">11:30pm-12am</span>
-                                    <span class="show-title">Destinies-The Voice of Science Fiction</span>
+                                    <a href="programX.html" class="show-title hover:text-[#8febfe] transition-colors hover:underline decoration-1 underline-offset-2">Destinies-The Voice of Science Fiction</a>
                                     
                                 </div>
                             </div>
@@ -1448,381 +1467,155 @@
         </div>
     </main>
 
-    <!-- COMPONENT: player.html -->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archive Player | WUSB 90.1 FM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              black: 'var(--color-black, #000000)',
-              white: 'var(--color-white, #ffffff)',
-              zinc: {
-                400: 'var(--color-zinc-400, #a1a1aa)',
-                500: 'var(--color-zinc-500, #71717a)',
-                600: 'var(--color-zinc-600, #52525b)',
-                700: 'var(--color-zinc-700, #3f3f46)',
-                800: 'var(--color-zinc-800, #27272a)',
-                900: 'var(--color-zinc-900, #18181b)',
-                950: 'var(--color-zinc-950, #09090b)',
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .player-card {
-            background: rgba(9, 9, 11, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--color-zinc-800);
-            box-shadow: 0 0 40px rgba(223, 7, 129, 0.1);
-        }
-        /* Spinning animation for cassette/vinyl wheels */
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .spinning {
-            animation: spin 4s linear infinite;
-        }
-        /* Paused spin state */
-        .paused-spin {
-            animation-play-state: paused;
-        }
-    </style>
-</head>
-<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
-
-    <!-- COMPONENT: HEADER -->
-    <!-- HEADER SECTION -->
-    <header class="border-b-4 border-zinc-900 sticky top-0 z-50 bg-black/95 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-6">
-                <!-- Logo Area -->
-                <a href="index.html" class="flex items-end gap-3 cursor-pointer group">
-                    <h1 class="font-chuck text-6xl md:text-8xl leading-none wusb-gradient transform hover:scale-105 transition-transform duration-200">WUSB</h1>
-                    <span class="font-swiss font-bold text-3xl md:text-5xl tracking-tighter mb-1 md:mb-2 text-white">90.1 FM</span>
-                </a>
-
-                <!-- Desktop Main Menu -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
-                    <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
-                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
-                    <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
-                    
-                    <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
-                        <i id="icon-sun" data-lucide="sun" class="w-6 h-6"></i>
-                        <i id="icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
-                    </button>
-
-                    <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-3xl px-8 py-3 rounded text-[#000] pledge-gradient transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] transition-all duration-200 inline-block text-center">PLEDGE</a>
-                </nav>
-
-                <!-- Mobile Menu Toggle -->
-                <div class="lg:hidden flex items-center gap-4">
-                    <button id="mobile-theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
-                        <i id="mobile-icon-sun" data-lucide="sun" class="w-6 h-6"></i>
-                        <i id="mobile-icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
-                    </button>
-                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
-                        <i id="icon-menu" data-lucide="menu" class="w-9 h-9"></i>
-                        <i id="icon-x" data-lucide="x" class="w-9 h-9 hidden"></i>
-                    </button>
+    <!-- COMPONENT: player-sticky -->
+    <!-- COMPONENT: PLAYER -->
+    <!-- STICKY BOTTOM RADIO PLAYER -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+        <div class="bg-zinc-950 border-t border-zinc-800 py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="play-pause-btn" class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:scale-105 transition-transform focus:outline-none">
+                    <i id="icon-play" data-lucide="play" class="w-6 h-6 ml-1 block fill-current"></i>
+                    <i id="icon-pause" data-lucide="pause" class="w-6 h-6 hidden fill-current"></i>
+                </button>
+                <div class="hidden sm:block">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span id="live-ping" class="hidden animate-ping absolute inline-flex h-full w-full rounded-full bg-[#df2331] opacity-75"></span>
+                            <span id="live-dot" class="relative inline-flex rounded-full h-3 w-3 bg-zinc-600"></span>
+                        </span>
+                        <span class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">On Air Now</span>
+                    </div>
+                    <div class="font-swiss font-bold text-lg tracking-tight">The Underground Sound w/ DJ Void</div>
                 </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 mr-4">
+                    <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400"></i>
+                    <div class="w-24 h-2 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-white"></div>
+                    </div>
+                </div>
+                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                    Listen Live
+                </button>
             </div>
         </div>
 
-        <!-- Desktop Sub Menu -->
-        <div class="hidden lg:block bg-zinc-900/50 border-t border-zinc-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto py-3 gap-6 no-scrollbar">
-                <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
-                <a href="djs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">DJs</a>
-                <a href="programs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Shows</a>
-                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
-                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
-                <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
-                <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
-            </div>
+        <!-- NEON COLOR STRIP -->
+        <div class="flex h-4 w-full">
+            <div class="flex-1 bg-[#df0781]"></div>
+            <div class="flex-1 bg-[#af04ab]"></div>
+            <div class="flex-1 bg-[#9800e0]"></div>
+            <div class="flex-1 bg-[#8febfe]"></div>
+            <div class="flex-1 bg-[#8bfa00]"></div>
+            <div class="flex-1 bg-[#f8e700]"></div>
+            <div class="flex-1 bg-[#eebc00]"></div>
+            <div class="flex-1 bg-[#df2331]"></div>
+            <div class="flex-1 bg-[#a91b00]"></div>
+            <div class="flex-1 bg-[#52a1fc]"></div>
+            <div class="flex-1 bg-[#3b00fc]"></div>
+            <div class="flex-1 bg-[#badd00]"></div>
         </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-zinc-900 border-b-4 border-zinc-800 flex flex-col">
-            <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
-                <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
-                <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
-                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
-                <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
-                <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">PLEDGE</a>
-            </div>
-            <div class="flex flex-col p-4 gap-3 bg-zinc-950">
-                <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
-                <a href="djs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs</a>
-                <a href="programs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Shows</a>
-                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
-                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
-                <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
-                <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
-            </div>
-        </div>
-    </header>
-    <!-- END COMPONENT: HEADER -->
-
-    <!-- MAIN PLAYER SECTION -->
-    <main id="player-page-container" class="flex-grow flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-        
-        <!-- Player Interface Card -->
-        <div class="player-card rounded-lg p-6 md:p-10 w-full md:max-w-2xl flex flex-col items-center gap-8 relative overflow-hidden">
-            <!-- Neon trim bar -->
-            <div class="absolute top-0 left-0 w-full h-1.5 flex">
-                <div class="flex-1 bg-[#df0781]"></div>
-                <div class="flex-1 bg-[#8febfe]"></div>
-                <div class="flex-1 bg-[#8bfa00]"></div>
-            </div>
-
-            <!-- Page Title -->
-            <div class="text-center">
-                <span class="font-swiss text-xs font-bold uppercase tracking-widest text-zinc-500">WUSB Stream Player</span>
-                <h2 class="font-chuck text-4xl md:text-5xl uppercase tracking-tighter wusb-gradient mt-1">Archive Playback</h2>
-            </div>
-
-            <!-- Cassette Tape Visualizer -->
-            <div class="relative w-full aspect-[16/9] bg-zinc-900 rounded border border-zinc-800 p-4 flex flex-col justify-between overflow-hidden shadow-inner select-none">
-                <!-- Cassette labels and aesthetic windows -->
-                <div class="flex justify-between items-center text-[0.65rem] font-bold text-zinc-500 uppercase tracking-wider px-2">
-                    <span>A Side</span>
-                    <span class="text-zinc-600">WUSB Broadcast Archive</span>
-                    <span>90.1 FM</span>
-                </div>
-
-                <!-- Cassette Center Holes & Reels -->
-                <div class="flex justify-center items-center gap-16 my-auto">
-                    <!-- Left Reel -->
-                    <div class="w-16 h-16 rounded-full border-4 border-dashed border-zinc-700 flex items-center justify-center spinning paused-spin" id="left-reel">
-                        <div class="w-6 h-6 rounded-full bg-black border border-zinc-800"></div>
-                    </div>
-                    <!-- Right Reel -->
-                    <div class="w-16 h-16 rounded-full border-4 border-dashed border-zinc-700 flex items-center justify-center spinning paused-spin" id="right-reel">
-                        <div class="w-6 h-6 rounded-full bg-black border border-zinc-800"></div>
-                    </div>
-                </div>
-
-                <!-- Audio Track info visual lines -->
-                <div class="border-t border-zinc-800/80 pt-2 flex justify-between items-center px-2">
-                    <div class="flex flex-col">
-                        <span class="text-[0.6rem] text-zinc-600 uppercase tracking-widest">Archive Ref</span>
-                        <span class="font-mono text-xs text-zinc-300 font-bold" id="archive-ref-display">Loading...</span>
-                    </div>
-                    <div class="flex flex-col text-right">
-                        <span class="text-[0.6rem] text-zinc-600 uppercase tracking-widest">Date Format</span>
-                        <span class="font-mono text-xs text-[#8febfe] font-bold" id="date-format-display">Loading...</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Show Title & Info Panel -->
-            <div class="w-full text-center">
-                <h3 id="archive-title" class="font-swiss font-bold text-2xl md:text-3xl tracking-tight text-white line-clamp-1">Loading Show Details...</h3>
-                <p id="archive-subtitle" class="text-zinc-500 font-swiss text-sm tracking-wide mt-1">Please select a show from the schedule.</p>
-            </div>
-
-            <!-- Playback Controls -->
-            <div class="w-full flex flex-col gap-4 mt-2">
-                <!-- Timeline Slider -->
-                <div class="flex items-center gap-3">
-                    <span class="font-mono text-xs text-zinc-500" id="current-time">0:00</span>
-                    <div class="flex-grow h-2 bg-zinc-800 rounded-full cursor-pointer relative" id="progress-bar-container">
-                        <div class="h-full bg-white rounded-full w-0" id="progress-bar-fill"></div>
-                    </div>
-                    <span class="font-mono text-xs text-zinc-500" id="total-duration">1:00:00</span>
-                </div>
-
-                <!-- Controls Layout -->
-                <div class="flex items-center justify-between px-2">
-                    <!-- Volume control -->
-                    <div class="flex items-center gap-2 w-28">
-                        <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400 cursor-pointer" id="volume-icon"></i>
-                        <input type="range" min="0" max="100" value="80" class="w-full accent-white bg-zinc-800 h-1 rounded-lg cursor-pointer" id="volume-slider" />
-                    </div>
-
-                    <!-- Main Buttons -->
-                    <div class="flex items-center gap-4">
-                        <button class="w-10 h-10 rounded-full border border-zinc-800 hover:border-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition-colors cursor-pointer" id="rewind-btn" title="Back 10 Seconds">
-                            <i data-lucide="rewind" class="w-5 h-5"></i>
-                        </button>
-                        <button class="w-16 h-16 rounded-full bg-white text-black hover:scale-105 hover:bg-[#8bfa00] hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] flex items-center justify-center transition-all duration-200 cursor-pointer focus:outline-none" id="archive-play-btn" title="Play/Pause">
-                            <i data-lucide="play" class="w-8 h-8 ml-1 fill-current" id="archive-icon-play"></i>
-                            <i data-lucide="pause" class="w-8 h-8 hidden fill-current" id="archive-icon-pause"></i>
-                        </button>
-                        <button class="w-10 h-10 rounded-full border border-zinc-800 hover:border-zinc-700 text-zinc-400 hover:text-white flex items-center justify-center transition-colors cursor-pointer" id="fast-forward-btn" title="Forward 10 Seconds">
-                            <i data-lucide="fast-forward" class="w-5 h-5"></i>
-                        </button>
-                    </div>
-
-                    <!-- Return button -->
-                    <a href="schedule.html" class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-zinc-900 border border-zinc-800 text-xs font-bold uppercase tracking-widest text-zinc-400 hover:text-[#8bfa00] hover:border-[#8bfa00] transition-colors cursor-pointer" title="Back to Schedule">
-                        <i data-lucide="calendar" class="w-4 h-4"></i>
-                        <span class="hidden sm:inline">Schedule</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- COMPONENT: PLAYER (PERSISTENT STICKY PLAYER) -->
-    <div id="player-placeholder"></div>
+    </div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script src="script.js"></script>
     <script>
-        // Archive Page-Specific Parser
         document.addEventListener('DOMContentLoaded', () => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const archive = urlParams.get('archive') || '';
-            const dateStr = urlParams.get('date') || '';
-            const title = urlParams.get('title') || 'WUSB Stream Archive';
-
-            // DOM Elements
-            const titleEl = document.getElementById('archive-title');
-            const subtitleEl = document.getElementById('archive-subtitle');
-            const archiveRefEl = document.getElementById('archive-ref-display');
-            const dateFormatEl = document.getElementById('date-format-display');
-
-            // Render details if available
-            if (archive || dateStr || title !== 'WUSB Stream Archive') {
-                titleEl.textContent = title;
-                archiveRefEl.textContent = archive ? archive : 'N/A';
-                dateFormatEl.textContent = dateStr ? dateStr : 'N/A';
-                
-                // Decode date components if available (e.g. 0900-06-06-2026)
-                if (dateStr) {
-                    const parts = dateStr.split('-');
-                    if (parts.length === 4) {
-                        const time = parts[0];
-                        const day = parts[1];
-                        const month = parts[2];
-                        const year = parts[3];
-                        
-                        const hour = parseInt(time.slice(0, 2), 10);
-                        const mins = time.slice(2);
-                        const ampm = hour >= 12 ? 'PM' : 'AM';
-                        const displayHour = hour % 12 === 0 ? 12 : hour % 12;
-                        
-                        const dateObj = new Date(year, month - 1, day);
-                        const dayOptions = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
-                        const readableDate = dateObj.toLocaleDateString(undefined, dayOptions);
-                        
-                        subtitleEl.textContent = `Aired: ${readableDate} at ${displayHour}:${mins} ${ampm}`;
-                    } else {
-                        subtitleEl.textContent = `Archive Stream | Date format: ${dateStr}`;
-                    }
+            const tabs = document.querySelectorAll('#day-selector button');
+            const tableCells = document.querySelectorAll('.schedule-table th[data-day], .schedule-table td[data-day]');
+            const datePicker = document.getElementById('schedule-date-picker');
+            const dateInfoDisplay = document.getElementById('date-info-display');
+            const dateInfoDay = document.getElementById('date-info-day');
+            const dateInfoFormatted = document.getElementById('date-info-formatted');
+            const clearDateBtn = document.getElementById('clear-date-btn');
+            
+            // Function to filter grid by day name
+            function filterDay(dayName) {
+                if (dayName === 'all') {
+                    tableCells.forEach(cell => {
+                        cell.style.display = '';
+                    });
                 } else {
-                    subtitleEl.textContent = `Archive Stream Reference: ${archive}`;
-                }
-            } else {
-                titleEl.textContent = "No Show Loaded";
-                subtitleEl.textContent = "Please go to the schedule and click play on a show.";
-                archiveRefEl.textContent = 'None';
-                dateFormatEl.textContent = 'None';
-            }
-
-            // Audio Player Controls Logic for Cassette Visualizer
-            const playBtn = document.getElementById('archive-play-btn');
-            const playIcon = document.getElementById('archive-icon-play');
-            const pauseIcon = document.getElementById('archive-icon-pause');
-            const leftReel = document.getElementById('left-reel');
-            const rightReel = document.getElementById('right-reel');
-            const progressFill = document.getElementById('progress-bar-fill');
-            const currentTimeEl = document.getElementById('current-time');
-            const totalDurationEl = document.getElementById('total-duration');
-            const volumeSlider = document.getElementById('volume-slider');
-            const volumeIcon = document.getElementById('volume-icon');
-
-            let isPlaying = false;
-            let currentSeconds = 0;
-            const totalSeconds = 3600; // Mock 1 hour archive
-            let playInterval = null;
-
-            function formatTime(s) {
-                const hours = Math.floor(s / 3600);
-                const minutes = Math.floor((s % 3600) / 60);
-                const seconds = s % 60;
-                return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-            }
-
-            totalDurationEl.textContent = formatTime(totalSeconds);
-
-            function togglePlayback() {
-                isPlaying = !isPlaying;
-                if (isPlaying) {
-                    playIcon.classList.add('hidden');
-                    pauseIcon.classList.remove('hidden');
-                    leftReel.classList.remove('paused-spin');
-                    rightReel.classList.remove('paused-spin');
-                    
-                    playInterval = setInterval(() => {
-                        currentSeconds++;
-                        if (currentSeconds >= totalSeconds) {
-                            currentSeconds = 0;
-                            togglePlayback();
+                    tableCells.forEach(cell => {
+                        if (cell.getAttribute('data-day') === dayName) {
+                            cell.style.display = '';
+                        } else {
+                            cell.style.display = 'none';
                         }
-                        progressFill.style.width = `${(currentSeconds / totalSeconds) * 100}%`;
-                        currentTimeEl.textContent = formatTime(currentSeconds);
-                    }, 1000);
-                } else {
-                    playIcon.classList.remove('hidden');
-                    pauseIcon.classList.add('hidden');
-                    leftReel.classList.add('paused-spin');
-                    rightReel.classList.add('paused-spin');
-                    clearInterval(playInterval);
+                    });
                 }
             }
 
-            if (playBtn) {
-                playBtn.addEventListener('click', togglePlayback);
-            }
-
-            // Rewind & Fast Forward Mock Logic
-            document.getElementById('rewind-btn').addEventListener('click', () => {
-                currentSeconds = Math.max(0, currentSeconds - 10);
-                progressFill.style.width = `${(currentSeconds / totalSeconds) * 100}%`;
-                currentTimeEl.textContent = formatTime(currentSeconds);
+            // Tab click handling
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    tabs.forEach(t => {
+                        t.classList.remove('text-[#8bfa00]', 'bg-zinc-800');
+                        t.classList.add('text-zinc-500', 'hover:text-white');
+                    });
+                    
+                    tab.classList.remove('text-zinc-500', 'hover:text-white');
+                    tab.classList.add('text-[#8bfa00]', 'bg-zinc-800');
+                    
+                    const filter = tab.getAttribute('data-filter');
+                    filterDay(filter);
+                    
+                    // Reset date picker and hide banner if user manually clicks a weekday or Full Week
+                    if (filter === 'all' || !datePicker.value) {
+                        datePicker.value = '';
+                        dateInfoDisplay.classList.add('hidden');
+                    } else {
+                        // Check if picker matches selected day; if not, clear it
+                        const dateVal = datePicker.value;
+                        if (dateVal) {
+                            const date = new Date(dateVal + 'T00:00:00');
+                            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                            const dayName = days[date.getDay()];
+                            if (dayName !== filter) {
+                                datePicker.value = '';
+                                dateInfoDisplay.classList.add('hidden');
+                            }
+                        }
+                    }
+                });
             });
 
-            document.getElementById('fast-forward-btn').addEventListener('click', () => {
-                currentSeconds = Math.min(totalSeconds, currentSeconds + 10);
-                progressFill.style.width = `${(currentSeconds / totalSeconds) * 100}%`;
-                currentTimeEl.textContent = formatTime(currentSeconds);
-            });
-
-            // Mock Volume Icon Click Toggling
-            let lastVolume = 80;
-            volumeIcon.addEventListener('click', () => {
-                if (volumeSlider.value > 0) {
-                    lastVolume = volumeSlider.value;
-                    volumeSlider.value = 0;
-                    volumeIcon.setAttribute('data-lucide', 'volume-x');
+            // Date picker change handling
+            datePicker.addEventListener('change', () => {
+                const dateVal = datePicker.value;
+                if (dateVal) {
+                    const date = new Date(dateVal + 'T00:00:00');
+                    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                    const dayName = days[date.getDay()];
+                    
+                    // Click matching day tab
+                    const matchingTab = document.querySelector('#day-selector button[data-filter="' + dayName + '"]');
+                    if (matchingTab) {
+                        matchingTab.click();
+                    }
+                    
+                    // Format display date
+                    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                    const formatted = date.toLocaleDateString(undefined, options);
+                    
+                    dateInfoDay.textContent = dayName;
+                    dateInfoFormatted.textContent = formatted.replace(dayName + ', ', '');
+                    dateInfoDisplay.classList.remove('hidden');
                 } else {
-                    volumeSlider.value = lastVolume;
-                    volumeIcon.setAttribute('data-lucide', 'volume-2');
+                    // Reset
+                    const allTab = document.querySelector('#day-selector button[data-filter="all"]');
+                    if (allTab) allTab.click();
                 }
-                lucide.createIcons();
+            });
+
+            // Clear button handling
+            clearDateBtn.addEventListener('click', () => {
+                const allTab = document.querySelector('#day-selector button[data-filter="all"]');
+                if (allTab) allTab.click();
             });
         });
     </script>
-</body>
-</html>
-
-    <!-- JAVASCRIPT LOGIC -->
-    <script src="script.js"></script>
 </body>
 </html>

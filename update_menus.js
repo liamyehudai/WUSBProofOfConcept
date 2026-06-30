@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html', 'djs.html', 'player.html', 'programX.html', 'programs.html', 'djx.html', 'playlistX.html'];
+const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html', 'djs.html', 'player.html', 'programX.html', 'programs.html', 'djx.html', 'playlistX.html', 'articleX.html'];
 
 // The links to update:
 // 1. "WUSB Requests" -> https://www.wusbrequests.com/
