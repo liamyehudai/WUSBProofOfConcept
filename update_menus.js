@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html', 'djs.html', 'player.html'];
+const files = ['index.html', 'about.html', 'contact.html', 'playlists.html', 'schedule.html', 'underwriting.html', 'wusbpublicfile.html', 'djs.html', 'player.html', 'programX.html', 'programs.html', 'djx.html', 'playlistX.html'];
 
 // The links to update:
 // 1. "WUSB Requests" -> https://www.wusbrequests.com/
@@ -35,6 +35,18 @@ files.forEach(file => {
     if (!content.includes('href="djs.html" class="font-swiss text-sm tracking-wide')) {
         content = content.replace(/(<a href="underwriting\.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting<\/a>)/g, 
             '$1\n                <a href="djs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs</a>');
+    }
+
+    // Inject Shows link in submenus if not already present
+    // Desktop:
+    if (!content.includes('href="programs.html" class="font-swiss text-sm font-medium tracking-wide')) {
+        content = content.replace(/(<a href="djs\.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">DJs<\/a>)/g, 
+            '$1\n                <a href="programs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Shows</a>');
+    }
+    // Mobile:
+    if (!content.includes('href="programs.html" class="font-swiss text-sm tracking-wide')) {
+        content = content.replace(/(<a href="djs\.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs<\/a>)/g, 
+            '$1\n                <a href="programs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Shows</a>');
     }
 
     // Pledge buttons (there are multiple, desktop and mobile)

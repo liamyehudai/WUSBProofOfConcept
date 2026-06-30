@@ -114,6 +114,22 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 
 ---
 
+### 🟢 2.6 DJ Profile (`dj_profile`)
+*   **Description:** The detailed profile view for a radio DJ/host ([djx.html](file:///Users/liam_yehudai/Documents/VSCode/WUSBProofOfConcept/djx.html)). It displays their brand identity (tag/name), active status, biography text, links to their socials and website, references to the shows they host, and a featured video stream.
+*   **Component Type:** Node DJ Profile Full View Mode (`node--dj--full.html.twig`).
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `dj_name` | DJ Name/Tag | Text | `DJx` | Primary brand heading. |
+| `dj_avatar` | Avatar Image | Media (Image) | `djx_avatar.jpg` | Square profile icon of the DJ. |
+| `active_status` | Is Active DJ | Boolean | `true` | Show status badge (Live Host / Inactive). |
+| `biography` | Bio Narrative | Rich Text | `<p>DJx is a resident...</p>` | Plain text description / biography. |
+| `social_links` | Social & Web Links | List (Link) | `[{"label": "Website", "url": "..."}]` | List of socials (Instagram, SoundCloud, Mixcloud, Website) rendered with matching Lucide icons. |
+| `attached_programs`| Hosted Programs | List (Entity Reference) | `[{"title": "Program X", "url": "programX.html"}]` | Link cards to shows hosted by this DJ. |
+
+---
+
 ## 3. Structural Content Components
 
 ### 🟢 3.1 Content Block / Column Panel (`content_column_panel`)
@@ -192,6 +208,58 @@ This document provides a modular breakdown of the WUSB Proof of Concept website.
 | `today_action` | Jump to Today Button | Element Button | `#today-btn` | Resets calendar to today's date, selecting today's tab and highlighting today's column. |
 | `date_picker` | Date Lookup Input | Input Element | `#date-lookup-input` | HTML5 Date field allowing native day search. |
 | `date_lookup_go` | Date Lookup Submit | Element Button | `#date-lookup-btn` | Triggers calendar focus jump to the input date. |
+
+---
+
+### 🟢 3.6 Radio Program Details (`program_details`)
+*   **Description:** The detailed view section for a radio show, displaying its cover thumbnail, description, active air block, genre tags, and references to the attached host/DJ.
+*   **Component Type:** Node Show Detail View Mode (`node--show--full.html.twig`).
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `thumbnail_image` | Program Thumbnail | Media (Image/GIF) | `program_x_thumbnail.jpg` | Main cover asset for the radio show, supporting animated gifs. |
+| `show_title` | Program Title | Text | `Program X` | Large header title for the show. |
+| `show_description` | Show Biography | Rich Text | `<p>Dive deep into...</p>` | Formatted text description of the program. |
+| `air_day` | Weekly Air Day | Text | `Thursdays` | Day of the week the program is broadcast. |
+| `air_hours` | On-Air Time Range | Text | `18:00 - 20:00 EST` | Start and end hours of the broadcast block. |
+| `genre_tags` | Genre Taxonomy Tags | List (Term) | `["Synthwave", "Vaporwave"]` | List of style categories associated with the program. |
+| `attached_dj` | Associated DJ Profile | Entity Reference | `[{"name": "DJ Void", "initials": "DV"}]` | Reference to the DJ profile host page. |
+
+---
+
+### 🟢 3.7 Interactive Rich Text Editor (`rich_text_editor`)
+*   **Description:** A client-side visual editor block allowing station staff or DJs to write blog posts, log track playlists, format text, and embed custom links, images, GIFs, and YouTube embeds.
+*   **Component Type:** Reusable Custom Editor Block / Node Form Element.
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `editor_title` | Editor Section Heading | Text | `Show Blog & Playlist Notes Editor` | Header label for the editor component. |
+| `initial_content` | Initial HTML Content | Rich Text | `<h2>Show Notes...</h2>` | Default populated HTML in the composer. |
+| `save_draft_action` | Save Trigger Handler | Function | LocalStorage Callback | Save mechanism for storing draft state. |
+| `preset_assets` | Preset Media Presets | List (Object) | `[{"label": "Vapor Tape GIF", "url": "..."}]` | Quick-insert buttons for demo graphics and animations. |
+
+---
+
+### 🟢 3.8 Playlist Detail Page (`playlist_detail`)
+*   **Description:** The detailed playlist log detail view page showing a list of tracks played during a single broadcast window, host metadata, Spotify companions, linked videos, and attached media ([playlistX.html](file:///Users/liam_yehudai/Documents/VSCode/WUSBProofOfConcept/playlistX.html)).
+*   **Component Type:** Node Playlist Full View Mode (`node--playlist--full.html.twig`).
+
+#### Component Fields
+| Field Machine Name | Field Label | Field Type | Example Value | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `program_title` | Program Name | Text | `Program X` | Name of the radio program. |
+| `broadcast_date` | Date of Release | Date | `June 25, 2026` | Date this specific episode aired. |
+| `attached_dj` | Host DJ Profile | Entity Reference | `[{"name": "DJx"}]` | Link reference to the DJ profile page. |
+| `narrative` | Show Description | Rich Text | `<p>Tonight on Program X...</p>` | Text block summarizing the specific episode's theme. |
+| `tracklist` | Tracklist Rows | List (Object) | `[{"artist": "Gunship", "title": "Fly for Your Life", "album": "Gunship", "new": false}]` | Table items with Artist, Title, and Album columns. New releases are marked with an asterisk `*` in the text. |
+| `program_profile` | Program Link | Link | `programX.html` | Click-through route to the master show profile. |
+| `download_csv` | Download CSV trigger| File / Action | Local Download Generator | Real-time browser spreadsheet compilation & download. |
+| `thumbnail_mode` | Thumbnail Mode | Choice (Enum) | `default` / `uploaded` | **Backend Feature Only:** Dictates whether the page renders the dynamically generated brand visual (rotating Vinyl graphic) or a custom uploaded image. Configurable by DJs on the dashboard and not exposed as a front-end toggle. |
+| `youtube_video` | Linked Program Video | URL | `https://www.youtube.com/embed/MVgM6X1hM8E` | Embed link for video archive playback. |
+| `spotify_playlist` | Spotify Embed URL | URL | `https://open.spotify.com/embed/playlist/...` | Widget embed for companion playlist. |
+| `attached_gallery` | Attached Studio Media | List (Media Image) | `["wusb_studio.jpg"]` | Gallery of files attached to the playlist with click lightbox. |
 
 ---
 

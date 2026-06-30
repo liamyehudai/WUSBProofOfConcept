@@ -31,7 +31,7 @@
                 <nav class="hidden lg:flex items-center gap-8">
                     <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
                     <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
-                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
                     <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
                     
                     <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
@@ -63,6 +63,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto py-3 gap-6 no-scrollbar">
                 <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
                 <a href="djs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">DJs</a>
+                <a href="programs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Shows</a>
                 <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
                 <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
                 <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
@@ -75,7 +76,7 @@
             <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
                 <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
                 <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
-                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
                 <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
                 <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
                     PLEDGE
@@ -84,6 +85,7 @@
             <div class="flex flex-col p-4 gap-3 bg-zinc-950">
                 <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
                 <a href="djs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs</a>
+                <a href="programs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Shows</a>
                 <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
                 <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
                 <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
@@ -180,6 +182,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const djs = [
+                { name: "DJx", initials: "DX", active: true },
                 { name: "DJ Void", initials: "DV", active: true },
                 { name: "scottorourke", initials: "SO", active: true },
                 { name: "Steve-K", initials: "SK", active: true },
@@ -245,33 +248,38 @@
                     noResultsEl.classList.remove('hidden');
                 } else {
                     noResultsEl.classList.add('hidden');
-                    gridContainer.innerHTML = filtered.map(dj => `
-                        <a href="playlists.html" class="flex flex-col items-center gap-3 group cursor-pointer p-4 bg-zinc-900/20 border border-zinc-800/40 hover:border-zinc-700/60 hover:bg-zinc-900/60 transition-all rounded-lg text-center relative">
-                            <!-- Active Status Indicator -->
-                            <span class="absolute top-3 right-3 flex h-3 w-3">
-                                ${dj.active ? `
-                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8bfa00] opacity-75"></span>
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-[#8bfa00]" title="Active DJ"></span>
-                                ` : `
-                                <span class="relative inline-flex rounded-full h-3 w-3 bg-zinc-700" title="Inactive DJ"></span>
-                                `}
-                            </span>
-                            
-                            <!-- Avatar circle -->
-                            <div class="w-24 h-24 rounded-full bg-gradient-to-tr ${dj.gradient} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md">
-                                ${dj.initials}
-                            </div>
-                            
-                            <div class="flex flex-col items-center">
-                                <span class="font-swiss font-bold text-sm text-white group-hover:text-[#8febfe] transition-colors leading-tight">
-                                    ${dj.name}
+                    gridContainer.innerHTML = filtered.map(dj => {
+                        const isDJx = dj.name === 'DJx';
+                        const linkHref = isDJx ? 'djx.html' : 'playlists.html';
+                        
+                        return `
+                            <a href="${linkHref}" class="flex flex-col items-center gap-3 group cursor-pointer p-4 bg-zinc-900/20 border border-zinc-800/40 hover:border-zinc-700/60 hover:bg-zinc-900/60 transition-all rounded-lg text-center relative">
+                                <!-- Active Status Indicator -->
+                                <span class="absolute top-3 right-3 flex h-3 w-3">
+                                    ${dj.active ? `
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8bfa00] opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#8bfa00]" title="Active DJ"></span>
+                                    ` : `
+                                    <span class="relative inline-flex rounded-full h-3 w-3 bg-zinc-700" title="Inactive DJ"></span>
+                                    `}
                                 </span>
-                                <span class="text-[0.65rem] font-swiss text-zinc-500 uppercase tracking-widest mt-1 font-bold">
-                                    ${dj.active ? 'Active Host' : 'Inactive'}
-                                </span>
-                            </div>
-                        </a>
-                    `).join('');
+                                
+                                <!-- Avatar circle -->
+                                <div class="w-24 h-24 rounded-full bg-gradient-to-tr ${dj.gradient} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md overflow-hidden">
+                                    ${isDJx ? `<img src="djx_avatar.jpg" alt="DJx Avatar" class="w-full h-full object-cover">` : dj.initials}
+                                </div>
+                                
+                                <div class="flex flex-col items-center">
+                                    <span class="font-swiss font-bold text-sm text-white group-hover:text-[#8febfe] transition-colors leading-tight">
+                                        ${dj.name}
+                                    </span>
+                                    <span class="text-[0.65rem] font-swiss text-zinc-500 uppercase tracking-widest mt-1 font-bold">
+                                        ${dj.active ? 'Active Host' : 'Inactive'}
+                                    </span>
+                                </div>
+                            </a>
+                        `;
+                    }).join('');
                 }
             }
 

@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Programs | WUSB 90.1 FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
+
+    <!-- COMPONENT: HEADER -->
+    <!-- HEADER SECTION -->
+    <header class="border-b-4 border-zinc-900 sticky top-0 z-50 bg-black/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-end gap-3 cursor-pointer group">
+                    <h1 class="font-chuck text-6xl md:text-8xl leading-none wusb-gradient transform hover:scale-105 transition-transform duration-200">
+                        WUSB
+                    </h1>
+                    <span class="font-swiss font-bold text-3xl md:text-5xl tracking-tighter mb-1 md:mb-2 text-white">
+                        90.1 FM
+                    </span>
+                </a>
+
+                <!-- Desktop Main Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
+                    <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
+                    
+                    <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+
+                    <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-3xl px-8 py-3 rounded text-[#000] pledge-gradient transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] transition-all duration-200 inline-block text-center">
+                        PLEDGE
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="mobile-theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="mobile-icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="mobile-icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i id="icon-menu" data-lucide="menu" class="w-9 h-9"></i>
+                        <i id="icon-x" data-lucide="x" class="w-9 h-9 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Sub Menu -->
+        <div class="hidden lg:block bg-zinc-900/50 border-t border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto py-3 gap-6 no-scrollbar">
+                <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
+                <a href="djs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">DJs</a>
+                <a href="programs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Shows</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-zinc-900 border-b-4 border-zinc-800 flex flex-col">
+            <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
+                <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
+                <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
+                <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
+                    PLEDGE
+                </a>
+            </div>
+            <div class="flex flex-col p-4 gap-3 bg-zinc-950">
+                <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
+                <a href="djs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs</a>
+                <a href="programs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Shows</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- END COMPONENT: HEADER -->
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full pb-36">
+        
+        <!-- Page Title & Search Bar -->
+        <div class="border-b-2 border-zinc-800 pb-6 mb-8 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+            <div>
+                <h1 class="font-swiss font-bold text-5xl wusb-gradient inline-block uppercase tracking-tighter">Radio Programs</h1>
+                <p class="text-zinc-500 font-swiss font-bold text-sm tracking-widest mt-2 uppercase">Discover WUSB's Diverse Shows & Hosts</p>
+            </div>
+            
+            <!-- Search Input -->
+            <div class="relative w-full md:w-80">
+                <input type="text" id="show-search" placeholder="Search shows by title or genre..." class="w-full bg-zinc-950 border border-zinc-800 rounded-md px-4 py-2 pl-10 text-white font-swiss focus:outline-none focus:border-[#8febfe] transition-colors" />
+                <i data-lucide="search" class="absolute left-3.5 top-3 w-4.5 h-4.5 text-zinc-500"></i>
+            </div>
+        </div>
+
+        <!-- Featured Show Hero Card (Top Fold) -->
+        <section class="mb-12">
+            <div class="font-swiss font-bold text-xs uppercase tracking-widest text-[#df0781] mb-4 flex items-center gap-1.5">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <span>Featured Program</span>
+            </div>
+            <div class="relative w-full bg-zinc-900/30 border border-zinc-800 rounded-xl overflow-hidden shadow-[0_0_50px_rgba(223,7,129,0.12)] group flex flex-col lg:flex-row">
+                <!-- Colored Top-Left Accent Strip -->
+                <div class="absolute top-0 left-0 w-full lg:w-3 h-3 lg:h-full bg-gradient-to-r lg:bg-gradient-to-b from-[#df0781] via-[#af04ab] to-[#8febfe] z-10"></div>
+                
+                <!-- Image Wrapper -->
+                <div class="lg:w-5/12 relative aspect-video lg:aspect-square overflow-hidden bg-zinc-950 flex items-center justify-center pl-0 lg:pl-3">
+                    <img src="program_x_thumbnail.jpg" alt="Program X" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black via-transparent to-transparent opacity-60"></div>
+                    <span class="absolute top-4 right-4 text-[10px] font-swiss font-bold uppercase tracking-wider bg-black border border-[#8bfa00]/40 text-[#8bfa00] px-2.5 py-1 rounded">
+                        On Air Tonight
+                    </span>
+                </div>
+                
+                <!-- Content Section -->
+                <div class="lg:w-7/12 p-8 lg:p-10 flex flex-col justify-between pl-8 lg:pl-10">
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2 mb-4">
+                            <span class="text-xs font-swiss font-bold uppercase tracking-widest px-2.5 py-1 bg-zinc-950 border border-zinc-800 rounded text-zinc-400">Electronic & Synthwave</span>
+                            <span class="text-xs font-swiss font-bold uppercase tracking-widest px-2.5 py-1 bg-black text-[#df0781] border border-[#df0781]/30 rounded">Thursdays 18:00 - 20:00</span>
+                        </div>
+                        
+                        <h2 class="font-chuck text-4xl sm:text-6xl leading-none wusb-gradient mb-4">PROGRAM X</h2>
+                        
+                        <p class="font-swiss text-zinc-400 text-base sm:text-lg leading-relaxed mb-6">
+                            Embark on a dynamic sonic voyage through vintage vaporwave, retro-futurism, and ambient soundscapes. Host DJ Void explores the historic lines of synthesizers and modern electronic beats live from Stony Brook.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mt-4 pt-6 border-t border-zinc-800/60">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#df0781] to-[#af04ab] flex items-center justify-center text-black font-chuck text-sm border border-white/15">DV</div>
+                            <div>
+                                <p class="text-[10px] font-swiss font-bold uppercase tracking-wider text-zinc-500">Host DJ</p>
+                                <a href="djs.html" class="font-swiss font-bold text-white text-sm hover:text-[#8febfe] transition-colors">DJ Void</a>
+                            </div>
+                        </div>
+                        
+                        <a href="programX.html" class="px-6 py-3 text-xs font-swiss font-bold uppercase tracking-widest bg-white text-black hover:bg-[#8bfa00] hover:text-black transition-colors duration-300 rounded text-center">
+                            View Program & Editor &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters Block -->
+        <section class="mb-10">
+            <div class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-500 mb-3">Filter by Air Day</div>
+            <div class="flex flex-wrap gap-2" id="day-filters">
+                <button data-day="All" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-white bg-white text-black rounded transition-all duration-200">
+                    All Shows
+                </button>
+                <button data-day="Sunday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Sunday
+                </button>
+                <button data-day="Monday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Monday
+                </button>
+                <button data-day="Tuesday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Tuesday
+                </button>
+                <button data-day="Wednesday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Wednesday
+                </button>
+                <button data-day="Thursday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Thursday
+                </button>
+                <button data-day="Friday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Friday
+                </button>
+                <button data-day="Saturday" class="px-4 py-2 text-xs font-swiss font-bold uppercase tracking-wider border-2 border-zinc-800 hover:border-white text-zinc-400 hover:text-white rounded transition-all duration-200">
+                    Saturday
+                </button>
+            </div>
+        </section>
+
+        <!-- Active Programs Grid -->
+        <section>
+            <div class="flex justify-between items-end border-b border-zinc-800 pb-4 mb-8">
+                <h3 class="font-swiss font-bold text-2xl uppercase tracking-tighter">Active Shows Calendar</h3>
+                <span id="results-count" class="text-xs font-swiss text-zinc-500 uppercase tracking-widest"></span>
+            </div>
+            
+            <div id="shows-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Populated via Javascript parsing schedule.json -->
+            </div>
+
+            <!-- No Results Info -->
+            <div id="no-results" class="hidden text-center py-24">
+                <i data-lucide="radio" class="w-16 h-16 text-zinc-700 mx-auto mb-4"></i>
+                <p class="text-zinc-400 font-swiss text-lg">No active shows match your filters.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- COMPONENT: PLAYER -->
+    <!-- STICKY BOTTOM RADIO PLAYER -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+        <div class="bg-zinc-950 border-t border-zinc-800 py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="play-pause-btn" class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:scale-105 transition-transform focus:outline-none">
+                    <i id="icon-play" data-lucide="play" class="w-6 h-6 ml-1 block fill-current"></i>
+                    <i id="icon-pause" data-lucide="pause" class="w-6 h-6 hidden fill-current"></i>
+                </button>
+                <div class="hidden sm:block">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span id="live-ping" class="hidden animate-ping absolute inline-flex h-full w-full rounded-full bg-[#df2331] opacity-75"></span>
+                            <span id="live-dot" class="relative inline-flex rounded-full h-3 w-3 bg-zinc-600"></span>
+                        </span>
+                        <span class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">On Air Now</span>
+                    </div>
+                    <div class="font-swiss font-bold text-lg tracking-tight">The Underground Sound w/ DJ Void</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 mr-4">
+                    <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400"></i>
+                    <div class="w-24 h-2 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-white"></div>
+                    </div>
+                </div>
+                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                    Listen Live
+                </button>
+            </div>
+        </div>
+
+        <!-- NEON COLOR STRIP -->
+        <div class="flex h-4 w-full">
+            <div class="flex-1 bg-[#df0781]"></div>
+            <div class="flex-1 bg-[#af04ab]"></div>
+            <div class="flex-1 bg-[#9800e0]"></div>
+            <div class="flex-1 bg-[#8febfe]"></div>
+            <div class="flex-1 bg-[#8bfa00]"></div>
+            <div class="flex-1 bg-[#f8e700]"></div>
+            <div class="flex-1 bg-[#eebc00]"></div>
+            <div class="flex-1 bg-[#df2331]"></div>
+            <div class="flex-1 bg-[#a91b00]"></div>
+            <div class="flex-1 bg-[#52a1fc]"></div>
+            <div class="flex-1 bg-[#3b00fc]"></div>
+            <div class="flex-1 bg-[#badd00]"></div>
+        </div>
+    </div>
+    <!-- END COMPONENT: PLAYER -->
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="script.js"></script>
+
+    <!-- Embedded Schedule Data and Directory Logic -->
+    <script>
+        // Data parsed directly from schedule.json
+        const scheduleData = {
+          "Sunday": [
+            { "time": "12-2am", "title": "Melting World", "is_alt": true },
+            { "time": "12-2am", "title": "Ménage à trois", "is_alt": false },
+            { "time": "2-5am", "title": "Melting World", "is_alt": false },
+            { "time": "5-6am", "title": "WUSB Alternatives", "is_alt": false },
+            { "time": "6-8am", "title": "Music Library Gems", "is_alt": false },
+            { "time": "8-9am", "title": "volume @ full", "is_alt": false },
+            { "time": "9am-12pm", "title": "Sunday Street", "is_alt": false },
+            { "time": "12-1pm", "title": "Down Home Country", "is_alt": false },
+            { "time": "1-3pm", "title": "Sunday Classical", "is_alt": true },
+            { "time": "1-3pm", "title": "Bob Longman Show", "is_alt": false },
+            { "time": "3-6pm", "title": "Jazz On The Air", "is_alt": false },
+            { "time": "6-7pm", "title": "China Blue", "is_alt": false },
+            { "time": "7-8pm", "title": "Counter Lock", "is_alt": false },
+            { "time": "8-10pm", "title": "Shades of Blues", "is_alt": false },
+            { "time": "10pm-12am", "title": "The Sports Section", "is_alt": false }
+          ],
+          "Monday": [
+            { "time": "12-3am", "title": "Purple Starlight", "is_alt": true },
+            { "time": "12-3am", "title": "Ridding The Mind Of Waste", "is_alt": false },
+            { "time": "3-4am", "title": "Moods 4 Moderns", "is_alt": true },
+            { "time": "3-4am", "title": "Omega", "is_alt": false },
+            { "time": "4-5am", "title": "WUSB Alternatives", "is_alt": false },
+            { "time": "5-6am", "title": "Global Alert News", "is_alt": false },
+            { "time": "6-7am", "title": "Ralph Nader Radio Hour", "is_alt": false },
+            { "time": "7-9am", "title": "An Eclectic Mess", "is_alt": true },
+            { "time": "7-9am", "title": "Fishing With Bill", "is_alt": false },
+            { "time": "9-10am", "title": "More Cowbell", "is_alt": true },
+            { "time": "9-10am", "title": "Clam Radio", "is_alt": false },
+            { "time": "11am-12pm", "title": "Health Matters", "is_alt": false },
+            { "time": "12-2pm", "title": "DJ Joi: 60s, 70s, And", "is_alt": false },
+            { "time": "2-4pm", "title": "Equilibrium", "is_alt": true },
+            { "time": "2-4pm", "title": "Music Library Gems", "is_alt": false },
+            { "time": "4-5pm", "title": "Notes from Underground", "is_alt": false },
+            { "time": "5-6pm", "title": "Democracy Now!", "is_alt": false },
+            { "time": "6-8pm", "title": "Unbound: Palestine", "is_alt": true },
+            { "time": "6-8pm", "title": "Movie News and Music", "is_alt": false },
+            { "time": "8-10pm", "title": "Salvage & Recovery Radio", "is_alt": false },
+            { "time": "10-11pm", "title": "In Transit", "is_alt": false },
+            { "time": "11pm-12am", "title": "Late Dawns & Sunsets", "is_alt": false }
+          ],
+          "Tuesday": [
+            { "time": "12-3am", "title": "Street FM", "is_alt": false },
+            { "time": "3-6am", "title": "Destinies Mini-Marathon", "is_alt": false },
+            { "time": "6-7am", "title": "Country Pocket Rewinds", "is_alt": false },
+            { "time": "7-8am", "title": "Uncritical Thinking", "is_alt": false },
+            { "time": "8-10am", "title": "The Spin Zone", "is_alt": true },
+            { "time": "8-10am", "title": "Megapolitan", "is_alt": false },
+            { "time": "10am-12pm", "title": "Cafe Ali", "is_alt": false },
+            { "time": "12-1pm", "title": "Lost Transmissions", "is_alt": true },
+            { "time": "12-1pm", "title": "The Cole Show", "is_alt": false },
+            { "time": "1-3pm", "title": "Recess", "is_alt": false },
+            { "time": "3-4pm", "title": "C4E Presents", "is_alt": false },
+            { "time": "4-5pm", "title": "HEALTH Yeah!", "is_alt": false },
+            { "time": "5-6pm", "title": "Democracy Now!", "is_alt": false },
+            { "time": "6-7pm", "title": "Off The Wall", "is_alt": false },
+            { "time": "7-8pm", "title": "Searching for Somewhere", "is_alt": false },
+            { "time": "8-10pm", "title": "In the Mix with DJ Robbo", "is_alt": true },
+            { "time": "8-10pm", "title": "Bustin' Out Blue", "is_alt": false },
+            { "time": "10-11pm", "title": "The Nervous System", "is_alt": true },
+            { "time": "10-11pm", "title": "Nothin' On Radio", "is_alt": false },
+            { "time": "11pm-12am", "title": "Girl from Mars", "is_alt": false }
+          ],
+          "Wednesday": [
+            { "time": "12-1am", "title": "Stereo Sanctity", "is_alt": true },
+            { "time": "12-1am", "title": "Stereo Types", "is_alt": false },
+            { "time": "1-2am", "title": "Close The Door", "is_alt": false },
+            { "time": "2-3am", "title": "Wayback Wednesday", "is_alt": false },
+            { "time": "3-6am", "title": "Flesh Uncovered", "is_alt": false },
+            { "time": "6-8am", "title": "Hot Wax", "is_alt": false },
+            { "time": "8-10am", "title": "Country Pocket", "is_alt": true },
+            { "time": "8-10am", "title": "Blues At Dawn", "is_alt": false },
+            { "time": "10am-12pm", "title": "Wizzy's Brew", "is_alt": false },
+            { "time": "12-1pm", "title": "The Golden Ratio", "is_alt": false },
+            { "time": "1-2pm", "title": "Creature Central", "is_alt": false },
+            { "time": "2-5pm", "title": "Suburban Hymns", "is_alt": true },
+            { "time": "2-5pm", "title": "The Juke Joint", "is_alt": false },
+            { "time": "5-6pm", "title": "Democracy Now!", "is_alt": false },
+            { "time": "6-8pm", "title": "Blue Grass Time", "is_alt": false },
+            { "time": "8-9pm", "title": "Waxx Traxx to the Maxx", "is_alt": true },
+            { "time": "8-9pm", "title": "Davie Jones Locker", "is_alt": false },
+            { "time": "9-10pm", "title": "Turmoil", "is_alt": true },
+            { "time": "9-10pm", "title": "Waxx Traxx to the Maxx", "is_alt": false },
+            { "time": "10pm-12am", "title": "Spiney Norman", "is_alt": true },
+            { "time": "10pm-12am", "title": "The End of Radio", "is_alt": false }
+          ],
+          "Thursday": [
+            { "time": "12-3am", "title": "With The Beatles", "is_alt": false },
+            { "time": "3-5am", "title": "How's That?", "is_alt": false },
+            { "time": "5-6am", "title": "A Face In The Crowd", "is_alt": false },
+            { "time": "6-8am", "title": "Workhorse Radio", "is_alt": false },
+            { "time": "8-10am", "title": "Steve K's Radio Kaos", "is_alt": true },
+            { "time": "8-10am", "title": "The Flip Side", "is_alt": false },
+            { "time": "10am-12pm", "title": "Musicality", "is_alt": false },
+            { "time": "12-2pm", "title": "Lunch On Thursdays", "is_alt": false },
+            { "time": "2-4pm", "title": "If This Be Treason", "is_alt": false },
+            { "time": "4-5pm", "title": "Captain Phil's Planet", "is_alt": false },
+            { "time": "5-6pm", "title": "Democracy Now!", "is_alt": false },
+            { "time": "6-8pm", "title": "The Sounds of Film", "is_alt": false },
+            { "time": "8-10pm", "title": "The Bayou", "is_alt": true },
+            { "time": "8-10pm", "title": "Global Rhythms", "is_alt": false },
+            { "time": "10pm-12am", "title": "No Sound Test", "is_alt": false }
+          ],
+          "Friday": [
+            { "time": "12-6am", "title": "Trim Mix Party", "is_alt": false },
+            { "time": "6-8am", "title": "The Last DJ", "is_alt": false },
+            { "time": "8-10am", "title": "Blues Warehouse", "is_alt": false },
+            { "time": "10am-12pm", "title": "Fermented Radio", "is_alt": false },
+            { "time": "12-1pm", "title": "Whenever, Wherever", "is_alt": false },
+            { "time": "1-2pm", "title": "GSO Radio Hour", "is_alt": true },
+            { "time": "1-2pm", "title": "Campus Connect", "is_alt": false },
+            { "time": "2-3pm", "title": "The Robin's Nest", "is_alt": false },
+            { "time": "3-5pm", "title": "A Visual Sound", "is_alt": true },
+            { "time": "3-5pm", "title": "Unclassic Rock", "is_alt": false },
+            { "time": "5-6pm", "title": "Democracy Now!", "is_alt": false },
+            { "time": "6-7pm", "title": "The Healthy Planet", "is_alt": false },
+            { "time": "7-9pm", "title": "Rockin' Iration", "is_alt": false },
+            { "time": "9-10pm", "title": "Cowboy's Blues", "is_alt": false },
+            { "time": "10-11:30pm", "title": "Friday Nite Free-Form", "is_alt": false },
+            { "time": "11:30pm-12am", "title": "Destinies", "is_alt": false }
+          ],
+          "Saturday": [
+            { "time": "12-2am", "title": "Threat Level Midnight", "is_alt": true },
+            { "time": "12-2am", "title": "Mental Out", "is_alt": false },
+            { "time": "2-3am", "title": "Threat Level Midnight", "is_alt": true },
+            { "time": "2-3am", "title": "No Apologies", "is_alt": false },
+            { "time": "3-5am", "title": "The Groove", "is_alt": true },
+            { "time": "3-5am", "title": "No Apologies", "is_alt": false },
+            { "time": "5-6am", "title": "No Apologies", "is_alt": true },
+            { "time": "5-6am", "title": "Pacifica Network", "is_alt": false },
+            { "time": "6-9am", "title": "a million open tabs", "is_alt": true },
+            { "time": "6-9am", "title": "Sunrise Angels", "is_alt": false },
+            { "time": "9-11am", "title": "Flywheel", "is_alt": true },
+            { "time": "9-11am", "title": "Bob Duffy", "is_alt": false },
+            { "time": "11am-12pm", "title": "Bob Duffy", "is_alt": true },
+            { "time": "11am-12pm", "title": "Health Matters", "is_alt": false },
+            { "time": "12-1pm", "title": "Rock Round Up", "is_alt": false },
+            { "time": "1-3pm", "title": "Saturday's a Party", "is_alt": true },
+            { "time": "1-3pm", "title": "S. T. E. M. Radio", "is_alt": false },
+            { "time": "3-5pm", "title": "Gabe's Flight", "is_alt": false },
+            { "time": "5-6pm", "title": "MTSG", "is_alt": false },
+            { "time": "6-8pm", "title": "Anything Goes", "is_alt": true },
+            { "time": "6-8pm", "title": "Meanwhile, In Europe", "is_alt": false },
+            { "time": "8-10pm", "title": "Over the Horizon Radio", "is_alt": true },
+            { "time": "8-10pm", "title": "Everything Must Go", "is_alt": false },
+            { "time": "10pm-12am", "title": "Reggaematic Vibes", "is_alt": false }
+          ]
+        };
+
+        // Standard genres mappings
+        const getGenreInfo = (title) => {
+            const t = title.toLowerCase();
+            if (t.includes('jazz')) return { genre: 'Jazz', color: '#eebc00', icon: 'music-3' };
+            if (t.includes('blue') || t.includes('bayou')) return { genre: 'Blues', color: '#52a1fc', icon: 'guitar' };
+            if (t.includes('country') || t.includes('bluegrass') || t.includes('grass')) return { genre: 'Country/Folk', color: '#badd00', icon: 'music' };
+            if (t.includes('sports') || t.includes('section')) return { genre: 'Sports/Talk', color: '#eebc00', icon: 'mic' };
+            if (t.includes('news') || t.includes('democracy') || t.includes('hour') || t.includes('planet') || t.includes('health') || t.includes('critic') || t.includes('palestine')) return { genre: 'Public Affairs', color: '#f8e700', icon: 'mic-2' };
+            if (t.includes('classical')) return { genre: 'Classical', color: '#3b00fc', icon: 'music-4' };
+            if (t.includes('mix') || t.includes('party') || t.includes('groove') || t.includes('starlight')) return { genre: 'Dance/Electronic', color: '#df0781', icon: 'audio-lines' };
+            if (t.includes('rock') || t.includes('beatles') || t.includes('punk') || t.includes('apolog') || t.includes('midnight') || t.includes('sanctity')) return { genre: 'Rock/Alternative', color: '#df2331', icon: 'guitar' };
+            
+            // Default
+            return { genre: 'Freeform', color: '#8febfe', icon: 'radio' };
+        };
+
+        const djsList = [
+            { name: "DJx", initials: "DX" },
+            { name: "DJ Void", initials: "DV" },
+            { name: "scottorourke", initials: "SO" },
+            { name: "Steve-K", initials: "SK" },
+            { name: "mr.ethanson", initials: "ME" },
+            { name: "maacastro", initials: "MC" },
+            { name: "Buddy Merriam", initials: "BM" },
+            { name: "Sillyometer", initials: "SM" },
+            { name: "DJ Ray Knives", initials: "RK" },
+            { name: "Ahmad Ali", initials: "AA" },
+            { name: "Joe V", initials: "JV" },
+            { name: "Mario Staiano", initials: "MS" },
+            { name: "Gavin", initials: "GV" },
+            { name: "Ryanberger", initials: "RB" }
+        ];
+
+        const getDeterministicDJ = (title) => {
+            let hash = 0;
+            for (let i = 0; i < title.length; i++) {
+                hash = title.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            const index = Math.abs(hash) % djsList.length;
+            return djsList[index];
+        };
+
+        const getDeterministicColor = (title) => {
+            const colors = ['#df0781', '#af04ab', '#9800e0', '#8febfe', '#8bfa00', '#f8e700', '#eebc00', '#df2331', '#52a1fc', '#3b00fc', '#badd00'];
+            let hash = 0;
+            for (let i = 0; i < title.length; i++) {
+                hash = title.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            const index = Math.abs(hash) % colors.length;
+            return colors[index];
+        };
+
+        const getMockDescription = (title, genre) => {
+            return `Join us for ${title}, WUSB's dedicated program featuring the best in ${genre} programming. Our curators spin a hand-picked selection of deep cuts, new releases, and historical context.`;
+        };
+
+        const getInitials = (title) => {
+            return title.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const showsGrid = document.getElementById('shows-grid');
+            const searchInput = document.getElementById('show-search');
+            const dayFilters = document.getElementById('day-filters');
+            const resultsCount = document.getElementById('results-count');
+            const noResults = document.getElementById('no-results');
+
+            // 1. Process Unique Shows
+            const showsMap = new Map();
+
+            // Explicitly exclude the featured hero show title so it doesn't double-render
+            const FEATURED_SHOW_TITLE = "Program X";
+
+            for (const [day, slots] of Object.entries(scheduleData)) {
+                slots.forEach(slot => {
+                    const title = slot.title.trim().replace(/&amp;/g, '&');
+                    if (title === FEATURED_SHOW_TITLE) return; // Skip featured show
+                    
+                    if (!showsMap.has(title)) {
+                        showsMap.set(title, {
+                            title: title,
+                            genreInfo: getGenreInfo(title),
+                            dj: getDeterministicDJ(title),
+                            color: getDeterministicColor(title),
+                            days: new Set(),
+                            schedules: []
+                        });
+                    }
+                    
+                    const showObj = showsMap.get(title);
+                    showObj.days.add(day);
+                    showObj.schedules.push({ day: day, time: slot.time });
+                });
+            }
+
+            const showsList = Array.from(showsMap.values()).sort((a, b) => a.title.localeCompare(b.title));
+
+            let currentDayFilter = 'All';
+            let searchQuery = '';
+
+            function renderCards() {
+                showsGrid.innerHTML = '';
+                
+                const filteredShows = showsList.filter(show => {
+                    // Match Search Query
+                    const matchesSearch = show.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                          show.genreInfo.genre.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                                          show.dj.name.toLowerCase().includes(searchQuery.toLowerCase());
+                    
+                    // Match Day Filter
+                    const matchesDay = currentDayFilter === 'All' || show.days.has(currentDayFilter);
+
+                    return matchesSearch && matchesDay;
+                });
+
+                // Update count label
+                resultsCount.textContent = `${filteredShows.length} Shows Found`;
+
+                if (filteredShows.length === 0) {
+                    noResults.classList.remove('hidden');
+                    showsGrid.classList.add('hidden');
+                    return;
+                }
+
+                noResults.classList.add('hidden');
+                showsGrid.classList.remove('hidden');
+
+                filteredShows.forEach(show => {
+                    // Format schedules block
+                    const scheduleStrings = Array.from(show.days).map(day => {
+                        const times = show.schedules.filter(s => s.day === day).map(s => s.time).join(', ');
+                        return `${day}s (${times})`;
+                    }).join(' & ');
+
+                    const initials = getInitials(show.title);
+                    const desc = getMockDescription(show.title, show.genreInfo.genre);
+
+                    // Choose icon SVG based on genreInfo
+                    let iconSVG = '';
+                    switch(show.genreInfo.icon) {
+                        case 'music-3':
+                            iconSVG = `<i data-lucide="music-3" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        case 'guitar':
+                            iconSVG = `<i data-lucide="guitar" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        case 'music-4':
+                            iconSVG = `<i data-lucide="music-4" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        case 'music':
+                            iconSVG = `<i data-lucide="music" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        case 'mic':
+                            iconSVG = `<i data-lucide="mic" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        case 'mic-2':
+                            iconSVG = `<i data-lucide="mic-2" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        case 'audio-lines':
+                            iconSVG = `<i data-lucide="audio-lines" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                            break;
+                        default:
+                            iconSVG = `<i data-lucide="radio" class="w-12 h-12 text-white/40 group-hover:text-white/90 group-hover:scale-110 transition-all duration-300"></i>`;
+                    }
+
+                    // Create Card Article elements
+                    const card = document.createElement('article');
+                    card.className = "group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300 border border-zinc-800 hover:border-zinc-700 rounded-lg overflow-hidden";
+                    card.style.setProperty('--card-color', show.color);
+
+                    card.innerHTML = `
+                        <!-- Colored Accent Header -->
+                        <div class="h-3 w-full" style="background-color: var(--card-color);"></div>
+
+                        <!-- Graphical Thumbnail Section -->
+                        <div class="relative w-full aspect-video border-b border-zinc-800/80 group-hover:border-zinc-700/80 transition-colors bg-zinc-950 flex items-center justify-center overflow-hidden">
+                            <!-- Glowing gradient shape in center -->
+                            <div class="absolute w-24 h-24 rounded-full filter blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300" style="background-color: var(--card-color);"></div>
+                            ${iconSVG}
+                            
+                            <!-- Day & Time Label overlay -->
+                            <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center">
+                                <span class="text-[9px] font-swiss font-bold tracking-widest px-2 py-0.5 bg-black/80 rounded uppercase border border-zinc-800 text-zinc-400">
+                                    ${show.genreInfo.genre}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Card Content -->
+                        <div class="p-6 flex flex-col flex-grow">
+                            <!-- Time Slot -->
+                            <span class="text-[10px] font-swiss font-bold uppercase tracking-widest text-[#8febfe] mb-2 block">${scheduleStrings}</span>
+                            
+                            <h4 class="font-swiss font-bold text-xl mb-3 leading-tight group-hover:underline decoration-2 underline-offset-4" style="text-decoration-color: var(--card-color);">
+                                ${show.title}
+                            </h4>
+                            
+                            <p class="font-swiss text-zinc-400 text-xs sm:text-sm leading-relaxed mb-6 flex-grow">
+                                ${desc}
+                            </p>
+
+                            <!-- DJ Attach and action link -->
+                            <div class="flex items-center justify-between mt-auto pt-4 border-t border-zinc-800/60">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-8 h-8 rounded-full bg-zinc-850 flex items-center justify-center text-xs font-chuck border border-white/5 text-zinc-300 overflow-hidden">
+                                        ${show.dj.name === 'DJx' ? `<img src="djx_avatar.jpg" alt="DJx" class="w-full h-full object-cover">` : show.dj.initials}
+                                    </div>
+                                    <a href="${show.dj.name === 'DJx' ? 'djx.html' : 'djs.html'}" class="text-xs font-swiss text-zinc-500 hover:text-white transition-colors uppercase font-bold tracking-tight" onclick="event.stopPropagation();">${show.dj.name}</a>
+                                </div>
+                                <span class="text-xs font-swiss font-bold uppercase tracking-widest flex items-center gap-1" style="color: var(--card-color);">
+                                    Details <span class="text-base leading-none">&rarr;</span>
+                                </span>
+                            </div>
+                        </div>
+                    `;
+
+                    // Simple redirect logic on click for show template details
+                    card.addEventListener('click', () => {
+                        // For demonstration, direct the user to the program detail page template
+                        window.location.href = "programX.html?show=" + encodeURIComponent(show.title);
+                    });
+
+                    showsGrid.appendChild(card);
+                });
+
+                // Re-init lucide icons for dynamically added nodes
+                lucide.createIcons();
+            }
+
+            // 2. Set up search listeners
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                renderCards();
+            });
+
+            // 3. Set up filter tab clicks
+            const buttons = dayFilters.querySelectorAll('button');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button styling
+                    buttons.forEach(b => {
+                        b.classList.remove('bg-white', 'text-black');
+                        b.classList.add('border-zinc-800', 'text-zinc-400', 'hover:text-white');
+                        b.classList.remove('border-white');
+                    });
+                    btn.classList.add('bg-white', 'text-black', 'border-white');
+                    btn.classList.remove('border-zinc-800', 'text-zinc-400', 'hover:text-white');
+
+                    currentDayFilter = btn.dataset.day;
+                    renderCards();
+                });
+            });
+
+            // Initial render
+            renderCards();
+        });
+    </script>
+</body>
+</html>

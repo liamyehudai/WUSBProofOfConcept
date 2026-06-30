@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJx Profile | WUSB 90.1 FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
+
+    <!-- COMPONENT: HEADER -->
+    <!-- HEADER SECTION -->
+    <header class="border-b-4 border-zinc-900 sticky top-0 z-50 bg-black/95 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                
+                <!-- Logo Area -->
+                <a href="index.html" class="flex items-end gap-3 cursor-pointer group">
+                    <h1 class="font-chuck text-6xl md:text-8xl leading-none wusb-gradient transform hover:scale-105 transition-transform duration-200">
+                        WUSB
+                    </h1>
+                    <span class="font-swiss font-bold text-3xl md:text-5xl tracking-tighter mb-1 md:mb-2 text-white">
+                        90.1 FM
+                    </span>
+                </a>
+
+                <!-- Desktop Main Menu -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="about.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">About</a>
+                    <a href="schedule.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Schedule</a>
+                    <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Sports</a>
+                    <a href="playlists.html" class="font-swiss font-bold text-xl uppercase tracking-tight hover:text-[#8febfe] transition-colors">Playlists</a>
+                    
+                    <button id="theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+
+                    <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-3xl px-8 py-3 rounded text-[#000] pledge-gradient transform hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(139,250,0,0.4)] transition-all duration-200 inline-block text-center">
+                        PLEDGE
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="lg:hidden flex items-center gap-4">
+                    <button id="mobile-theme-toggle" class="text-white hover:text-[#8febfe] transition-colors focus:outline-none" aria-label="Toggle theme">
+                        <i id="mobile-icon-sun" data-lucide="sun" class="w-6 h-6"></i>
+                        <i id="mobile-icon-moon" data-lucide="moon" class="w-6 h-6 hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i id="icon-menu" data-lucide="menu" class="w-9 h-9"></i>
+                        <i id="icon-x" data-lucide="x" class="w-9 h-9 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Desktop Sub Menu -->
+        <div class="hidden lg:block bg-zinc-900/50 border-t border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto py-3 gap-6 no-scrollbar">
+                <a href="underwriting.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Underwriting</a>
+                <a href="djs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">DJs</a>
+                <a href="programs.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Shows</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">EEO Report</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm font-medium tracking-wide text-zinc-400 hover:text-white whitespace-nowrap transition-colors">Contact</a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-zinc-900 border-b-4 border-zinc-800 flex flex-col">
+            <div class="flex flex-col p-4 gap-4 border-b border-zinc-800">
+                <a href="about.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">About</a>
+                <a href="schedule.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Schedule</a>
+                <a href="https://sites.google.com/view/wusbsports/home" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" target="_blank" rel="noopener noreferrer" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Sports</a>
+                <a href="playlists.html" class="font-swiss font-bold text-2xl uppercase tracking-tight text-white hover:text-[#8febfe]">Playlists</a>
+                <a href="https://stonybrookuniversity.co1.qualtrics.com/jfe/form/SV_8lcy7jXUazUqsVE" target="_blank" rel="noopener noreferrer" class="font-chuck text-2xl px-6 py-3 mt-2 rounded text-[#000] pledge-gradient w-full text-center inline-block">
+                    PLEDGE
+                </a>
+            </div>
+            <div class="flex flex-col p-4 gap-3 bg-zinc-950">
+                <a href="underwriting.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Underwriting</a>
+                <a href="djs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">DJs</a>
+                <a href="programs.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Shows</a>
+                <a href="https://www.wusbrequests.com/" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Requests</a>
+                <a href="https://www.wusb.fm/files/WUSB%20EEO%20Report%202022.pdf" target="_blank" rel="noopener noreferrer" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">EEO Report</a>
+                <a href="wusbpublicfile.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">WUSB Public File</a>
+                <a href="contact.html" class="font-swiss text-sm tracking-wide text-zinc-400 hover:text-white">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- END COMPONENT: HEADER -->
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full pb-36">
+        
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 mb-8 text-xs font-swiss font-bold uppercase tracking-widest text-zinc-500">
+            <a href="index.html" class="hover:text-white transition-colors">Home</a>
+            <span>/</span>
+            <a href="djs.html" class="hover:text-white transition-colors">DJs</a>
+            <span>/</span>
+            <span class="wusb-gradient">DJx</span>
+        </nav>
+
+        <!-- DJ Profile Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 border-b border-zinc-800 pb-12">
+            
+            <!-- Left: Avatar & Socials -->
+            <div class="lg:col-span-5 flex flex-col items-center">
+                <div class="relative w-full max-w-md aspect-square rounded-lg overflow-hidden border border-zinc-800 shadow-[0_0_35px_rgba(223,7,129,0.2)] group mb-6">
+                    <img id="dj-avatar" src="djx_avatar.jpg" alt="DJx Avatar Icon" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    
+                    <!-- Active Status Indicator -->
+                    <div class="absolute top-4 right-4 bg-black/80 backdrop-blur-sm border border-[#8bfa00] px-3 py-1.5 rounded-full flex items-center gap-2">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#8bfa00] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#8bfa00]"></span>
+                        </span>
+                        <span class="text-[10px] font-swiss font-bold uppercase tracking-wider text-[#8bfa00]">Live Host</span>
+                    </div>
+                </div>
+
+                <!-- Socials & Website Links -->
+                <div class="w-full max-w-md bg-zinc-900/30 border border-zinc-800 rounded-lg p-5">
+                    <h3 class="text-xs font-swiss font-bold uppercase tracking-widest text-zinc-500 mb-4 border-b border-zinc-800 pb-2">Connect with DJx</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <a href="https://djx-music.example.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-zinc-950 border border-zinc-800 hover:border-[#8febfe] rounded text-sm font-swiss font-semibold text-zinc-300 hover:text-white transition-colors">
+                            <i data-lucide="globe" class="w-4 h-4 text-[#8febfe]"></i>
+                            <span>Website</span>
+                        </a>
+                        <a href="https://instagram.com/djx_radio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-zinc-950 border border-zinc-800 hover:border-[#df0781] rounded text-sm font-swiss font-semibold text-zinc-300 hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-4 h-4 text-[#df0781]"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://soundcloud.com/djx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-zinc-950 border border-zinc-800 hover:border-[#df2331] rounded text-sm font-swiss font-semibold text-zinc-300 hover:text-white transition-colors">
+                            <i data-lucide="music" class="w-4 h-4 text-[#df2331]"></i>
+                            <span>SoundCloud</span>
+                        </a>
+                        <a href="https://mixcloud.com/djx" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-3 py-2 bg-zinc-950 border border-zinc-800 hover:border-[#8bfa00] rounded text-sm font-swiss font-semibold text-zinc-300 hover:text-white transition-colors">
+                            <i data-lucide="audio-lines" class="w-4 h-4 text-[#8bfa00]"></i>
+                            <span>Mixcloud</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Details & Programs -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+                <div>
+                    <!-- Meta Tag -->
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-xs font-swiss font-bold uppercase tracking-widest px-2.5 py-1 bg-zinc-900 border border-zinc-800 rounded-full text-zinc-400">
+                            WUSB Resident DJ
+                        </span>
+                    </div>
+
+                    <!-- DJ Tag/Name -->
+                    <h1 class="font-chuck text-6xl sm:text-8xl leading-none wusb-gradient mb-6 tracking-wide">
+                        DJx
+                    </h1>
+
+                    <!-- Plain Text Description / Biography -->
+                    <div class="prose prose-invert font-swiss text-zinc-450 text-lg leading-relaxed mb-8">
+                        <p>
+                            DJx is a resident sound designer and radio host broadcasting live from Stony Brook University. Known for blending classic analog frequencies with forward-thinking cyber beats, DJx crafts immersive auditory journeys that cross the boundaries of synthwave, ambient soundscapes, and high-energy vapor-techno.
+                        </p>
+                        <p class="mt-4">
+                            With over a decade of crate-digging experience, DJx’s weekly air blocks serve as a curated exhibition of rare cassette releases, live modular hardware patches, and exclusive local music showcases. Whether you are driving down a midnight highway or coding in the dark, DJx provides the ultimate soundtrack.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Programs DJ is On -->
+                <div class="border-t border-zinc-800 pt-6 mt-4">
+                    <h2 class="text-xs font-swiss font-bold uppercase tracking-widest text-zinc-500 mb-4">Radio Programs</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        
+                        <!-- Program Card 1 -->
+                        <a href="programX.html" class="group bg-zinc-900/40 hover:bg-zinc-900/70 p-4 border border-zinc-800 hover:border-[#8febfe] rounded transition-all flex justify-between items-center">
+                            <div>
+                                <h3 class="font-swiss font-bold text-white group-hover:text-[#8febfe] transition-colors text-base uppercase">Program X</h3>
+                                <p class="font-swiss text-xs text-zinc-500 mt-1">Thursdays &bull; 18:00 - 20:00 EST</p>
+                                <span class="inline-block text-[9px] font-swiss font-bold uppercase tracking-wider px-2 py-0.5 bg-zinc-950 border border-zinc-800 text-zinc-400 rounded mt-2">Electronic / Synthwave</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-600 group-hover:text-[#8febfe] transition-colors"></i>
+                        </a>
+
+                        <!-- Program Card 2 -->
+                        <a href="playlists.html" class="group bg-zinc-900/40 hover:bg-zinc-900/70 p-4 border border-zinc-800 hover:border-[#df0781] rounded transition-all flex justify-between items-center">
+                            <div>
+                                <h3 class="font-swiss font-bold text-white group-hover:text-[#df0781] transition-colors text-base uppercase">Midnight Frequencies</h3>
+                                <p class="font-swiss text-xs text-zinc-500 mt-1">Saturdays &bull; 22:00 - 00:00 EST</p>
+                                <span class="inline-block text-[9px] font-swiss font-bold uppercase tracking-wider px-2 py-0.5 bg-zinc-950 border border-zinc-800 text-zinc-400 rounded mt-2">Vaporwave / Chillwave</span>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-600 group-hover:text-[#df0781] transition-colors"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- YouTube Video Showcase Section -->
+        <section class="bg-zinc-900/20 border border-zinc-800 rounded-lg p-6 sm:p-8 hover:border-zinc-700 transition-colors duration-300 shadow-md">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-zinc-800 pb-4 mb-6">
+                <div>
+                    <h2 class="font-swiss font-bold text-2xl text-white uppercase tracking-tight">Featured Studio Set</h2>
+                    <p class="text-xs text-zinc-500 mt-1 uppercase font-swiss font-bold tracking-wider">Live Broadcast & hardware demonstration</p>
+                </div>
+                <span class="text-[9px] font-swiss font-bold tracking-widest px-2.5 py-1 bg-zinc-950 rounded uppercase border border-zinc-800 text-zinc-400">
+                    YouTube Stream
+                </span>
+            </div>
+            
+            <!-- Video Embedded Player -->
+            <div class="relative w-full aspect-video my-6 rounded-lg overflow-hidden border border-zinc-800 shadow-lg">
+                <!-- Using a retro-themed vaporwave music/visual embed -->
+                <iframe src="https://www.youtube.com/embed/4xDzrJKXOOY" 
+                        class="absolute inset-0 w-full h-full" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="prose prose-invert max-w-none font-swiss text-zinc-400 leading-relaxed text-sm">
+                <p>
+                    Check out the live tape-deck and modular synthesizer session recorded at the WUSB Studios. In this performance, DJx constructs dynamic 80s arpeggiated basslines and transitions them into chillwave rhythms, utilizing a pair of vintage cassette recorders and custom-patched analog synthesizer modules.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- COMPONENT: PLAYER -->
+    <!-- STICKY BOTTOM RADIO PLAYER -->
+    <div class="fixed bottom-0 left-0 w-full z-50">
+        <div class="bg-zinc-950 border-t border-zinc-800 py-3 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <button id="play-pause-btn" class="w-12 h-12 rounded-full flex items-center justify-center bg-white text-black hover:scale-105 transition-transform focus:outline-none">
+                    <i id="icon-play" data-lucide="play" class="w-6 h-6 ml-1 block fill-current"></i>
+                    <i id="icon-pause" data-lucide="pause" class="w-6 h-6 hidden fill-current"></i>
+                </button>
+                <div class="hidden sm:block">
+                    <div class="flex items-center gap-2">
+                        <span class="relative flex h-3 w-3">
+                            <span id="live-ping" class="hidden animate-ping absolute inline-flex h-full w-full rounded-full bg-[#df2331] opacity-75"></span>
+                            <span id="live-dot" class="relative inline-flex rounded-full h-3 w-3 bg-zinc-600"></span>
+                        </span>
+                        <span class="font-swiss font-bold text-xs uppercase tracking-widest text-zinc-400">On Air Now</span>
+                    </div>
+                    <div class="font-swiss font-bold text-lg tracking-tight">The Underground Sound w/ DJ Void</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex items-center gap-2 mr-4">
+                    <i data-lucide="volume-2" class="w-5 h-5 text-zinc-400"></i>
+                    <div class="w-24 h-2 bg-zinc-800 rounded-full overflow-hidden">
+                        <div class="w-3/4 h-full bg-white"></div>
+                    </div>
+                </div>
+                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                    Listen Live
+                </button>
+            </div>
+        </div>
+
+        <!-- NEON COLOR STRIP -->
+        <div class="flex h-4 w-full">
+            <div class="flex-1 bg-[#df0781]"></div>
+            <div class="flex-1 bg-[#af04ab]"></div>
+            <div class="flex-1 bg-[#9800e0]"></div>
+            <div class="flex-1 bg-[#8febfe]"></div>
+            <div class="flex-1 bg-[#8bfa00]"></div>
+            <div class="flex-1 bg-[#f8e700]"></div>
+            <div class="flex-1 bg-[#eebc00]"></div>
+            <div class="flex-1 bg-[#df2331]"></div>
+            <div class="flex-1 bg-[#a91b00]"></div>
+            <div class="flex-1 bg-[#52a1fc]"></div>
+            <div class="flex-1 bg-[#3b00fc]"></div>
+            <div class="flex-1 bg-[#badd00]"></div>
+        </div>
+    </div>
+    <!-- END COMPONENT: PLAYER -->
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script src="script.js"></script>
+</body>
+</html>

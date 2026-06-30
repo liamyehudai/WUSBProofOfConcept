@@ -38,6 +38,11 @@ You can explore the live, fully interactive prototype deployed on GitHub Pages h
 *   **Real-time Search Filter:** Instantly filters DJ profiles in a fully responsive grid as the user types.
 *   **Cohesive Aesthetic:** Adapts beautifully to dark and light mode variable shifts, utilizing stable gradient profiles for each card avatar.
 
+### 🎧 6. DJ Profile (DJx) & Playlist Detail (playlistX) Templates
+*   **High-Fidelity DJ Profile (`djx.html`):** A custom resident DJ biography page showing their tag, a detailed profile picture/avatar, links to their socials, the list of shows they host, and an embedded video set.
+*   **Playlist Detail Template (`playlistX.html`):** Displays a specific broadcast log with program details, host reference, narrative description, a 3-column tracklist table with new releases, an embedded Spotify companion player, a linked program video archive, and a photo gallery with zoom lightboxes.
+*   **Dynamic CSV Playlist Downloader:** Enables one-click client-side spreadsheet compilation and download directly from the tracklist log.
+
 ---
 
 ## 📂 Project Structure
@@ -48,8 +53,12 @@ You can explore the live, fully interactive prototype deployed on GitHub Pages h
 *   `schedule.html` - Interactive programming grid.
 *   `playlists.html` - Directory of DJ playlist logs.
 *   `djs.html` - Searchable and filterable DJ profiles directory page.
+*   `djx.html` - Premium proof of concept profile page for resident host DJx.
+*   `playlistX.html` - Playlist log detail view page template displaying tracklists, media, and CSV downloads.
 *   `underwriting.html` - Station support and sponsorship information.
 *   `wusbpublicfile.html` - FCC public inspection files checklist.
+*   `djx_avatar.jpg` - Generated cyberpunk-style DJ avatar graphic.
+*   `wusb_studio.jpg` - Generated vintage radio console studio photo.
 *   `style.css` - Custom styles, layout variables, and typography defaults.
 *   `script.js` - Dynamic DOM scripting, mobile menus, theme syncing, schedule column solvers, and navigation event hooks.
 *   `components.md` - Modular breakdown of elements for future migration to Drupal 10/11 Single Directory Components (SDC).
