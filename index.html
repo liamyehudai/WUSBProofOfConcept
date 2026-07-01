@@ -359,10 +359,10 @@
             <!-- DJ Profiles Carousel (Scrolling Right to Left) -->
             <div class="flex flex-col gap-3">
                 <h3 class="font-swiss font-bold text-sm tracking-widest uppercase text-zinc-400 pl-2">Featured DJs</h3>
-                <div class="relative overflow-hidden w-full bg-zinc-950/30 border-y border-zinc-900/60 py-8">
+                <div class="relative overflow-hidden w-full bg-zinc-950/30 border-y border-zinc-900/60 py-8 carousel-wrapper">
                     <!-- Left and Right Gradient Fades -->
-                    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-                    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none fade-left"></div>
+                    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none fade-right"></div>
                     
                     <div id="dj-carousel-inner" class="animate-marquee-left flex whitespace-nowrap">
                         <!-- Dynamically populated DJ Profile circles -->
@@ -373,10 +373,10 @@
             <!-- Show Profiles Carousel (Scrolling Left to Right) -->
             <div class="flex flex-col gap-3">
                 <h3 class="font-swiss font-bold text-sm tracking-widest uppercase text-zinc-400 pl-2">On Air Programs</h3>
-                <div class="relative overflow-hidden w-full bg-zinc-950/30 border-y border-zinc-900/60 py-8">
+                <div class="relative overflow-hidden w-full bg-zinc-950/30 border-y border-zinc-900/60 py-8 carousel-wrapper">
                     <!-- Left and Right Gradient Fades -->
-                    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none"></div>
-                    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none"></div>
+                    <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none fade-left"></div>
+                    <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none fade-right"></div>
                     
                     <div id="show-carousel-inner" class="animate-marquee-right flex whitespace-nowrap">
                         <!-- Dynamically populated Show rounded squares -->

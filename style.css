@@ -195,6 +195,21 @@
   border-color: #000000 !important;
 }
 
+/* Light mode carousel wrapper and fade overrides on index.html */
+.light-theme .carousel-wrapper {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+.light-theme .carousel-wrapper .fade-left {
+  background-image: linear-gradient(to right, #ffffff, transparent) !important;
+}
+
+.light-theme .carousel-wrapper .fade-right {
+  background-image: linear-gradient(to left, #ffffff, transparent) !important;
+}
+
+
 
 
 
