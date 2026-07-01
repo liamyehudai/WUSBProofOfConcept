@@ -96,3 +96,88 @@
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
+/* Light theme overrides for titles and headers using wusb-gradient (excluding header main logo) */
+.light-theme h1.wusb-gradient,
+.light-theme h2.wusb-gradient,
+.light-theme h3.wusb-gradient,
+.light-theme h4.wusb-gradient,
+.light-theme h5.wusb-gradient,
+.light-theme h6.wusb-gradient,
+.light-theme h1 .wusb-gradient,
+.light-theme h2 .wusb-gradient,
+.light-theme h3 .wusb-gradient,
+.light-theme h4 .wusb-gradient,
+.light-theme h5 .wusb-gradient,
+.light-theme h6 .wusb-gradient {
+  background: transparent !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Ensure links inside these highlighted headers are also black */
+.light-theme h1.wusb-gradient a,
+.light-theme h2.wusb-gradient a,
+.light-theme h3.wusb-gradient a,
+.light-theme h4.wusb-gradient a,
+.light-theme h5.wusb-gradient a,
+.light-theme h6.wusb-gradient a,
+.light-theme h1 .wusb-gradient a,
+.light-theme h2 .wusb-gradient a,
+.light-theme h3 .wusb-gradient a,
+.light-theme h4 .wusb-gradient a,
+.light-theme h5 .wusb-gradient a,
+.light-theme h6 .wusb-gradient a {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Revert the main header logo to standard gradient in light mode */
+.light-theme header h1.wusb-gradient {
+  background: linear-gradient(90deg, #f6e200 0%, #e19301 50%, #d14401 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: block !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Light mode card styling for about.html, contact.html, and djs.html */
+.light-theme main .bg-zinc-900\/40,
+.light-theme main .bg-zinc-900\/20 {
+  background-color: #ffffff !important;
+  border-color: #e4e4e7 !important;
+}
+
+/* Hover styling for DJ cards in djs.html */
+.light-theme main .hover\:bg-zinc-900\/60:hover {
+  background-color: #f4f4f5 !important;
+  border-color: #d4d4d8 !important;
+}
+
+/* High-contrast link colors inside cards/main for light theme */
+.light-theme main a.text-\[\#8febfe\] {
+  color: #007ba8 !important;
+}
+
+.light-theme main a.text-\[\#8febfe\]:hover {
+  color: #000000 !important;
+}
+
+/* Hover text color override for DJ names in djs.html under light theme */
+.light-theme main a.group:hover span.text-white {
+  color: #007ba8 !important;
+}
+
+/* Slightly darker green for checklist checkmarks in about.html for readability in light mode */
+.light-theme main .text-\[\#8bfa00\] {
+  color: #6fb800 !important;
+}
+
+
