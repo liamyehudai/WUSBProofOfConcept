@@ -96,7 +96,7 @@
 <!-- END COMPONENT: HEADER -->
     
     <!-- COMPONENT: HERO -->
-    <section class="relative w-full h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden border-b-4 border-zinc-900" style="--hero-overlay-color: rgba(0,0,0,0.6);">
+    <section class="relative w-full h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden border-b-4 border-zinc-900 hero-section" style="--hero-overlay-color: rgba(0,0,0,0.6);">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0 bg-black">
             <img src="RadioHero.png" alt="WUSB Studio" class="w-full h-full object-cover object-center opacity-60" />
@@ -462,7 +462,7 @@
                         return `
                             <a href="${linkHref}" class="flex flex-col items-center gap-2 group flex-shrink-0 cursor-pointer">
                                 <div class="w-24 h-24 rounded-full bg-gradient-to-tr ${grad} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md overflow-hidden">
-                                    ${isDJx ? `<img src="djx_avatar.jpg" alt="DJx Avatar" class="w-full h-full object-cover">` : dj.initials}
+                                    ${isDJx ? `<img src="dj.png" alt="DJx Avatar" class="w-full h-full object-cover">` : dj.initials}
                                 </div>
                                 <span class="text-xs font-swiss text-zinc-400 group-hover:text-white transition-colors truncate max-w-[100px] text-center">
                                     ${dj.name}

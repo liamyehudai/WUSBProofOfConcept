@@ -180,4 +180,21 @@
   color: #6fb800 !important;
 }
 
+/* Keep the hero section title in index.html in the original wusb gradient */
+.light-theme .hero-section .wusb-gradient {
+  background: linear-gradient(90deg, #f6e200 0%, #e19301 50%, #d14401 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
+/* Make hero section subtitle text and border black in light mode */
+.light-theme .hero-section p {
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+
+
 
