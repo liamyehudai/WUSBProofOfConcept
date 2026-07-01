@@ -47,6 +47,88 @@
         .paused-spin {
             animation-play-state: paused;
         }
+
+        /* Light Theme Overrides for the Player Card */
+        .light-theme .player-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-color: #e4e4e7;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+        
+        .light-theme .player-card .bg-zinc-900 {
+            background-color: #f4f4f5 !important;
+            border-color: #e4e4e7 !important;
+        }
+
+        .light-theme .player-card .border-zinc-800 {
+            border-color: #e4e4e7 !important;
+        }
+
+        .light-theme .player-card .border-zinc-800\/80 {
+            border-color: #e4e4e7 !important;
+        }
+
+        .light-theme .player-card .text-zinc-500 {
+            color: #71717a !important;
+        }
+
+        .light-theme .player-card .text-zinc-350,
+        .light-theme .player-card .text-zinc-300 {
+            color: #18181b !important;
+        }
+
+        .light-theme .player-card .text-white {
+            color: #09090b !important;
+        }
+
+        .light-theme .player-card #left-reel,
+        .light-theme .player-card #right-reel {
+            border-color: #d4d4d8 !important;
+        }
+
+        .light-theme .player-card #left-reel div,
+        .light-theme .player-card #right-reel div {
+            background-color: #ffffff !important;
+            border-color: #e4e4e7 !important;
+        }
+
+        .light-theme .player-card .bg-zinc-800 {
+            background-color: #e4e4e7 !important;
+        }
+
+        .light-theme .player-card #progress-bar-fill {
+            background-color: #09090b !important;
+        }
+
+        .light-theme .player-card #volume-slider {
+            background-color: #e4e4e7 !important;
+            accent-color: #09090b !important;
+        }
+
+        .light-theme .player-card #rewind-btn,
+        .light-theme .player-card #fast-forward-btn,
+        .light-theme .player-card #back-to-schedule-btn {
+            border-color: #e4e4e7 !important;
+            color: #71717a !important;
+        }
+
+        .light-theme .player-card #rewind-btn:hover,
+        .light-theme .player-card #fast-forward-btn:hover,
+        .light-theme .player-card #back-to-schedule-btn:hover {
+            color: #09090b !important;
+            border-color: #a1a1aa !important;
+        }
+
+        .light-theme .player-card #archive-play-btn {
+            background-color: #09090b !important;
+            color: #ffffff !important;
+        }
+
+        .light-theme .player-card #archive-play-btn:hover {
+            background-color: #8bfa00 !important;
+            color: #000000 !important;
+            box-shadow: 0 0 20px rgba(139, 250, 0, 0.4);
+        }
     </style>
 </head>
 <body class="bg-black text-white font-sans selection:bg-[#df0781] selection:text-white flex flex-col min-h-screen">
@@ -141,7 +223,7 @@
             <!-- Page Title -->
             <div class="text-center">
                 <span class="font-swiss text-xs font-bold uppercase tracking-widest text-zinc-500">WUSB Stream Player</span>
-                <h2 class="font-chuck text-4xl md:text-5xl uppercase tracking-tighter wusb-gradient mt-1">Archive Playback</h2>
+                <h2 class="font-chuck text-4xl md:text-5xl uppercase tracking-wide wusb-gradient mt-1">Archive Playback</h2>
             </div>
 
             <!-- Cassette Tape Visualizer -->
