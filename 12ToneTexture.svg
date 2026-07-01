@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1219.2 1219.2" width="100%" height="100%">
+  <style>
+    .circle-group {
+      shape-rendering: geometricPrecision;
+    }
+  </style>
+  <!-- Background white fill -->
+  <rect x="0" y="0" width="1219.2" height="1219.2" fill="#ffffff" />
+  <!-- Grid of overlapping repeating concentric rings -->
+  <g class="circle-group" data-center="-101.6,-101.6">
+    <circle cx="-101.6" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="-101.6" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="-101.6" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="-101.6" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="-101.6" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="-101.6" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="-101.6" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="-101.6" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="-101.6" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="-101.6" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="101.6,-101.6">
+    <circle cx="101.6" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="101.6" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="101.6" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="101.6" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="101.6" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="101.6" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="101.6" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="101.6" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="101.6" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="101.6" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="304.8,-101.6">
+    <circle cx="304.8" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="304.8" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="304.8" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="304.8" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="304.8" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="304.8" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="304.8" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="304.8" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="304.8" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="304.8" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="508.0,-101.6">
+    <circle cx="508.0" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="508.0" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="508.0" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="508.0" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="508.0" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="508.0" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="508.0" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="508.0" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="508.0" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="508.0" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="711.2,-101.6">
+    <circle cx="711.2" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="711.2" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="711.2" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="711.2" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="711.2" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="711.2" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="711.2" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="711.2" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="711.2" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="711.2" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="914.4,-101.6">
+    <circle cx="914.4" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="914.4" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="914.4" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="914.4" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="914.4" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="914.4" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="914.4" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="914.4" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="914.4" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="914.4" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="1117.6,-101.6">
+    <circle cx="1117.6" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="1117.6" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="1117.6" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="1117.6" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="1117.6" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="1117.6" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="1117.6" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="1117.6" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="1117.6" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="1117.6" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="1320.8,-101.6">
+    <circle cx="1320.8" cy="-101.6" r="95" fill="#e58a0b" />
+    <circle cx="1320.8" cy="-101.6" r="85" fill="#47bc3c" />
+    <circle cx="1320.8" cy="-101.6" r="75" fill="#e58a0b" />
+    <circle cx="1320.8" cy="-101.6" r="65" fill="#47bc3c" />
+    <circle cx="1320.8" cy="-101.6" r="55" fill="#e58a0b" />
+    <circle cx="1320.8" cy="-101.6" r="45" fill="#47bc3c" />
+    <circle cx="1320.8" cy="-101.6" r="35" fill="#e58a0b" />
+    <circle cx="1320.8" cy="-101.6" r="25" fill="#47bc3c" />
+    <circle cx="1320.8" cy="-101.6" r="15" fill="#e58a0b" />
+    <circle cx="1320.8" cy="-101.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="-203.2,0.0">
+    <circle cx="-203.2" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="-203.2" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="-203.2" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="-203.2" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="-203.2" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="-203.2" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="-203.2" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="-203.2" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="-203.2" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="-203.2" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="0.0,0.0">
+    <circle cx="0.0" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="0.0" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="0.0" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="0.0" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="0.0" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="0.0" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="0.0" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="0.0" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="0.0" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="0.0" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="203.2,0.0">
+    <circle cx="203.2" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="203.2" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="203.2" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="203.2" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="203.2" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="203.2" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="203.2" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="203.2" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="203.2" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="203.2" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="406.4,0.0">
+    <circle cx="406.4" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="406.4" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="406.4" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="406.4" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="406.4" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="406.4" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="406.4" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="406.4" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="406.4" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="406.4" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="609.6,0.0">
+    <circle cx="609.6" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="609.6" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="609.6" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="609.6" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="609.6" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="609.6" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="609.6" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="609.6" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="609.6" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="609.6" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="812.8,0.0">
+    <circle cx="812.8" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="812.8" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="812.8" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="812.8" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="812.8" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="812.8" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="812.8" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="812.8" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="812.8" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="812.8" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1016.0,0.0">
+    <circle cx="1016.0" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="1016.0" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="1016.0" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="1016.0" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="1016.0" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="1016.0" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="1016.0" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="1016.0" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="1016.0" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="1016.0" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1219.2,0.0">
+    <circle cx="1219.2" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="1219.2" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="1219.2" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="1219.2" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="1219.2" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="1219.2" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="1219.2" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="1219.2" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="1219.2" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="1219.2" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1422.4,0.0">
+    <circle cx="1422.4" cy="0.0" r="95" fill="#ff1a81" />
+    <circle cx="1422.4" cy="0.0" r="85" fill="#b712e1" />
+    <circle cx="1422.4" cy="0.0" r="75" fill="#ff1a81" />
+    <circle cx="1422.4" cy="0.0" r="65" fill="#b712e1" />
+    <circle cx="1422.4" cy="0.0" r="55" fill="#ff1a81" />
+    <circle cx="1422.4" cy="0.0" r="45" fill="#b712e1" />
+    <circle cx="1422.4" cy="0.0" r="35" fill="#ff1a81" />
+    <circle cx="1422.4" cy="0.0" r="25" fill="#b712e1" />
+    <circle cx="1422.4" cy="0.0" r="15" fill="#ff1a81" />
+    <circle cx="1422.4" cy="0.0" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="-101.6,101.6">
+    <circle cx="-101.6" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="-101.6" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="-101.6" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="-101.6" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="-101.6" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="-101.6" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="-101.6" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="-101.6" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="-101.6" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="-101.6" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="101.6,101.6">
+    <circle cx="101.6" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="101.6" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="101.6" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="101.6" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="101.6" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="101.6" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="101.6" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="101.6" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="101.6" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="101.6" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="304.8,101.6">
+    <circle cx="304.8" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="304.8" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="304.8" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="304.8" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="304.8" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="304.8" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="304.8" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="304.8" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="304.8" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="304.8" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="508.0,101.6">
+    <circle cx="508.0" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="508.0" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="508.0" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="508.0" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="508.0" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="508.0" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="508.0" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="508.0" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="508.0" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="508.0" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="711.2,101.6">
+    <circle cx="711.2" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="711.2" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="711.2" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="711.2" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="711.2" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="711.2" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="711.2" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="711.2" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="711.2" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="711.2" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="914.4,101.6">
+    <circle cx="914.4" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="914.4" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="914.4" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="914.4" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="914.4" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="914.4" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="914.4" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="914.4" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="914.4" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="914.4" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="1117.6,101.6">
+    <circle cx="1117.6" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="1117.6" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="1117.6" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="1117.6" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="1117.6" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="1117.6" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="1117.6" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="1117.6" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="1117.6" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="1117.6" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="1320.8,101.6">
+    <circle cx="1320.8" cy="101.6" r="95" fill="#d314b2" />
+    <circle cx="1320.8" cy="101.6" r="85" fill="#14baff" />
+    <circle cx="1320.8" cy="101.6" r="75" fill="#d314b2" />
+    <circle cx="1320.8" cy="101.6" r="65" fill="#14baff" />
+    <circle cx="1320.8" cy="101.6" r="55" fill="#d314b2" />
+    <circle cx="1320.8" cy="101.6" r="45" fill="#14baff" />
+    <circle cx="1320.8" cy="101.6" r="35" fill="#d314b2" />
+    <circle cx="1320.8" cy="101.6" r="25" fill="#14baff" />
+    <circle cx="1320.8" cy="101.6" r="15" fill="#d314b2" />
+    <circle cx="1320.8" cy="101.6" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="-203.2,203.2">
+    <circle cx="-203.2" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="-203.2" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="-203.2" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="-203.2" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="-203.2" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="-203.2" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="-203.2" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="-203.2" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="-203.2" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="-203.2" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="0.0,203.2">
+    <circle cx="0.0" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="0.0" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="0.0" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="0.0" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="0.0" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="0.0" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="0.0" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="0.0" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="0.0" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="0.0" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="203.2,203.2">
+    <circle cx="203.2" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="203.2" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="203.2" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="203.2" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="203.2" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="203.2" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="203.2" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="203.2" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="203.2" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="203.2" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="406.4,203.2">
+    <circle cx="406.4" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="406.4" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="406.4" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="406.4" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="406.4" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="406.4" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="406.4" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="406.4" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="406.4" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="406.4" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="609.6,203.2">
+    <circle cx="609.6" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="609.6" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="609.6" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="609.6" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="609.6" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="609.6" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="609.6" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="609.6" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="609.6" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="609.6" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="812.8,203.2">
+    <circle cx="812.8" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="812.8" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="812.8" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="812.8" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="812.8" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="812.8" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="812.8" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="812.8" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="812.8" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="812.8" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1016.0,203.2">
+    <circle cx="1016.0" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="1016.0" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="1016.0" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="1016.0" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="1016.0" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="1016.0" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="1016.0" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="1016.0" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="1016.0" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="1016.0" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1219.2,203.2">
+    <circle cx="1219.2" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="1219.2" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="1219.2" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="1219.2" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="1219.2" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="1219.2" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="1219.2" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="1219.2" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="1219.2" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="1219.2" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1422.4,203.2">
+    <circle cx="1422.4" cy="203.2" r="95" fill="#61ff76" />
+    <circle cx="1422.4" cy="203.2" r="85" fill="#b712e1" />
+    <circle cx="1422.4" cy="203.2" r="75" fill="#61ff76" />
+    <circle cx="1422.4" cy="203.2" r="65" fill="#b712e1" />
+    <circle cx="1422.4" cy="203.2" r="55" fill="#61ff76" />
+    <circle cx="1422.4" cy="203.2" r="45" fill="#b712e1" />
+    <circle cx="1422.4" cy="203.2" r="35" fill="#61ff76" />
+    <circle cx="1422.4" cy="203.2" r="25" fill="#b712e1" />
+    <circle cx="1422.4" cy="203.2" r="15" fill="#61ff76" />
+    <circle cx="1422.4" cy="203.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="-101.6,304.8">
+    <circle cx="-101.6" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="-101.6" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="-101.6" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="-101.6" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="-101.6" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="-101.6" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="-101.6" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="-101.6" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="-101.6" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="-101.6" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="101.6,304.8">
+    <circle cx="101.6" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="101.6" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="101.6" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="101.6" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="101.6" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="101.6" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="101.6" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="101.6" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="101.6" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="101.6" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="304.8,304.8">
+    <circle cx="304.8" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="304.8" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="304.8" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="304.8" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="304.8" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="304.8" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="304.8" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="304.8" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="304.8" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="304.8" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="508.0,304.8">
+    <circle cx="508.0" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="508.0" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="508.0" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="508.0" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="508.0" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="508.0" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="508.0" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="508.0" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="508.0" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="508.0" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="711.2,304.8">
+    <circle cx="711.2" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="711.2" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="711.2" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="711.2" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="711.2" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="711.2" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="711.2" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="711.2" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="711.2" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="711.2" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="914.4,304.8">
+    <circle cx="914.4" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="914.4" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="914.4" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="914.4" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="914.4" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="914.4" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="914.4" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="914.4" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="914.4" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="914.4" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="1117.6,304.8">
+    <circle cx="1117.6" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="1117.6" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="1117.6" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="1117.6" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="1117.6" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="1117.6" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="1117.6" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="1117.6" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="1117.6" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="1117.6" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="1320.8,304.8">
+    <circle cx="1320.8" cy="304.8" r="95" fill="#6df5ff" />
+    <circle cx="1320.8" cy="304.8" r="85" fill="#ff384b" />
+    <circle cx="1320.8" cy="304.8" r="75" fill="#6df5ff" />
+    <circle cx="1320.8" cy="304.8" r="65" fill="#ff384b" />
+    <circle cx="1320.8" cy="304.8" r="55" fill="#6df5ff" />
+    <circle cx="1320.8" cy="304.8" r="45" fill="#ff384b" />
+    <circle cx="1320.8" cy="304.8" r="35" fill="#6df5ff" />
+    <circle cx="1320.8" cy="304.8" r="25" fill="#ff384b" />
+    <circle cx="1320.8" cy="304.8" r="15" fill="#6df5ff" />
+    <circle cx="1320.8" cy="304.8" r="5" fill="#ff384b" />
+  </g>
+  <g class="circle-group" data-center="-203.2,406.4">
+    <circle cx="-203.2" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="-203.2" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="-203.2" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="-203.2" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="-203.2" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="-203.2" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="-203.2" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="-203.2" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="-203.2" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="-203.2" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="0.0,406.4">
+    <circle cx="0.0" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="0.0" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="0.0" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="0.0" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="0.0" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="0.0" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="0.0" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="0.0" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="0.0" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="0.0" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="203.2,406.4">
+    <circle cx="203.2" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="203.2" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="203.2" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="203.2" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="203.2" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="203.2" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="203.2" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="203.2" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="203.2" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="203.2" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="406.4,406.4">
+    <circle cx="406.4" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="406.4" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="406.4" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="406.4" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="406.4" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="406.4" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="406.4" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="406.4" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="406.4" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="406.4" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="609.6,406.4">
+    <circle cx="609.6" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="609.6" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="609.6" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="609.6" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="609.6" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="609.6" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="609.6" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="609.6" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="609.6" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="609.6" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="812.8,406.4">
+    <circle cx="812.8" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="812.8" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="812.8" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="812.8" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="812.8" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="812.8" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="812.8" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="812.8" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="812.8" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="812.8" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="1016.0,406.4">
+    <circle cx="1016.0" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="1016.0" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="1016.0" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="1016.0" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="1016.0" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="1016.0" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="1016.0" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="1016.0" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="1016.0" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="1016.0" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="1219.2,406.4">
+    <circle cx="1219.2" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="1219.2" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="1219.2" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="1219.2" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="1219.2" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="1219.2" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="1219.2" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="1219.2" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="1219.2" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="1219.2" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="1422.4,406.4">
+    <circle cx="1422.4" cy="406.4" r="95" fill="#ffc506" />
+    <circle cx="1422.4" cy="406.4" r="85" fill="#61ff76" />
+    <circle cx="1422.4" cy="406.4" r="75" fill="#ffc506" />
+    <circle cx="1422.4" cy="406.4" r="65" fill="#61ff76" />
+    <circle cx="1422.4" cy="406.4" r="55" fill="#ffc506" />
+    <circle cx="1422.4" cy="406.4" r="45" fill="#61ff76" />
+    <circle cx="1422.4" cy="406.4" r="35" fill="#ffc506" />
+    <circle cx="1422.4" cy="406.4" r="25" fill="#61ff76" />
+    <circle cx="1422.4" cy="406.4" r="15" fill="#ffc506" />
+    <circle cx="1422.4" cy="406.4" r="5" fill="#61ff76" />
+  </g>
+  <g class="circle-group" data-center="-101.6,508.0">
+    <circle cx="-101.6" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="-101.6" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="-101.6" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="-101.6" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="-101.6" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="-101.6" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="-101.6" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="-101.6" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="-101.6" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="-101.6" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="101.6,508.0">
+    <circle cx="101.6" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="101.6" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="101.6" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="101.6" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="101.6" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="101.6" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="101.6" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="101.6" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="101.6" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="101.6" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="304.8,508.0">
+    <circle cx="304.8" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="304.8" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="304.8" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="304.8" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="304.8" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="304.8" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="304.8" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="304.8" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="304.8" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="304.8" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="508.0,508.0">
+    <circle cx="508.0" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="508.0" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="508.0" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="508.0" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="508.0" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="508.0" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="508.0" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="508.0" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="508.0" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="508.0" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="711.2,508.0">
+    <circle cx="711.2" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="711.2" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="711.2" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="711.2" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="711.2" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="711.2" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="711.2" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="711.2" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="711.2" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="711.2" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="914.4,508.0">
+    <circle cx="914.4" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="914.4" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="914.4" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="914.4" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="914.4" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="914.4" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="914.4" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="914.4" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="914.4" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="914.4" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="1117.6,508.0">
+    <circle cx="1117.6" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="1117.6" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="1117.6" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="1117.6" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="1117.6" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="1117.6" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="1117.6" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="1117.6" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="1117.6" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="1117.6" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="1320.8,508.0">
+    <circle cx="1320.8" cy="508.0" r="95" fill="#ffe806" />
+    <circle cx="1320.8" cy="508.0" r="85" fill="#d314b2" />
+    <circle cx="1320.8" cy="508.0" r="75" fill="#ffe806" />
+    <circle cx="1320.8" cy="508.0" r="65" fill="#d314b2" />
+    <circle cx="1320.8" cy="508.0" r="55" fill="#ffe806" />
+    <circle cx="1320.8" cy="508.0" r="45" fill="#d314b2" />
+    <circle cx="1320.8" cy="508.0" r="35" fill="#ffe806" />
+    <circle cx="1320.8" cy="508.0" r="25" fill="#d314b2" />
+    <circle cx="1320.8" cy="508.0" r="15" fill="#ffe806" />
+    <circle cx="1320.8" cy="508.0" r="5" fill="#d314b2" />
+  </g>
+  <g class="circle-group" data-center="-203.2,609.6">
+    <circle cx="-203.2" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="-203.2" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="-203.2" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="-203.2" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="-203.2" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="-203.2" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="-203.2" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="-203.2" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="-203.2" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="-203.2" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="0.0,609.6">
+    <circle cx="0.0" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="0.0" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="0.0" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="0.0" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="0.0" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="0.0" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="0.0" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="0.0" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="0.0" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="0.0" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="203.2,609.6">
+    <circle cx="203.2" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="203.2" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="203.2" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="203.2" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="203.2" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="203.2" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="203.2" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="203.2" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="203.2" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="203.2" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="406.4,609.6">
+    <circle cx="406.4" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="406.4" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="406.4" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="406.4" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="406.4" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="406.4" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="406.4" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="406.4" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="406.4" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="406.4" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="609.6,609.6">
+    <circle cx="609.6" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="609.6" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="609.6" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="609.6" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="609.6" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="609.6" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="609.6" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="609.6" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="609.6" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="609.6" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="812.8,609.6">
+    <circle cx="812.8" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="812.8" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="812.8" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="812.8" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="812.8" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="812.8" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="812.8" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="812.8" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="812.8" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="812.8" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="1016.0,609.6">
+    <circle cx="1016.0" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="1016.0" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="1016.0" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="1016.0" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="1016.0" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="1016.0" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="1016.0" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="1016.0" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="1016.0" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="1016.0" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="1219.2,609.6">
+    <circle cx="1219.2" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="1219.2" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="1219.2" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="1219.2" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="1219.2" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="1219.2" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="1219.2" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="1219.2" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="1219.2" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="1219.2" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="1422.4,609.6">
+    <circle cx="1422.4" cy="609.6" r="95" fill="#cb2a10" />
+    <circle cx="1422.4" cy="609.6" r="85" fill="#ffc506" />
+    <circle cx="1422.4" cy="609.6" r="75" fill="#cb2a10" />
+    <circle cx="1422.4" cy="609.6" r="65" fill="#ffc506" />
+    <circle cx="1422.4" cy="609.6" r="55" fill="#cb2a10" />
+    <circle cx="1422.4" cy="609.6" r="45" fill="#ffc506" />
+    <circle cx="1422.4" cy="609.6" r="35" fill="#cb2a10" />
+    <circle cx="1422.4" cy="609.6" r="25" fill="#ffc506" />
+    <circle cx="1422.4" cy="609.6" r="15" fill="#cb2a10" />
+    <circle cx="1422.4" cy="609.6" r="5" fill="#ffc506" />
+  </g>
+  <g class="circle-group" data-center="-101.6,711.2">
+    <circle cx="-101.6" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="-101.6" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="-101.6" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="-101.6" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="-101.6" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="-101.6" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="-101.6" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="-101.6" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="-101.6" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="-101.6" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="101.6,711.2">
+    <circle cx="101.6" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="101.6" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="101.6" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="101.6" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="101.6" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="101.6" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="101.6" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="101.6" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="101.6" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="101.6" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="304.8,711.2">
+    <circle cx="304.8" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="304.8" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="304.8" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="304.8" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="304.8" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="304.8" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="304.8" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="304.8" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="304.8" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="304.8" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="508.0,711.2">
+    <circle cx="508.0" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="508.0" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="508.0" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="508.0" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="508.0" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="508.0" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="508.0" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="508.0" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="508.0" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="508.0" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="711.2,711.2">
+    <circle cx="711.2" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="711.2" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="711.2" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="711.2" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="711.2" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="711.2" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="711.2" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="711.2" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="711.2" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="711.2" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="914.4,711.2">
+    <circle cx="914.4" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="914.4" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="914.4" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="914.4" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="914.4" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="914.4" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="914.4" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="914.4" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="914.4" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="914.4" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="1117.6,711.2">
+    <circle cx="1117.6" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="1117.6" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="1117.6" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="1117.6" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="1117.6" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="1117.6" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="1117.6" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="1117.6" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="1117.6" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="1117.6" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="1320.8,711.2">
+    <circle cx="1320.8" cy="711.2" r="95" fill="#ff384b" />
+    <circle cx="1320.8" cy="711.2" r="85" fill="#47bc3c" />
+    <circle cx="1320.8" cy="711.2" r="75" fill="#ff384b" />
+    <circle cx="1320.8" cy="711.2" r="65" fill="#47bc3c" />
+    <circle cx="1320.8" cy="711.2" r="55" fill="#ff384b" />
+    <circle cx="1320.8" cy="711.2" r="45" fill="#47bc3c" />
+    <circle cx="1320.8" cy="711.2" r="35" fill="#ff384b" />
+    <circle cx="1320.8" cy="711.2" r="25" fill="#47bc3c" />
+    <circle cx="1320.8" cy="711.2" r="15" fill="#ff384b" />
+    <circle cx="1320.8" cy="711.2" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="-203.2,812.8">
+    <circle cx="-203.2" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="-203.2" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="-203.2" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="-203.2" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="-203.2" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="-203.2" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="-203.2" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="-203.2" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="-203.2" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="-203.2" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="0.0,812.8">
+    <circle cx="0.0" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="0.0" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="0.0" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="0.0" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="0.0" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="0.0" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="0.0" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="0.0" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="0.0" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="0.0" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="203.2,812.8">
+    <circle cx="203.2" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="203.2" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="203.2" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="203.2" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="203.2" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="203.2" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="203.2" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="203.2" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="203.2" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="203.2" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="406.4,812.8">
+    <circle cx="406.4" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="406.4" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="406.4" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="406.4" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="406.4" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="406.4" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="406.4" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="406.4" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="406.4" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="406.4" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="609.6,812.8">
+    <circle cx="609.6" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="609.6" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="609.6" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="609.6" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="609.6" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="609.6" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="609.6" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="609.6" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="609.6" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="609.6" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="812.8,812.8">
+    <circle cx="812.8" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="812.8" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="812.8" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="812.8" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="812.8" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="812.8" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="812.8" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="812.8" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="812.8" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="812.8" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="1016.0,812.8">
+    <circle cx="1016.0" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="1016.0" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="1016.0" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="1016.0" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="1016.0" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="1016.0" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="1016.0" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="1016.0" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="1016.0" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="1016.0" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="1219.2,812.8">
+    <circle cx="1219.2" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="1219.2" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="1219.2" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="1219.2" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="1219.2" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="1219.2" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="1219.2" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="1219.2" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="1219.2" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="1219.2" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="1422.4,812.8">
+    <circle cx="1422.4" cy="812.8" r="95" fill="#e58a0b" />
+    <circle cx="1422.4" cy="812.8" r="85" fill="#cb2a10" />
+    <circle cx="1422.4" cy="812.8" r="75" fill="#e58a0b" />
+    <circle cx="1422.4" cy="812.8" r="65" fill="#cb2a10" />
+    <circle cx="1422.4" cy="812.8" r="55" fill="#e58a0b" />
+    <circle cx="1422.4" cy="812.8" r="45" fill="#cb2a10" />
+    <circle cx="1422.4" cy="812.8" r="35" fill="#e58a0b" />
+    <circle cx="1422.4" cy="812.8" r="25" fill="#cb2a10" />
+    <circle cx="1422.4" cy="812.8" r="15" fill="#e58a0b" />
+    <circle cx="1422.4" cy="812.8" r="5" fill="#cb2a10" />
+  </g>
+  <g class="circle-group" data-center="-101.6,914.4">
+    <circle cx="-101.6" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="-101.6" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="-101.6" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="-101.6" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="-101.6" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="-101.6" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="-101.6" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="-101.6" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="-101.6" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="-101.6" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="101.6,914.4">
+    <circle cx="101.6" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="101.6" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="101.6" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="101.6" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="101.6" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="101.6" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="101.6" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="101.6" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="101.6" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="101.6" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="304.8,914.4">
+    <circle cx="304.8" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="304.8" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="304.8" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="304.8" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="304.8" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="304.8" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="304.8" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="304.8" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="304.8" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="304.8" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="508.0,914.4">
+    <circle cx="508.0" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="508.0" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="508.0" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="508.0" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="508.0" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="508.0" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="508.0" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="508.0" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="508.0" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="508.0" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="711.2,914.4">
+    <circle cx="711.2" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="711.2" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="711.2" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="711.2" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="711.2" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="711.2" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="711.2" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="711.2" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="711.2" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="711.2" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="914.4,914.4">
+    <circle cx="914.4" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="914.4" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="914.4" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="914.4" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="914.4" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="914.4" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="914.4" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="914.4" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="914.4" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="914.4" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="1117.6,914.4">
+    <circle cx="1117.6" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="1117.6" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="1117.6" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="1117.6" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="1117.6" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="1117.6" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="1117.6" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="1117.6" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="1117.6" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="1117.6" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="1320.8,914.4">
+    <circle cx="1320.8" cy="914.4" r="95" fill="#14baff" />
+    <circle cx="1320.8" cy="914.4" r="85" fill="#ffe806" />
+    <circle cx="1320.8" cy="914.4" r="75" fill="#14baff" />
+    <circle cx="1320.8" cy="914.4" r="65" fill="#ffe806" />
+    <circle cx="1320.8" cy="914.4" r="55" fill="#14baff" />
+    <circle cx="1320.8" cy="914.4" r="45" fill="#ffe806" />
+    <circle cx="1320.8" cy="914.4" r="35" fill="#14baff" />
+    <circle cx="1320.8" cy="914.4" r="25" fill="#ffe806" />
+    <circle cx="1320.8" cy="914.4" r="15" fill="#14baff" />
+    <circle cx="1320.8" cy="914.4" r="5" fill="#ffe806" />
+  </g>
+  <g class="circle-group" data-center="-203.2,1016.0">
+    <circle cx="-203.2" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="-203.2" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="-203.2" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="-203.2" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="-203.2" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="0.0,1016.0">
+    <circle cx="0.0" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="0.0" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="0.0" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="0.0" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="0.0" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="0.0" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="0.0" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="0.0" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="0.0" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="0.0" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="203.2,1016.0">
+    <circle cx="203.2" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="203.2" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="203.2" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="203.2" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="203.2" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="203.2" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="203.2" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="203.2" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="203.2" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="203.2" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="406.4,1016.0">
+    <circle cx="406.4" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="406.4" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="406.4" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="406.4" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="406.4" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="406.4" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="406.4" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="406.4" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="406.4" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="406.4" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="609.6,1016.0">
+    <circle cx="609.6" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="609.6" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="609.6" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="609.6" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="609.6" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="609.6" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="609.6" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="609.6" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="609.6" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="609.6" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="812.8,1016.0">
+    <circle cx="812.8" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="812.8" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="812.8" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="812.8" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="812.8" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="812.8" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="812.8" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="812.8" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="812.8" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="812.8" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="1016.0,1016.0">
+    <circle cx="1016.0" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="1016.0" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="1016.0" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="1016.0" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="1016.0" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="1219.2,1016.0">
+    <circle cx="1219.2" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="1219.2" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="1219.2" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="1219.2" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="1219.2" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="1422.4,1016.0">
+    <circle cx="1422.4" cy="1016.0" r="95" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1016.0" r="85" fill="#6df5ff" />
+    <circle cx="1422.4" cy="1016.0" r="75" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1016.0" r="65" fill="#6df5ff" />
+    <circle cx="1422.4" cy="1016.0" r="55" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1016.0" r="45" fill="#6df5ff" />
+    <circle cx="1422.4" cy="1016.0" r="35" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1016.0" r="25" fill="#6df5ff" />
+    <circle cx="1422.4" cy="1016.0" r="15" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1016.0" r="5" fill="#6df5ff" />
+  </g>
+  <g class="circle-group" data-center="-101.6,1117.6">
+    <circle cx="-101.6" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="-101.6" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="-101.6" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="-101.6" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="-101.6" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="-101.6" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="-101.6" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="-101.6" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="-101.6" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="-101.6" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="101.6,1117.6">
+    <circle cx="101.6" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="101.6" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="101.6" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="101.6" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="101.6" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="101.6" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="101.6" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="101.6" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="101.6" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="101.6" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="304.8,1117.6">
+    <circle cx="304.8" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="304.8" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="304.8" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="304.8" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="304.8" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="304.8" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="304.8" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="304.8" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="304.8" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="304.8" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="508.0,1117.6">
+    <circle cx="508.0" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="508.0" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="508.0" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="508.0" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="508.0" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="508.0" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="508.0" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="508.0" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="508.0" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="508.0" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="711.2,1117.6">
+    <circle cx="711.2" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="711.2" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="711.2" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="711.2" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="711.2" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="711.2" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="711.2" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="711.2" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="711.2" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="711.2" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="914.4,1117.6">
+    <circle cx="914.4" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="914.4" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="914.4" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="914.4" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="914.4" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="914.4" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="914.4" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="914.4" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="914.4" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="914.4" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="1117.6,1117.6">
+    <circle cx="1117.6" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="1117.6" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="1117.6" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="1117.6" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="1117.6" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="1117.6" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="1117.6" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="1117.6" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="1117.6" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="1117.6" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="1320.8,1117.6">
+    <circle cx="1320.8" cy="1117.6" r="95" fill="#e58a0b" />
+    <circle cx="1320.8" cy="1117.6" r="85" fill="#47bc3c" />
+    <circle cx="1320.8" cy="1117.6" r="75" fill="#e58a0b" />
+    <circle cx="1320.8" cy="1117.6" r="65" fill="#47bc3c" />
+    <circle cx="1320.8" cy="1117.6" r="55" fill="#e58a0b" />
+    <circle cx="1320.8" cy="1117.6" r="45" fill="#47bc3c" />
+    <circle cx="1320.8" cy="1117.6" r="35" fill="#e58a0b" />
+    <circle cx="1320.8" cy="1117.6" r="25" fill="#47bc3c" />
+    <circle cx="1320.8" cy="1117.6" r="15" fill="#e58a0b" />
+    <circle cx="1320.8" cy="1117.6" r="5" fill="#47bc3c" />
+  </g>
+  <g class="circle-group" data-center="-203.2,1219.2">
+    <circle cx="-203.2" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="-203.2" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="-203.2" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="-203.2" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="-203.2" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="-203.2" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="0.0,1219.2">
+    <circle cx="0.0" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="0.0" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="0.0" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="0.0" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="0.0" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="0.0" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="0.0" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="0.0" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="0.0" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="0.0" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="203.2,1219.2">
+    <circle cx="203.2" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="203.2" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="203.2" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="203.2" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="203.2" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="203.2" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="203.2" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="203.2" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="203.2" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="203.2" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="406.4,1219.2">
+    <circle cx="406.4" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="406.4" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="406.4" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="406.4" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="406.4" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="406.4" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="406.4" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="406.4" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="406.4" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="406.4" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="609.6,1219.2">
+    <circle cx="609.6" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="609.6" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="609.6" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="609.6" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="609.6" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="609.6" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="609.6" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="609.6" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="609.6" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="609.6" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="812.8,1219.2">
+    <circle cx="812.8" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="812.8" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="812.8" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="812.8" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="812.8" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="812.8" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="812.8" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="812.8" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="812.8" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="812.8" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1016.0,1219.2">
+    <circle cx="1016.0" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="1016.0" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="1016.0" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="1016.0" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="1016.0" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="1016.0" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1219.2,1219.2">
+    <circle cx="1219.2" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="1219.2" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="1219.2" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="1219.2" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="1219.2" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="1219.2" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="1422.4,1219.2">
+    <circle cx="1422.4" cy="1219.2" r="95" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1219.2" r="85" fill="#b712e1" />
+    <circle cx="1422.4" cy="1219.2" r="75" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1219.2" r="65" fill="#b712e1" />
+    <circle cx="1422.4" cy="1219.2" r="55" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1219.2" r="45" fill="#b712e1" />
+    <circle cx="1422.4" cy="1219.2" r="35" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1219.2" r="25" fill="#b712e1" />
+    <circle cx="1422.4" cy="1219.2" r="15" fill="#ff1a81" />
+    <circle cx="1422.4" cy="1219.2" r="5" fill="#b712e1" />
+  </g>
+  <g class="circle-group" data-center="-101.6,1320.8">
+    <circle cx="-101.6" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="-101.6" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="-101.6" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="-101.6" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="-101.6" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="-101.6" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="-101.6" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="-101.6" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="-101.6" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="-101.6" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="101.6,1320.8">
+    <circle cx="101.6" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="101.6" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="101.6" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="101.6" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="101.6" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="101.6" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="101.6" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="101.6" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="101.6" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="101.6" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="304.8,1320.8">
+    <circle cx="304.8" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="304.8" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="304.8" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="304.8" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="304.8" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="304.8" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="304.8" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="304.8" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="304.8" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="304.8" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="508.0,1320.8">
+    <circle cx="508.0" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="508.0" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="508.0" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="508.0" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="508.0" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="508.0" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="508.0" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="508.0" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="508.0" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="508.0" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="711.2,1320.8">
+    <circle cx="711.2" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="711.2" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="711.2" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="711.2" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="711.2" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="711.2" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="711.2" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="711.2" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="711.2" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="711.2" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="914.4,1320.8">
+    <circle cx="914.4" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="914.4" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="914.4" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="914.4" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="914.4" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="914.4" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="914.4" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="914.4" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="914.4" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="914.4" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="1117.6,1320.8">
+    <circle cx="1117.6" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="1117.6" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="1117.6" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="1117.6" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="1117.6" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="1117.6" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="1117.6" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="1117.6" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="1117.6" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="1117.6" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+  <g class="circle-group" data-center="1320.8,1320.8">
+    <circle cx="1320.8" cy="1320.8" r="95" fill="#d314b2" />
+    <circle cx="1320.8" cy="1320.8" r="85" fill="#14baff" />
+    <circle cx="1320.8" cy="1320.8" r="75" fill="#d314b2" />
+    <circle cx="1320.8" cy="1320.8" r="65" fill="#14baff" />
+    <circle cx="1320.8" cy="1320.8" r="55" fill="#d314b2" />
+    <circle cx="1320.8" cy="1320.8" r="45" fill="#14baff" />
+    <circle cx="1320.8" cy="1320.8" r="35" fill="#d314b2" />
+    <circle cx="1320.8" cy="1320.8" r="25" fill="#14baff" />
+    <circle cx="1320.8" cy="1320.8" r="15" fill="#d314b2" />
+    <circle cx="1320.8" cy="1320.8" r="5" fill="#14baff" />
+  </g>
+</svg>
