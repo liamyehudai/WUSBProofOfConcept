@@ -55,7 +55,13 @@
             padding: 0;
             vertical-align: top;
             transition: background-color 0.2s;
-            height: 1px; /* Magic trick for full height children in tables */
+            height: 1px; /* Magic trick for full height children in tables (Chrome/Safari) */
+        }
+        /* Firefox specific override to prevent height collapse */
+        @supports (-moz-appearance: none) {
+            .schedule-table td {
+                height: 100%;
+            }
         }
         .schedule-table td:hover {
             background-color: var(--color-zinc-900);
