@@ -96,7 +96,7 @@
 <!-- END COMPONENT: HEADER -->
     
     <!-- COMPONENT: HERO -->
-    <section class="relative w-full h-[50vh] md:h-[70vh] flex items-center justify-center overflow-hidden border-b-4 border-zinc-900 hero-section" style="--hero-overlay-color: rgba(0,0,0,0.6);">
+    <section class="relative w-full min-h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden border-b-4 border-zinc-900 hero-section py-16 md:py-0" style="--hero-overlay-color: rgba(0,0,0,0.6);">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0 bg-black">
             <img src="RadioHero.png" alt="WUSB Studio" class="w-full h-full object-cover object-center opacity-60" />
@@ -105,19 +105,19 @@
         </div>
         
         <!-- Content -->
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 mt-16 md:mt-24">
-            <h2 class="font-chuck text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-2xl tracking-wide leading-none">
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 my-auto">
+            <h2 class="font-chuck text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white drop-shadow-2xl tracking-wide leading-none">
                 <span class="wusb-gradient block mb-2">50 YEARS OF LONG ISLAND</span>
                 FREE FORM RADIO
             </h2>
-            <p class="font-swiss font-bold text-sm md:text-xl text-zinc-300 uppercase tracking-widest drop-shadow-md border-b-2 border-zinc-800 pb-4 inline-block">
+            <p class="font-swiss font-bold text-xs sm:text-sm md:text-xl text-zinc-300 uppercase tracking-widest drop-shadow-md border-b-2 border-zinc-800 pb-3 md:pb-4 inline-block">
                 Broadcasting live from Stony Brook University
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 mt-2">
-                <a href="schedule.html" class="font-swiss font-bold text-sm md:text-base uppercase tracking-widest px-8 py-3 bg-[#df0781] text-white hover:bg-white hover:text-black transition-colors duration-300">
+            <div class="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto px-4 sm:px-0">
+                <a href="schedule.html" class="font-swiss font-bold text-sm md:text-base uppercase tracking-widest px-8 py-3 bg-[#df0781] text-white hover:bg-white hover:text-black transition-colors duration-300 text-center block sm:inline-block w-full sm:w-auto">
                     View Schedule
                 </a>
-                <a href="playlists.html" class="font-swiss font-bold text-sm md:text-base uppercase tracking-widest px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black transition-colors duration-300 bg-black/30 backdrop-blur-sm">
+                <a href="playlists.html" class="font-swiss font-bold text-sm md:text-base uppercase tracking-widest px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black transition-colors duration-300 bg-black/30 backdrop-blur-sm text-center block sm:inline-block w-full sm:w-auto">
                     Recent Playlists
                 </a>
             </div>
@@ -138,7 +138,7 @@
         </div>
 
         <!-- Blog Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-12 md:pb-24">
             
             <!-- Post 1 -->
             <a href="articleX.html" class="group cursor-pointer flex flex-col bg-zinc-900/40 hover:bg-zinc-900 transition-colors duration-300" style="--card-color: #df0781;">
@@ -350,7 +350,7 @@
         </div>
 
         <!-- Section Title: WUSB Crew & Broadcasts -->
-        <div class="border-b-2 border-zinc-800 pb-4 mb-8 mt-24">
+        <div class="border-b-2 border-zinc-800 pb-4 mb-8 mt-12 md:mt-24">
             <h2 class="font-swiss font-bold text-4xl md:text-5xl uppercase tracking-tighter">WUSB Crew & Broadcasts</h2>
         </div>
 
@@ -555,5 +555,7 @@
 </body>
 </html>
 
+<!--
 --NOTES worked on snorlax2988 account, Make gradient be horizontal move sub menu to the bottom, put the main menu where the sub menu is and the robot animation back into the website, OR move about to sub menu,
 --SIDEQUESTS Add DJ Page, Add Shows page
+-->

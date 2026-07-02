@@ -26,7 +26,20 @@
       height: 100vh;
       max-width: 177.78vh;
       max-height: 56.25vw;
-      overflow: hidden;
+      overflow: visible;
+    }
+
+    /* Black border overlay to prevent subpixel bleed and act as margin */
+    .aspect-ratio-box::after {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      right: -15px;
+      bottom: -15px;
+      border: 20px solid #000000;
+      pointer-events: none;
+      z-index: 10;
     }
 
     /* Screen container */
