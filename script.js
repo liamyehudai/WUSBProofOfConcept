@@ -888,10 +888,111 @@ function initCarousels() {
     }
 }
 
+// Dynamic On Air Show logic
+let cachedSchedule = null;
+
+async function updateOnAirShow() {
+    const showTitleEl = document.querySelector('.fixed.bottom-0 .font-swiss.font-bold.text-lg.tracking-tight');
+    if (!showTitleEl) return;
+
+    try {
+        if (!cachedSchedule) {
+            const res = await fetch('schedule.json');
+            if (!res.ok) throw new Error("Failed to fetch schedule");
+            cachedSchedule = await res.json();
+        }
+
+        const now = new Date();
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const currentDay = days[now.getDay()];
+        const currentHour = now.getHours() + now.getMinutes() / 60;
+
+        const daySchedule = cachedSchedule[currentDay] || [];
+        const activeShows = [];
+
+        daySchedule.forEach(slot => {
+            const range = parseTimeRange(slot.time);
+            if (!range) return;
+
+            const { startHour, endHour } = range;
+            let inRange = false;
+
+            if (endHour < startHour) {
+                // Spans across midnight (e.g. 10pm - 2am)
+                inRange = (currentHour >= startHour || currentHour < endHour);
+            } else {
+                inRange = (currentHour >= startHour && currentHour < endHour);
+            }
+
+            if (inRange) {
+                activeShows.push(slot.title);
+            }
+        });
+
+        if (activeShows.length > 0) {
+            // Deduplicate in case the same show is listed multiple times
+            const uniqueShows = [...new Set(activeShows)];
+            showTitleEl.textContent = uniqueShows.join(' / ');
+        } else {
+            showTitleEl.textContent = "WUSB Music Library";
+        }
+
+    } catch (err) {
+        console.error("Error updating on-air show:", err);
+        if (!showTitleEl.textContent) {
+            showTitleEl.textContent = "WUSB Programming";
+        }
+    }
+}
+
+function parseTimeRange(timeStr) {
+    const parts = timeStr.toLowerCase().replace(/\s+/g, '').split('-');
+    if (parts.length !== 2) return null;
+    
+    let startPart = parts[0];
+    let endPart = parts[1];
+    
+    // Parse end time
+    const endMatch = endPart.match(/^(\d+)(?::(\d+))?(am|pm)$/);
+    if (!endMatch) return null;
+    let endVal = parseInt(endMatch[1], 10);
+    let endMin = endMatch[2] ? parseInt(endMatch[2], 10) : 0;
+    const endAmpm = endMatch[3];
+    
+    // Convert end to decimal 24h
+    let endHour = endVal + endMin / 60;
+    if (endAmpm === 'pm' && endVal !== 12) endHour += 12;
+    if (endAmpm === 'am' && endVal === 12) endHour = endMin / 60;
+    
+    // Parse start time
+    let startVal, startMin, startAmpm;
+    const startMatch = startPart.match(/^(\d+)(?::(\d+))?(am|pm)$/);
+    if (startMatch) {
+        startVal = parseInt(startMatch[1], 10);
+        startMin = startMatch[2] ? parseInt(startMatch[2], 10) : 0;
+        startAmpm = startMatch[3];
+    } else {
+        const startNumMatch = startPart.match(/^(\d+)(?::(\d+))?$/);
+        if (!startNumMatch) return null;
+        startVal = parseInt(startNumMatch[1], 10);
+        startMin = startNumMatch[2] ? parseInt(startNumMatch[2], 10) : 0;
+        startAmpm = endAmpm; // fallback to end indicator
+    }
+    
+    // Convert start to decimal 24h
+    let startHour = startVal + startMin / 60;
+    if (startAmpm === 'pm' && startVal !== 12) startHour += 12;
+    if (startAmpm === 'am' && startVal === 12) startHour = startMin / 60;
+    
+    return { startHour, endHour };
+}
+
 // Start sequence
 document.addEventListener('DOMContentLoaded', () => {
     initLogic();
     initSchedule();
     initCarousels();
     initSPANavigation();
+    updateOnAirShow();
+    setInterval(updateOnAirShow, 60000); // Check/update every minute
 });
