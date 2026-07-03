@@ -7,6 +7,7 @@ tailwind.config = {
             white: 'var(--color-white, #ffffff)',
             zinc: {
             400: 'var(--color-zinc-400, #a1a1aa)',
+            450: '#7e7e86',
             500: 'var(--color-zinc-500, #71717a)',
             600: 'var(--color-zinc-600, #52525b)',
             700: 'var(--color-zinc-700, #3f3f46)',
@@ -14,6 +15,10 @@ tailwind.config = {
             900: 'var(--color-zinc-900, #18181b)',
             950: 'var(--color-zinc-950, #09090b)',
             }
+        },
+        fontFamily: {
+            swiss: ['Inter', 'sans-serif'],
+            chuck: ['"Chuck W01 Regular"', 'Impact', 'sans-serif'],
         }
         }
     }
@@ -49,34 +54,176 @@ function initLogic() {
         });
     }
 
-    // Play/Pause Logic
+    // Play/Pause & Live Audio Stream Logic
     const playPauseBtn = document.getElementById('play-pause-btn');
-    const iconPlay = document.getElementById('icon-play');
-    const iconPause = document.getElementById('icon-pause');
-    const livePing = document.getElementById('live-ping');
-    const liveDot = document.getElementById('live-dot');
+    const listenLiveBtn = document.getElementById('listen-live-btn') || Array.from(document.querySelectorAll('button')).find(btn => btn.textContent.trim() === 'Listen Live');
     let isPlaying = false;
+    let audio = null;
+    const streamUrl = 'https://stream.wusb.stonybrook.edu:8092/listen.pl';
+
+    // Volume Control Elements & State
+    const volumeSliderContainer = document.querySelector('.fixed.bottom-0 .bg-zinc-800.rounded-full.overflow-hidden') || document.querySelector('.bg-zinc-800.rounded-full.overflow-hidden');
+    let volumeSliderFill = null;
+    let volumeIcon = null;
+    let volume = 0.75;
+    let isMuted = false;
+
+    if (volumeSliderContainer) {
+        volumeSliderFill = volumeSliderContainer.querySelector('div');
+        volumeIcon = volumeSliderContainer.previousElementSibling;
+        
+        volumeSliderContainer.style.cursor = 'pointer';
+        if (volumeIcon) {
+            volumeIcon.style.cursor = 'pointer';
+        }
+    }
+
+    function togglePlayback() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+            if (!audio) {
+                audio = new Audio();
+            }
+            audio.volume = volume;
+            audio.muted = isMuted;
+            audio.src = streamUrl;
+            audio.load();
+            audio.play().catch(err => {
+                console.error("Audio playback failed:", err);
+                isPlaying = false;
+                updateUI(false);
+            });
+            updateUI(true);
+        } else {
+            if (audio) {
+                audio.pause();
+                audio.src = '';
+                audio.load();
+            }
+            updateUI(false);
+        }
+    }
+
+    function updateUI(playing) {
+        const iconPlay = document.getElementById('icon-play');
+        const iconPause = document.getElementById('icon-pause');
+        const livePing = document.getElementById('live-ping');
+        const liveDot = document.getElementById('live-dot');
+
+        if (playing) {
+            if (iconPlay) iconPlay.classList.add('hidden');
+            if (iconPause) iconPause.classList.remove('hidden');
+            if (livePing) livePing.classList.remove('hidden');
+            if (liveDot) {
+                liveDot.classList.remove('bg-zinc-600');
+                liveDot.classList.add('bg-[#df2331]');
+            }
+        } else {
+            if (iconPlay) iconPlay.classList.remove('hidden');
+            if (iconPause) iconPause.classList.add('hidden');
+            if (livePing) livePing.classList.add('hidden');
+            if (liveDot) {
+                liveDot.classList.remove('bg-[#df2331]');
+                liveDot.classList.add('bg-zinc-600');
+            }
+        }
+    }
+
+    function setVolume(val) {
+        volume = Math.max(0, Math.min(1, val));
+        if (audio) {
+            audio.volume = volume;
+        }
+        if (volumeSliderFill) {
+            volumeSliderFill.style.width = `${volume * 100}%`;
+        }
+        updateVolumeIcon();
+    }
+
+    function updateVolumeIcon() {
+        if (!volumeIcon) return;
+        
+        let iconName = 'volume-2';
+        if (volume === 0 || isMuted) {
+            iconName = 'volume-x';
+        } else if (volume < 0.3) {
+            iconName = 'volume';
+        } else if (volume < 0.6) {
+            iconName = 'volume-1';
+        }
+        
+        volumeIcon.setAttribute('data-lucide', iconName);
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    if (volumeSliderContainer) {
+        const updateVolumeFromEvent = (e) => {
+            const rect = volumeSliderContainer.getBoundingClientRect();
+            const posX = e.clientX - rect.left;
+            const percentage = posX / rect.width;
+            isMuted = false;
+            if (audio) {
+                audio.muted = false;
+            }
+            setVolume(percentage);
+        };
+
+        volumeSliderContainer.addEventListener('mousedown', (e) => {
+            updateVolumeFromEvent(e);
+            
+            const onMouseMove = (moveEvent) => {
+                updateVolumeFromEvent(moveEvent);
+            };
+            
+            const onMouseUp = () => {
+                document.removeEventListener('mousemove', onMouseMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            };
+            
+            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mouseup', onMouseUp);
+        });
+    }
+
+    if (volumeIcon) {
+        const newVolumeIcon = volumeIcon.cloneNode(true);
+        volumeIcon.parentNode.replaceChild(newVolumeIcon, volumeIcon);
+        volumeIcon = newVolumeIcon; // Update reference to the new clone
+        
+        volumeIcon.addEventListener('click', () => {
+            isMuted = !isMuted;
+            if (audio) {
+                audio.muted = isMuted;
+            }
+            if (isMuted) {
+                if (volumeSliderFill) {
+                    volumeSliderFill.style.width = '0%';
+                }
+                volumeIcon.setAttribute('data-lucide', 'volume-x');
+            } else {
+                if (volumeSliderFill) {
+                    volumeSliderFill.style.width = `${volume * 100}%`;
+                }
+                updateVolumeIcon();
+            }
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    }
 
     if (playPauseBtn) {
         const newPlayBtn = playPauseBtn.cloneNode(true);
         playPauseBtn.parentNode.replaceChild(newPlayBtn, playPauseBtn);
+        newPlayBtn.addEventListener('click', togglePlayback);
+    }
 
-        newPlayBtn.addEventListener('click', () => {
-            isPlaying = !isPlaying;
-            if (isPlaying) {
-                document.getElementById('icon-play').classList.add('hidden');
-                document.getElementById('icon-pause').classList.remove('hidden');
-                document.getElementById('live-ping').classList.remove('hidden');
-                document.getElementById('live-dot').classList.remove('bg-zinc-600');
-                document.getElementById('live-dot').classList.add('bg-[#df2331]');
-            } else {
-                document.getElementById('icon-play').classList.remove('hidden');
-                document.getElementById('icon-pause').classList.add('hidden');
-                document.getElementById('live-ping').classList.add('hidden');
-                document.getElementById('live-dot').classList.remove('bg-[#df2331]');
-                document.getElementById('live-dot').classList.add('bg-zinc-600');
-            }
-        });
+    if (listenLiveBtn) {
+        const newListenLiveBtn = listenLiveBtn.cloneNode(true);
+        listenLiveBtn.parentNode.replaceChild(newListenLiveBtn, listenLiveBtn);
+        newListenLiveBtn.addEventListener('click', togglePlayback);
     }
 
     // Theme Toggle Logic
@@ -470,8 +617,281 @@ function initSchedule() {
     updateScheduleForDate();
 }
 
+// SPA Navigation System to keep audio playing uninterrupted
+function initSPANavigation() {
+    // Intercept clicks on links
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+        
+        const href = link.getAttribute('href');
+        if (!href) return;
+        
+        // Only intercept internal links and exclude external links, anchors, downloads, and data URIs
+        const isDownload = link.hasAttribute('download');
+        const isDataUri = href.startsWith('data:');
+        const isInternal = href && !href.startsWith('http') && !href.startsWith('//') && !href.startsWith('#') && !link.getAttribute('target') && !href.endsWith('.pdf') && !isDownload && !isDataUri;
+        if (!isInternal) return;
+        
+        e.preventDefault();
+        navigateToPage(href);
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', () => {
+        loadPageContent(window.location.pathname + window.location.search, false);
+    });
+}
+
+function navigateToPage(url) {
+    loadPageContent(url, true);
+}
+
+async function loadPageContent(url, pushToHistory = true) {
+    try {
+        const currentMain = document.querySelector('main');
+        const currentHero = document.querySelector('.hero-section');
+        
+        // Step 1: Fade out
+        if (currentMain) {
+            currentMain.style.transition = 'opacity 0.15s ease-in-out';
+            currentMain.style.opacity = 0;
+        }
+        if (currentHero) {
+            currentHero.style.transition = 'opacity 0.15s ease-in-out';
+            currentHero.style.opacity = 0;
+        }
+
+        if (currentMain || currentHero) {
+            await new Promise(resolve => setTimeout(resolve, 150));
+        }
+
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Failed to load page");
+        const html = await response.text();
+        
+        // Parse the fetched HTML
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        // Clean up any old dynamic styles
+        const oldStyles = document.querySelectorAll('.spa-dynamic-style');
+        oldStyles.forEach(style => style.remove());
+
+        // Extract and load new styles from the fetched document
+        const newStyles = doc.querySelectorAll('style');
+        newStyles.forEach(style => {
+            const styleClone = style.cloneNode(true);
+            styleClone.classList.add('spa-dynamic-style');
+            document.head.appendChild(styleClone);
+        });
+
+        // Swap title
+        document.title = doc.title;
+        
+        // Handle Hero Section
+        const newHero = doc.querySelector('.hero-section');
+        if (currentHero && !newHero) {
+            currentHero.remove();
+        } else if (!currentHero && newHero) {
+            const mainEl = document.querySelector('main');
+            if (mainEl) {
+                newHero.style.opacity = 0;
+                newHero.style.transition = 'opacity 0.15s ease-in-out';
+                mainEl.parentNode.insertBefore(newHero, mainEl);
+            }
+        } else if (currentHero && newHero) {
+            newHero.style.opacity = 0;
+            newHero.style.transition = 'opacity 0.15s ease-in-out';
+            currentHero.replaceWith(newHero);
+        }
+
+        // Swap main content
+        const newMain = doc.querySelector('main');
+        if (currentMain && newMain) {
+            newMain.style.opacity = 0;
+            newMain.style.transition = 'opacity 0.15s ease-in-out';
+            currentMain.replaceWith(newMain);
+            
+            // Trigger reflow to start transition
+            newMain.offsetHeight;
+            newMain.style.opacity = 1;
+            
+            const activeHero = document.querySelector('.hero-section');
+            if (activeHero) {
+                activeHero.offsetHeight;
+                activeHero.style.opacity = 1;
+            }
+        }
+        
+        // Update URL in history
+        if (pushToHistory) {
+            history.pushState(null, '', url);
+        }
+        
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        
+        // Re-run general initializers for script.js first (decorates DOM)
+        if (typeof initLogic === 'function') {
+            initLogic();
+        }
+        if (typeof initSchedule === 'function') {
+            initSchedule();
+        }
+        if (typeof initCarousels === 'function') {
+            initCarousels();
+        }
+        
+        // Execute inline scripts with temporary document.addEventListener override
+        const originalAddEventListener = document.addEventListener;
+        document.addEventListener = function(type, listener, options) {
+            if (type === 'DOMContentLoaded') {
+                listener(new Event('DOMContentLoaded'));
+            } else {
+                originalAddEventListener.call(this, type, listener, options);
+            }
+        };
+
+        const scripts = doc.querySelectorAll('script');
+        scripts.forEach(script => {
+            const src = script.getAttribute('src') || '';
+            if (src.includes('script.js') || src.includes('tailwindcss') || src.includes('lucide')) {
+                return;
+            }
+            
+            const newScript = document.createElement('script');
+            if (script.src) {
+                newScript.src = script.src;
+            } else {
+                newScript.textContent = script.textContent;
+            }
+            document.body.appendChild(newScript);
+            newScript.remove();
+        });
+
+        // Restore original listener
+        document.addEventListener = originalAddEventListener;
+        
+    } catch (err) {
+        console.error("SPA loading error:", err);
+        window.location.href = url;
+    }
+}
+
+function initCarousels() {
+    const djContainer = document.getElementById('dj-carousel-inner');
+    const showContainer = document.getElementById('show-carousel-inner');
+    if (!djContainer && !showContainer) return;
+
+    const djs = [
+        { name: "DJx", initials: "DX" },
+        { name: "DJ Void", initials: "DV" },
+        { name: "scottorourke", initials: "SO" },
+        { name: "Steve-K", initials: "SK" },
+        { name: "mr.ethanson", initials: "ME" },
+        { name: "maacastro", initials: "MC" },
+        { name: "Buddy Merriam", initials: "BM" },
+        { name: "Sillyometer", initials: "SM" },
+        { name: "DJ Ray Knives", initials: "RK" },
+        { name: "Ahmad Ali", initials: "AA" },
+        { name: "Joe V", initials: "JV" },
+        { name: "Mario Staiano", initials: "MS" },
+        { name: "Gavin", initials: "GV" },
+        { name: "Ryanberger", initials: "RB" },
+        { name: "DJ Spiney", initials: "DS" },
+        { name: "Scott O", initials: "SO" }
+    ];
+
+    const shows = [
+        { name: "Melting World", initials: "MW" },
+        { name: "Ménage à trois", initials: "MT" },
+        { name: "Sunday Street", initials: "SS" },
+        { name: "Jazz On The Air", initials: "JA" },
+        { name: "Purple Starlight", initials: "PS" },
+        { name: "Omega", initials: "OM" },
+        { name: "Underground Sound", initials: "US" },
+        { name: "Radio Kaos", initials: "RK" },
+        { name: "Stereo Sanctity", initials: "SS" },
+        { name: "Close The Door", initials: "CD" },
+        { name: "Wayback Wednesday", initials: "WW" },
+        { name: "Suburban Hymns", initials: "SH" },
+        { name: "Blues At Dawn", initials: "BD" },
+        { name: "Blue Grass Time", initials: "BT" },
+        { name: "Hot Wax", initials: "HW" },
+        { name: "A Visual Sound", initials: "VS" },
+        { name: "The Golden Ratio", initials: "GR" },
+        { name: "Creature Central", initials: "CC" }
+    ];
+
+    const gradients = [
+        'from-[#df0781] to-[#af04ab]',
+        'from-[#9800e0] to-[#52a1fc]',
+        'from-[#3b00fc] to-[#8febfe]',
+        'from-[#8bfa00] to-[#eebc00]',
+        'from-[#df2331] to-[#f8e700]',
+        'from-[#af04ab] to-[#3b00fc]',
+        'from-[#8febfe] to-[#8bfa00]',
+        'from-[#eebc00] to-[#df0781]'
+    ];
+
+    function shuffle(array) {
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+
+    // Populate DJs
+    if (djContainer) {
+        const shuffledDJs = shuffle(djs);
+        const doubledDJs = [...shuffledDJs, ...shuffledDJs];
+        
+        djContainer.innerHTML = doubledDJs.map((dj, index) => {
+            const isDJx = dj.name === 'DJx';
+            const grad = gradients[(index + Math.floor(Math.random() * gradients.length)) % gradients.length];
+            const linkHref = 'djx.html';
+            
+            return `
+                <a href="${linkHref}" class="flex flex-col items-center gap-2 group flex-shrink-0 cursor-pointer">
+                    <div class="w-24 h-24 rounded-full bg-gradient-to-tr ${grad} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md overflow-hidden">
+                        ${isDJx ? `<img src="dj.png" alt="DJx Avatar" class="w-full h-full object-cover">` : dj.initials}
+                    </div>
+                    <span class="text-xs font-swiss text-zinc-400 group-hover:text-white transition-colors truncate max-w-[100px] text-center">
+                        ${dj.name}
+                    </span>
+                </a>
+            `;
+        }).join('');
+    }
+
+    // Populate Shows
+    if (showContainer) {
+        const shuffledShows = shuffle(shows);
+        const doubledShows = [...shuffledShows, ...shuffledShows];
+        
+        showContainer.innerHTML = doubledShows.map((show, index) => {
+            const grad = gradients[(index + Math.floor(Math.random() * gradients.length)) % gradients.length];
+            return `
+                <a href="programX.html" class="flex flex-col items-center gap-2 group flex-shrink-0 cursor-pointer">
+                    <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr ${grad} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md">
+                        ${show.initials}
+                    </div>
+                    <span class="text-xs font-swiss text-zinc-400 group-hover:text-white transition-colors truncate max-w-[100px] text-center">
+                        ${show.name}
+                    </span>
+                </a>
+            `;
+        }).join('');
+    }
+}
+
 // Start sequence
 document.addEventListener('DOMContentLoaded', () => {
     initLogic();
     initSchedule();
+    initCarousels();
+    initSPANavigation();
 });

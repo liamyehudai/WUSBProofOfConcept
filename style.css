@@ -170,6 +170,25 @@
   color: #000000 !important;
 }
 
+/* Override day text color in light theme for programs.html */
+.light-theme main .text-\[\#8febfe\] {
+  color: #007ba8 !important;
+}
+
+/* Override Details text color in light theme for programs.html */
+.light-theme .details-text {
+  color: #007ba8 !important;
+}
+
+/* Override View Program link color in light theme for playlists.html */
+.light-theme main article .justify-end a {
+  color: #007ba8 !important;
+}
+
+.light-theme main article .justify-end a:hover {
+  color: #000000 !important;
+}
+
 /* Hover text color override for DJ names in djs.html under light theme */
 .light-theme main a.group:hover span.text-white {
   color: #007ba8 !important;

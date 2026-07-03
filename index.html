@@ -385,115 +385,6 @@
             </div>
             
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const djs = [
-                    { name: "DJx", initials: "DX" },
-                    { name: "DJ Void", initials: "DV" },
-                    { name: "scottorourke", initials: "SO" },
-                    { name: "Steve-K", initials: "SK" },
-                    { name: "mr.ethanson", initials: "ME" },
-                    { name: "maacastro", initials: "MC" },
-                    { name: "Buddy Merriam", initials: "BM" },
-                    { name: "Sillyometer", initials: "SM" },
-                    { name: "DJ Ray Knives", initials: "RK" },
-                    { name: "Ahmad Ali", initials: "AA" },
-                    { name: "Joe V", initials: "JV" },
-                    { name: "Mario Staiano", initials: "MS" },
-                    { name: "Gavin", initials: "GV" },
-                    { name: "Ryanberger", initials: "RB" },
-                    { name: "DJ Spiney", initials: "DS" },
-                    { name: "Scott O", initials: "SO" }
-                ];
-
-                const shows = [
-                    { name: "Melting World", initials: "MW" },
-                    { name: "Ménage à trois", initials: "MT" },
-                    { name: "Sunday Street", initials: "SS" },
-                    { name: "Jazz On The Air", initials: "JA" },
-                    { name: "Purple Starlight", initials: "PS" },
-                    { name: "Omega", initials: "OM" },
-                    { name: "Underground Sound", initials: "US" },
-                    { name: "Radio Kaos", initials: "RK" },
-                    { name: "Stereo Sanctity", initials: "SS" },
-                    { name: "Close The Door", initials: "CD" },
-                    { name: "Wayback Wednesday", initials: "WW" },
-                    { name: "Suburban Hymns", initials: "SH" },
-                    { name: "Blues At Dawn", initials: "BD" },
-                    { name: "Blue Grass Time", initials: "BT" },
-                    { name: "Hot Wax", initials: "HW" },
-                    { name: "A Visual Sound", initials: "VS" },
-                    { name: "The Golden Ratio", initials: "GR" },
-                    { name: "Creature Central", initials: "CC" }
-                ];
-
-                const gradients = [
-                    'from-[#df0781] to-[#af04ab]',
-                    'from-[#9800e0] to-[#52a1fc]',
-                    'from-[#3b00fc] to-[#8febfe]',
-                    'from-[#8bfa00] to-[#eebc00]',
-                    'from-[#df2331] to-[#f8e700]',
-                    'from-[#af04ab] to-[#3b00fc]',
-                    'from-[#8febfe] to-[#8bfa00]',
-                    'from-[#eebc00] to-[#df0781]'
-                ];
-
-                function shuffle(array) {
-                    const arr = [...array];
-                    for (let i = arr.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [arr[i], arr[j]] = [arr[j], arr[i]];
-                    }
-                    return arr;
-                }
-
-                // Populate DJs
-                const djContainer = document.getElementById('dj-carousel-inner');
-                if (djContainer) {
-                    const shuffledDJs = shuffle(djs);
-                    const doubledDJs = [...shuffledDJs, ...shuffledDJs];
-                    
-                    djContainer.innerHTML = doubledDJs.map((dj, index) => {
-                        const isDJx = dj.name === 'DJx';
-                        const grad = gradients[(index + Math.floor(Math.random() * gradients.length)) % gradients.length];
-                        const linkHref = 'djx.html';
-                        
-                        return `
-                            <a href="${linkHref}" class="flex flex-col items-center gap-2 group flex-shrink-0 cursor-pointer">
-                                <div class="w-24 h-24 rounded-full bg-gradient-to-tr ${grad} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md overflow-hidden">
-                                    ${isDJx ? `<img src="dj.png" alt="DJx Avatar" class="w-full h-full object-cover">` : dj.initials}
-                                </div>
-                                <span class="text-xs font-swiss text-zinc-400 group-hover:text-white transition-colors truncate max-w-[100px] text-center">
-                                    ${dj.name}
-                                </span>
-                            </a>
-                        `;
-                    }).join('');
-                }
-
-                // Populate Shows
-                const showContainer = document.getElementById('show-carousel-inner');
-                if (showContainer) {
-                    const shuffledShows = shuffle(shows);
-                    const doubledShows = [...shuffledShows, ...shuffledShows];
-                    
-                    showContainer.innerHTML = doubledShows.map((show, index) => {
-                        const grad = gradients[(index + Math.floor(Math.random() * gradients.length)) % gradients.length];
-                        return `
-                            <a href="programX.html" class="flex flex-col items-center gap-2 group flex-shrink-0 cursor-pointer">
-                                <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr ${grad} flex items-center justify-center text-white font-bold text-2xl border-2 border-zinc-800 group-hover:border-white transition-all transform group-hover:scale-105 shadow-md">
-                                    ${show.initials}
-                                </div>
-                                <span class="text-xs font-swiss text-zinc-400 group-hover:text-white transition-colors truncate max-w-[100px] text-center">
-                                    ${show.name}
-                                </span>
-                            </a>
-                        `;
-                    }).join('');
-                }
-            });
-        </script>
     </main>
 
     <!-- COMPONENT: PLAYER -->
@@ -524,7 +415,7 @@
                         <div class="w-3/4 h-full bg-white"></div>
                     </div>
                 </div>
-                <button class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
+                <button id="listen-live-btn" class="font-swiss font-bold text-sm border-2 border-white px-4 py-2 hover:bg-white hover:text-black transition-colors uppercase tracking-widest">
                     Listen Live
                 </button>
             </div>
